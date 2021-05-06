@@ -21,9 +21,16 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 5rem;
+    font-size: 6rem;
     font-family: 'Roboto Mono', monospace;
 }
+
+/* tablets and smartphones responsive */
+@media screen and (max-width: 1080px) {
+h1 {
+   font-size: 7.5rem;
+   margin-bottom: 9rem;
+}}
 
 .nav-main {
     display: flex;
@@ -47,13 +54,37 @@ h1 {
     margin: 1.6rem 0;
     text-decoration: none;
     font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
 }
 
 .nav-main a:hover {
     color: var(--color-terciario);
     font-size: 1.7rem;
-    font-weight: bold;
 }
+
+/* tablets and smartphones responsive */
+@media screen and (max-width: 1080px) {
+
+body {
+    padding-left: 0;
+    padding-top: 8rem;
+}
+
+
+
+.nav-main {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 8rem;
+}
+
+.nav-main a {
+    font-size: 2.5rem;
+    display: block;
+    padding: 1.1rem 0;
+    margin: 2.9rem 0;
+}}
 
 section {
     padding: 0px 5rem;
@@ -72,4 +103,27 @@ section h2 {
 section a {
     text-decoration: none;
 }
+
+footer {
+    text-align: center;
+    font-size: 0.7rem;
+    padding: 0.9rem;
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #1E242C;
+}
+
+/* tablets and smartphones responsive */
+@media screen and (max-width: 1080px) {
+section {
+    font-size: 2.6rem;
+}
+section h2 {
+    font-size: 4.5rem;
+}
+
+footer {
+    padding: 3.2rem;
+    font-size: 0.01rem;
+}}
 
