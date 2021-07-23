@@ -3,8 +3,12 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Eber Alejo freelancer y estudiante de progamación web">
+      <meta name="description" content="Eber Alejo un Freelancer en el desarrollo web, apasionado de linux y la programación">
+
+      <!--preload-->
+      <link rel="preload" href="build/css/app.css" as="style">
       <link rel="stylesheet" href="build/css/app.css">
+      <link rel="preload" href="build/img/bannerImg.svg" as="image">
       <title>Eber Alejo - Desarrollador web Frontend</title>
    </head>
    <body>
@@ -20,11 +24,12 @@
                <span>Hola!</span>
                <h1>Mi nombre es Eber Alejo y soy un desarrollador web Frontend</h1>
                <picture>
-                  <img src="build/img/eberalejo.jpg" alt="Eber Alejo" style="display: none;">
+                  <img alt="Eber Alejo" srcset="build/img/eberalejo.webp" type="webp" style="display: none; width: 5rem; height: 5rem;">
+                  <img src="build/img/eberalejo.jpg" alt="Eber Alejo" style="display: none; width: 5rem; height: 5rem;">
                </picture>
             </div>
             <div class="header__img">
-               <img src="build/img/bannerImg.svg" alt="Programador sentado">
+               <img src="build/img/bannerImg.svg" alt="Imagen de un programador sentado">
             </div>
          </header>
          <div class="header__svg">
@@ -37,7 +42,7 @@
             <h2>Portafolio</h2>
             <div class="pages__target"> 
                <p>Festival Musica</p>
-               <a target="_blank" href="https://festival-musica-website.vercel.app">
+               <a target="_blank" rel="noreferrer" href="https://eber-festival-musica.vercel.app">
                   <picture>
                      <source class="pages__img" loading="lazy" srcset="build/img/pagina1.webp" type="image/webp">
                      <img class="pages__img" loading="lazy" src="img/pagina1.png" alt="Foto de la pagina" >
@@ -46,7 +51,7 @@
             </div>
             <div class="pages__target"> 
                <p>Frontend Store</p>
-               <a target="_blank" href="https://eber-frontendstore.netlify.app">
+               <a target="_blank" rel="noreferrer" href="https://eber-frontendstore.netlify.app">
                   <picture>
                      <source class="pages__img" srcset="build/img/pagina2.webp" type="image/webp">
                      <img class="pages__img" src="img/pagina2.png" alt="Foto de la pagina" >
@@ -55,7 +60,7 @@
             </div>
             <div class="pages__target"> 
                <p>Sitio web Freelancer</p>
-               <a target="_blank" href="https://eber-template1.netlify.app">
+               <a target="_blank" rel="noreferrer" href="https://eber-template1.netlify.app">
                   <picture>
                      <source class="pages__img" srcset="build/img/pagina3.webp" type="image/webp">
                      <img class="pages__img" src="img/pagina3.png" alt="Foto de la pagina" >
@@ -64,7 +69,7 @@
             </div>
             <div class="pages__target"> 
                <p>Blog de Café</p>
-               <a target="_blank" href="https://eber-blogdecafe.netlify.app">
+               <a target="_blank" rel="noreferrer" href="https://eber-blogdecafe.netlify.app">
                   <picture>
                      <source class="pages__img" srcset="build/img/pagina4.webp" type="image/webp">
                      <img class="pages__img" src="img/pagina4.png" alt="Foto de la pagina" >
