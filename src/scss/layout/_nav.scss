@@ -1,0 +1,30 @@
+.nav {
+   display: flex;
+   justify-content: space-around;
+   background-color: $secundario;
+   padding: math.div($unit, 2);
+   align-items: center;
+
+   .nav__link {
+      font-size: 2rem;
+      color: $terciario;
+      font-weight: bold;
+   }
+}
+
+@include tablet {
+   .nav {
+      justify-content: flex-end;
+      gap: 5rem;
+      .nav__link {
+         font-size: 2.4rem;
+         padding: 0.5rem;
+         &:hover {
+            font-weight: lighter;
+            color: $terciarioSombra;
+         }
+      }
+      
+   }
+}
+

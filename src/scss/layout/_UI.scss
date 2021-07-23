@@ -1,0 +1,34 @@
+body {
+   background-color: $primario;
+   color: $blanco;
+   font-family: $fuente_principal;
+}
+
+.container {
+   width: min(80%, 120rem);
+   margin: 0 auto;
+}
+
+section {
+   margin-bottom: $unit * 3;
+}
+
+// mailto button
+.mailto {
+   text-align: center;
+   margin-bottom: 10rem;
+}
+.mailto__link {
+   background-color: $terciario;
+   color: $enfasis;
+   padding: 2rem;
+   font-weight: bold;
+   border-radius: 20px;
+}
+
+@include tablet {
+   .mailto__link {
+      font-size: 2.5rem;
+   }
+}
+

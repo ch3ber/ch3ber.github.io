@@ -1,0 +1,38 @@
+.header--container {
+   align-items: center;
+   background-color: $secundario;
+}
+
+.header {
+   text-align: center;
+   padding: 2.5rem 5rem 0 5rem;
+   .header__info {
+      margin-bottom: $unit;
+      span {
+         font-size: 9rem;
+         font-weight: lighter;
+      }
+   }
+   .header__img {
+      margin: auto 0;
+   }
+}
+
+//este elemento va por fuera del header
+.header__svg {
+   img {
+      margin-bottom: -1rem;
+   }
+}
+
+@include tablet {
+   .header {
+      display: flex;
+      justify-content: space-evenly;
+      gap: $unit;
+   }
+   .header__info {
+      margin: auto 0;
+   }
+}
+

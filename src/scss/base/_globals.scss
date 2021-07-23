@@ -1,0 +1,59 @@
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+*, *:before, *:after {
+   box-sizing: inherit;
+}
+
+body {
+   font-size: 1.6rem;
+   line-height: 1.5;
+}
+
+p {
+   font-size: 2rem;
+}
+
+a {
+   text-decoration: none;
+}
+
+img {
+   max-width: 100%;
+   background-repeat: no-repeat;
+}
+
+h2,
+h3 {
+   text-align: center;
+   background-color: $terciario;
+   border-radius: math.div($unit, 4);
+   color: $enfasis;
+}
+
+h1 {
+   margin: 0;
+   text-align: center;
+   font-size: 4.5rem;
+   font-weight: 700;
+   color: var(--blanco);
+}
+
+@include tablet {
+   h1 {
+      line-height: 1.5;
+      font-size: 5.2rem;
+   }
+}
+
+h2 {
+   font-size: 5rem;
+}
+
+h3 {
+   font-weight: lighter;
+   font-size: 3rem;
+}
+

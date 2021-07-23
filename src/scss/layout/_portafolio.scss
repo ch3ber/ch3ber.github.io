@@ -1,0 +1,48 @@
+.pages__target {
+   background-color: $secundario;
+   padding: 2rem;
+   border-radius: 10px;
+   margin-bottom: $unit;
+   text-align: center;
+
+   box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.4);
+   -webkit-box-shadow: 0px 8px 25px 0px rgba(0,0,0,0.4);
+   -moz-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.4);
+
+   &:last-of-type {
+      margin-bottom: 0;
+   }
+   p {
+
+      background: #2A9D8F;
+      box-shadow:  5px 5px 10px #217c71,
+                   -5px -5px 10px #33bead;
+
+      color: $blanco;
+      display: inline-block;
+      padding: 1.5rem;
+      border-radius: $unit;
+   }
+}
+
+.pages__img {
+   filter: grayscale(1);
+   border-radius: 1.5rem;
+}
+
+@include tablet {
+   .pages {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap: 5rem;
+      .pages__target {
+         margin: 0;
+      }
+   }
+
+   .pages h2 {
+      grid-column: 1/3;
+   }
+}
+
