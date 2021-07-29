@@ -13,14 +13,19 @@
 }
 
 @include tablet {
+   .nav__link {
+      font-size: 2.4rem;
+   }
+}
+
+@include pc {
    .nav {
       justify-content: flex-end;
       gap: 5rem;
       .nav__link {
-         font-size: 2.4rem;
+         font-size: 2.7rem;
          padding: 0.5rem;
          &:hover {
-            font-weight: lighter;
             color: $terciarioSombra;
          }
       }

@@ -6,28 +6,38 @@
 .header {
    text-align: center;
    padding: 2.5rem 5rem 0 5rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    .header__info {
+      line-height: 1;
       margin-bottom: $unit;
       span {
-         font-size: 9rem;
-         font-weight: lighter;
+         font-size: 8.5rem;
+         font-weight: $lighter;
       }
    }
    .header__img {
+      max-width: 80%;
       margin: auto 0;
    }
 }
 
 //este elemento va por fuera del header
 .header__svg {
+   display: grid;
+   place-items: center center;
+   overflow: hidden;
    img {
+      min-width: 101%;
       margin-bottom: -1rem;
    }
 }
 
-@include tablet {
+@include pc {
    .header {
       display: flex;
+      flex-direction: row;
       justify-content: space-evenly;
       gap: $unit;
    }

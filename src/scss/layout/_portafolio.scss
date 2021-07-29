@@ -1,6 +1,15 @@
+.pages {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   h2 {
+      margin: 3rem 0;
+   }
+}
 .pages__target {
    background-color: $secundario;
-   padding: 2rem;
+   padding: 2.5rem;
    border-radius: 10px;
    margin-bottom: $unit;
    text-align: center;
@@ -13,21 +22,19 @@
       margin-bottom: 0;
    }
    p {
-
-      background: #2A9D8F;
-      box-shadow:  5px 5px 10px #217c71,
-                   -5px -5px 10px #33bead;
-
+      font-weight: $bold;
       color: $blanco;
       display: inline-block;
-      padding: 1.5rem;
-      border-radius: $unit;
+      margin: 1.5rem 0 2.5rem 0;
    }
 }
 
 .pages__img {
    filter: grayscale(1);
    border-radius: 1.5rem;
+   &:hover {
+      filter: saturate(1);
+   }
 }
 
 @include tablet {
@@ -35,7 +42,11 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, auto);
+      place-items: center;
       gap: 5rem;
+      p {
+         font-size: 2.4rem;
+      }
       .pages__target {
          margin: 0;
       }

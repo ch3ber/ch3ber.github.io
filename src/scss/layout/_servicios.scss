@@ -1,23 +1,53 @@
+// seleccionar el div con id servicio para que el parrafo no ocupe all espacio
+#servicios {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   h2 {
+      padding: 0 0.3rem;
+   }
+}
+
+.servicios {
+   margin-top: 3rem;
+}
+
 .servicios__info {
    text-align: center;
+   h3 {
+      margin-top: 8rem;
+   }
+   img {
+      max-height: 15rem;
+   }
+   &:first-of-type {
+      h3 {
+         margin-top: 3rem;
+      }
+   }
 }
 
 @include tablet {
+#servicios {
+   h2 {
+      padding: 0.3rem 4rem;
+   }
+}
    .servicios {
       @include grid(3, $unit);
    }
    .servicios__info {
-      /*display: grid;*/
-      /*grid-template-rows: 1fr repeat(2, auto);*/
       display: flex;
       flex-direction: column;
 
+      img {
+         max-height: 19%;
+      }
       h3 {
-         /*grid-row: 2/3;*/
+         margin: 3rem 0;
          order: 1;
       }
       img {
-         /*margin: auto 0;*/
          order: 0;
       }
       p {
@@ -30,3 +60,10 @@
    }
 }
 
+@include pc {
+   .servicios__info {
+      img {
+         max-height: 40%;
+      }
+   }
+}

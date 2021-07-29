@@ -19,11 +19,18 @@ section {
    margin-bottom: 10rem;
 }
 .mailto__link {
-   background-color: $terciario;
-   color: $enfasis;
+   color: $blanco;
    padding: 2rem;
    font-weight: bold;
-   border-radius: 20px;
+   border-radius: 2rem;
+
+background: #264653;
+box-shadow:  15px 15px 30px #13242a,
+             -15px -15px 30px #39687c;
+
+   &:hover {
+      color: darken($blanco, 25);
+   }
 }
 
 @include tablet {
