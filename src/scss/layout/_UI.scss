@@ -1,7 +1,7 @@
 body {
    background-color: $primario;
    color: $blanco;
-   font-family: $fuente_principal;
+   font-family: $fuenteRegular;
 }
 
 .container {
@@ -21,7 +21,7 @@ section {
 .mailto__link {
    color: $blanco;
    padding: 2rem;
-   font-weight: bold;
+   font-family: $fuenteBold;
    border-radius: 2rem;
 
 background: #264653;

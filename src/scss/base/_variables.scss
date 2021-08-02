@@ -1,5 +1,9 @@
 // Fuentes
-$fuente_principal: 'Nunito', sans-serif;
+//$fuente_principal: 'Nunito', sans-serif;
+$fuenteLight: 'Nunitolight', sans-serif;
+$fuenteRegular: 'Nunitoregular', sans-serif;
+$fuenteBold: 'Nunitobold', sans-serif;
+$fuenteBlack: 'Nunitoback', sans-serif;
 
 // Tamaño de Media Queries
 $phone: 480px;
@@ -22,3 +26,4 @@ $unit: 5rem;
 $lighter: 300;
 $regular : 400;
 $bold: 700;
+$black: 900;

@@ -10,11 +10,14 @@ const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const webp = require('gulp-webp');
+const fontConver = require('gulp-ttf2woff2');
+const ttfsvg = require('gulp-ttf-svg');
 
 const paths = {
     scss: 'src/scss/**/*.scss',
     js: 'src/js/**/*.js',
-    imagenes: 'src/img/**/*'
+    imagenes: 'src/img/**/*',
+   fonts: 'src/fonts/**/*.ttf'
 }
 
 // css es una función que se puede llamar automaticamente
@@ -59,6 +62,18 @@ function watchArchivos() {
     watch( paths.imagenes, versionWebp );
 }
 
+function ttf2woff2(){
+  return src(paths.fonts)
+    .pipe(fontConver())
+    .pipe(dest('build/fonts'));
+}
+
+function ttfToSvg() {
+   return src(paths.fonts)
+  .pipe(ttfsvg())
+  .pipe(dest('build/fonts'));
+}
+
 exports.css = css;
 exports.watchArchivos = watchArchivos;
-exports.default = parallel(css, javascript,  imagenes, versionWebp, watchArchivos );
+exports.default = parallel(css, javascript,  imagenes, versionWebp, watchArchivos, ttf2woff2, ttfToSvg );
