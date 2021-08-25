@@ -11,18 +11,26 @@ $tablet: 768px;
 $pc: 1024px;
 
 // Colores
-$primario: #264653;
-$secundario: #2A9D8F;
-$terciario: #E9C46A;
-$terciarioSombra: #F4A261;
-$enfasis: #E76F51;
-$blanco: #FFFFFF;
-$negro: #000000;
+$base: #f8f8f8;
+$waves: #ECEFF4;
+$text: #3B4252;
+$primario: #FFF;
+$secundario: #88C0D0;
+$terciario: #D8DEE9;
+
+$base-dark: #2E3440;
+$waves-dark: #3B4252;
+$text-dark: #ECEFF4;
+$primario-dark: #3B4252;
+$secundario-dark: #434C5E;
+$terciario-dark: #4C566A;
+$enfasis: #000;
+$blanco: #fff;
+$terciarioSombra: #ccc;
 
 $unit: 5rem;
 
 // Fuentes
-
 $lighter: 300;
 $regular : 400;
 $bold: 700;

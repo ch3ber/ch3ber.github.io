@@ -1,41 +1,14 @@
 body {
-   background-color: $primario;
-   color: $blanco;
+   background-color: $base;
    font-family: $fuenteRegular;
+   color: $text;
 }
 
 .container {
-   width: min(80%, 120rem);
+   width: min(90%, 120rem);
    margin: 0 auto;
 }
 
-section {
-   margin-bottom: $unit * 3;
+.main {
+   background-color: $secundario;
 }
-
-// mailto button
-.mailto {
-   text-align: center;
-   margin-bottom: 10rem;
-}
-.mailto__link {
-   color: $blanco;
-   padding: 2rem;
-   font-family: $fuenteBold;
-   border-radius: 2rem;
-
-background: #264653;
-box-shadow:  15px 15px 30px #13242a,
-             -15px -15px 30px #39687c;
-
-   &:hover {
-      color: darken($blanco, 25);
-   }
-}
-
-@include tablet {
-   .mailto__link {
-      font-size: 2.5rem;
-   }
-}
-

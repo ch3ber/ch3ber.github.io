@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-html5" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
-  <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" />
+<svg width="24" height="33" viewBox="0 0 24 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.35001 0.5H4.70251V1.92533H5.94001V0.5H7.29251V4.81467H5.94001V3.37067H4.70251V4.81467H3.35126V0.5H3.35001Z" fill="#5E81AC"/>
+<path d="M9.07003 1.93067H7.88004V0.5H11.6138V1.93067H10.4225V4.81467H9.07003V1.93067Z" fill="#5E81AC"/>
+<path d="M12.2063 0.5H13.6163L14.4838 2.016L15.35 0.5H16.76V4.81467H15.4138V2.676L14.4838 4.21067H14.46L13.5288 2.67733V4.81467H12.2063V0.5Z" fill="#5E81AC"/>
+<path d="M17.4325 0.5H18.7862V3.38933H20.6862V4.816H17.4325V0.5Z" fill="#5E81AC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.3075 29.9293L0.75 6.78931H23.25L20.6912 29.9266L11.9875 32.5L3.3075 29.9293ZM8.47875 17.2626L8.23625 14.356H18.4175L18.655 11.5186H5.33L6.0475 20.1013H15.2687L14.96 23.7813L11.9925 24.6373H11.99L9.0275 23.784L8.8375 21.5213H6.165L6.5375 25.9773L11.9875 27.5906L17.4463 25.9773L18.1112 18.0253L18.1763 17.264H8.47875V17.2626Z" fill="#5E81AC"/>
 </svg>
-
-

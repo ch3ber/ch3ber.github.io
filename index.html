@@ -18,108 +18,69 @@
          <a class="nav__link" href="#portafolio">Portafolio</a>
          <a class="nav__link" href="#servicios">Servicios</a>
          <a class="nav__link" href="#contacto">Contacto</a>
+         <span id="colorToggle"><img src="build/img/moon-dark.svg" alt="Moon icon"></span>
       </nav>
 
-      <div class="header--container">
+      <div class="container">
+         <h1>Eber Alejo &dash; Frontend Wep Developer</h1>
          <header class="header">
-            <div class="header__info">
-               <span>Hola!</span>
-               <h1>Me llamo Eber Alejo y soy un desarrollador web Frontend</h1>
-               <picture>
-                  <source srcset="build/img/eberalejo.webp" type="img/webp" style="display: none; width: 5rem; height: 5rem;">
-                  <img src="build/img/eberalejo.jpg" alt="Eber Alejo" style="display: none; width: 5rem; height: 5rem;">
-               </picture>
+            <div class="container about">
+               <div class="about__description">
+                  <h2>Quién soy&quest;</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                  aliquam, purus sit amet luctus venenatis, lectus magna
+                  fringilla urna, porttitor rhoncus dolor purus non enim</p>
+               </div>
+               <div class="about__profilePicture">
+                  <picture>
+                     <source srcset="build/img/eberalejo.webp" type="image/webp">
+                     <img loading="lazy" src="build/img/eberalejo.jpg" alt="Foto de Eber Alejo">
+                  </picture>
+               </div>
             </div>
-            <div class="header__img">
-               <img src="build/img/bannerImg.svg" alt="Ilustracion programador sentado">
+            <div class="container tecnologias">
+               <div class="tecnologias__using">
+                  <p>Tecnologias y herramientas que uso</p>
+                  <div class="iconsContainer">
+                     <img src="build/img/icon-html5.svg" alt="Icon html5">
+                     <img src="build/img/icon-css3.svg" alt="Icon css3">
+                     <img src="build/img/icon-sass.svg" alt="Icon sass">
+                     <img src="build/img/icon-gulp.svg" alt="Icon gulp">
+                     <img src="build/img/icon-javascript.svg" alt="Icon javascript">
+                     <img src="build/img/icon-git.svg" alt="Icon git">
+                     <img src="build/img/icon-figma.svg" alt="Icon figma">
+                  </div>
+               </div>
+               <div class="tecnologias__learning">
+                  <p>Tecnologias que estoy aprendiendo</p>
+                  <div class="iconsContainer">
+                     <img src="build/img/icon-php.svg" alt="Icon php">
+                     <img src="build/img/icon-react.svg" alt="Icon react">
+                  </div>
+               </div>
             </div>
          </header>
-         <div class="header__svg">
-            <img src="build/img/wave.svg" alt="wave">
-         </div>
       </div>
 
-      <main class="main container">
-         <section id="portafolio" class="pages">
-            <h2>Portafolio</h2>
-            <div class="pages__target"> 
-               <p>Festival Musica</p>
-               <a target="_blank" rel="noreferrer" href="https://eber-festival-musica.vercel.app">
-                  <picture>
-                     <source class="pages__img" srcset="build/img/pagina1.webp" type="image/webp">
-                     <img class="pages__img" loading="lazy" src="build/img/pagina1.png" alt="Foto de la pagina" >
-                  </picture>
-               </a>
+      <main>
+         <img src="build/img/wave-white.svg" alt="Wave picture" style="margin-bottom: -1rem;">
+         <div class="portafolio" id="portafolio">
+            <div class="container">
+               <h2>Portafolio</h2>
+               <div class="targetsPortafolio"></div>
             </div>
-            <div class="pages__target"> 
-               <p>Frontend Store</p>
-               <a target="_blank" rel="noreferrer" href="https://eber-frontendstore.netlify.app">
-                  <picture>
-                     <source class="pages__img" srcset="build/img/pagina2.webp" type="image/webp">
-                     <img class="pages__img" loading="lazy" src="build/img/pagina2.png" alt="Foto de la pagina" >
-                  </picture>
-               </a>
-            </div>
-            <div class="pages__target"> 
-               <p>Sitio web Freelancer</p>
-               <a target="_blank" rel="noreferrer" href="https://eber-template1.netlify.app">
-                  <picture>
-                     <source class="pages__img" srcset="build/img/pagina3.webp" type="image/webp">
-                     <img class="pages__img" loading="lazy" src="build/img/pagina3.png" alt="Foto de la pagina" >
-                  </picture>
-               </a>
-            </div>
-            <div class="pages__target"> 
-               <p>Blog de Café</p>
-               <a target="_blank" rel="noreferrer" href="https://eber-blogdecafe.netlify.app">
-                  <picture>
-                     <source class="pages__img" srcset="build/img/pagina4.webp" type="image/webp">
-                     <img class="pages__img" loading="lazy" src="build/img/pagina4.png" alt="Foto de la pagina" >
-                  </picture>
-               </a>
-            </div>
-         </section>
-
-         <section id="servicios">
-            <h2 class="txt-center">Mis servicios</h2>
-            <div class="servicios">
-
-               <div class="servicios__info">
-                  <h3 >Pagina web completa</h3>
-                  <img loading="lazy" src="build/img/webCompleta.svg" alt="Ilustracion pagina web completa">
-                  <p>
-                     Crea la pagina de tus sueños, tendras una página con el mejor SEO,
-                     la mejor optimización en la web y un diseño increible
-                  </p>
-               </div>
-
-               <div class="servicios__info">
-                  <h3 >SEO</h3>
-                  <img loading="lazy" src="build/img/seo.svg" alt="Ilustracion pagina web Sencilla">
-                  <p>
-                     ¿Quieres que tu página se posicione primero que otras?,
-                     dejame ayudarte con eso
-                  </p>
-               </div>
-
-               <div class="servicios__info">
-                  <h3 >Rendimiento</h3>
-                  <img loading="lazy" src="build/img/performance.svg" alt="Ilustracion servicio de blog">
-                  <p>
-                     Optimiza tu página web para que cargue a la mayor velocidad, dile 
-                     adios a las paginas lentas
-                  </p>
-               </div>
-            </div>
-         </section>
+         </div>
+         <img src="build/img/wave-white.svg" alt="Wave picture" style="transform: rotate(180deg); margin-top: -0.5rem;">
+         <div class="servicios" id="servicios">
+            <h2>Mis Servicios</h2>
+            <div class="targetsServicios"></div>
+         </div>
       </main>
 
-      <div id="contacto" class="container mailto">
-         <a class="mailto__link" href="mailto:eber4202@hotmail.com">Enviame un correo y hablemos</a>
-      </div>
-
-      <footer class="footer">
-         <p>Eber Alejo - Todos los derechos reservados 2021 &copy;</p>
+      <footer class="footer" id="contacto">
+         <a class="mailto__link" href="mailto:eber4202@hotmail.com"><img src="build/img/mailto.svg" alt="Mailto icon"></a>
+         <p>Hecho con &#128153; por <strong>Eber Alejo</strong> &copy; <span id="year"></span></p>
+         <a href="https://github.com/ch3ber" target="_blank"><img src="build/img/github.svg" alt="GitHub icon"></a>
       </footer>
 
       <script src="build/js/bundle.min.js"></script>

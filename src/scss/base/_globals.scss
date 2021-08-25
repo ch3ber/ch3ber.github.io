@@ -27,38 +27,23 @@ img {
 
 h2,
 h3 {
-   font-weight: $regular;
    text-align: center;
-   background-color: $terciario;
-   border-radius: 1.5rem;
-   color: $enfasis;
+   margin: 0;
 }
 
 h1 {
-   margin: 0;
+   max-width: 70%;
+   margin: 0 auto;
    text-align: center;
-   font-size: 4.5rem;
-   font-weight: $regular;
-   color: $blanco;
-}
-
-@include tablet {
-   h1 {
-      line-height: 1.5;
-      font-size: 5.2rem;
-   }
+   font-size: 6.4rem;
+   font-weight: $fuenteBold;
 }
 
 h2 {
-   text-align: center;
-   display: inline-block;
-   padding: 0.3rem 4rem;
-   margin: auto;
    font-size: 5rem;
 }
 
 h3 {
-   font-weight: $regular;
    font-size: 3rem;
 }
 
