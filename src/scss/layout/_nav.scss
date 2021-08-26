@@ -1,31 +1,50 @@
 .nav {
    display: flex;
-   justify-content: space-around;
-   padding: 3rem 10rem;
-   align-items: center;
-
+   justify-content: space-between;
+   padding: 4rem;
+   background-color: $base;
    .nav__link {
-      font-size: 1.8rem;
+      display: none;
       color: $text;
       font-family: $fuenteRegular;
    }
 }
-
-@include tablet {
+.static {
+   overflow: hidden;
+}
+.nav--show {
+   height: 100vh;
+   .container {
+      margin-top: 4rem;
+      font-size: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+   }
    .nav__link {
-      font-size: 1.3rem;
+      display: inline-block;
    }
 }
 
 @include pc {
    .nav {
       justify-content: flex-end;
-      gap: 2rem;
-      .nav__link {
-         font-size: 2rem;
-         padding: 0.5rem;
-         &:hover {
-            color: $secundario;
+      #menuIcon {
+         display: none;
+      }
+      .container {
+         display: flex;
+         justify-content: flex-end;
+         gap: 2rem;
+         .nav__link {
+            display: inline-block;
+            font-size: 2rem;
+            padding: 0.5rem;
+            &:hover {
+               color: $secundario;
+            }
          }
       }
       

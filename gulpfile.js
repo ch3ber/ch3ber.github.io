@@ -76,4 +76,5 @@ function ttfToSvg() {
 
 exports.css = css;
 exports.watchArchivos = watchArchivos;
+exports.js = javascript;
 exports.default = parallel(css, javascript,  imagenes, versionWebp, watchArchivos, ttf2woff2, ttfToSvg );

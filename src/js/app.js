@@ -2,13 +2,17 @@
 
 document.addEventListener('DOMContentLoaded', function() {
    alert('Esta pagina esta en desarrollo');
+   createWaves(DATA_APP.darkMode);
    createTargets();
    createServicios();
-   scrollNav();
    setYear();
+   showMenu();
+   scrollNav();
+   darkMode();
 });
 
 const DATA_APP = {
+   darkMode: false,
    pagina1: 'Lorem1 ipsum dolor sit amet, consectetur adipiscing elit. scelerisque netus. Nam placerat fames enim mauris enim nec.',
    pagina2: 'Lorem2 ipsum dolor sit amet, consectetur adipiscing elit. scelerisque netus. Nam placerat fames enim mauris enim nec.',
    pagina3: 'Lorem3 ipsum dolor sit amet, consectetur adipiscing elit. scelerisque netus. Nam placerat fames enim mauris enim nec.',
@@ -28,6 +32,17 @@ const DATA_APP = {
 
 };
 
+function createWaves(darkMode) {
+   let color;
+   if (darkMode == false) {
+      color = 'white';
+   }
+   if (darkMode) {
+      color = 'dark';
+   }
+   document.querySelectorAll('.wave').forEach(wave => wave.setAttribute('src', `build/img/wave-${color}.svg`));
+}
+
 function scrollNav() {
    const enlaces = document.querySelectorAll('.nav__link');
    enlaces.forEach(enlace => {
@@ -40,7 +55,6 @@ function scrollNav() {
 }
 
 function createTargets() {
-   const targets = document.querySelector('.targetsPortafolio');
    for (let i=1; i < 4; i++) {
       const target = document.createElement('DIV');
       
@@ -51,25 +65,24 @@ function createTargets() {
       description.textContent = DATA_APP[`pagina${i}`];
 
       const buttons = document.createElement('DIV');
-      let buttonI = 1;
-      while (buttonI < 3) {
+      let buttonNumber = 1;
+      while (buttonNumber < 3) {
          const button = document.createElement('A');
-         button.classList.add(`button-style${buttonI}`);
-         button.innerHTML = DATA_APP[`button${buttonI}`];
+         button.classList.add(`button-style${buttonNumber}`);
+         button.innerHTML = DATA_APP[`button${buttonNumber}`];
          button.href = DATA_APP[`link${i}`];
          buttons.append(button);
-         buttonI++;
+         buttonNumber++;
       }
       buttons.classList.add('buttons-container');
 
 
       target.append(img, description, buttons);
-      targets.append(target);
+      document.querySelector('.targetsPortafolio').append(target);
    }
 }
 
 function createServicios() {
-   const servicios = document.querySelector('.targetsServicios');
    for (let i=1; i < 5; i++) {
       const target = document.createElement('DIV');
 
@@ -83,13 +96,30 @@ function createServicios() {
       img.setAttribute('src', `build/img/servicio${i}.svg`);
 
       target.append(title, description, img);
-      servicios.append(target);
+      document.querySelector('.targetsServicios').append(target);
    }
 }
 
 function setYear() {
    const date = new Date;
    const year = date.getFullYear();
-   const yearHtml = document.getElementById('year');
-   yearHtml.textContent = year;
+   document.getElementById('year').textContent = year;
+}
+
+function showMenu() {
+   document.getElementById('menuIcon').addEventListener('click', show);
+   document.querySelectorAll('.nav__link').forEach(link => link.addEventListener('click', show));
+   function show() {
+      document.querySelector('.nav').classList.toggle('nav--show');
+      document.body.classList.toggle('static');
+   }
+}
+
+function darkMode() {
+   document.getElementById('colorToggle').addEventListener('click', darkModeToggle);
+   function darkModeToggle() {
+      DATA_APP.darkMode = !DATA_APP.darkMode;
+      document.body.classList.toggle('dark');
+      createWaves(DATA_APP.darkMode);
+   }
 }

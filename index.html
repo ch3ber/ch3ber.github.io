@@ -3,21 +3,23 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Eber Alejo un Freelancer en el desarrollo web, apasionado de linux y la programación">
+      <meta name="description" content="Eber Alejo un Freelancer en el desarrollo web&comma; apasionado de linux y la programación">
 
       <!--preload css-->
       <link rel="preload" href="build/css/app.css" as="style">
       <link rel="stylesheet" href="build/css/app.css">
       <!--preload images-->
-      <link rel="preload" href="build/img/bannerImg.svg" as="image">
-      <link rel="preload" href="build/img/wave.svg" as="image">
-      <title>Eber Alejo - Desarrollador web Frontend</title>
+      <!--<link rel="preload" href="build/img/wave-white.svg" as="image">-->
+      <title>Eber Alejo &dash; Desarrollador web Frontend</title>
    </head>
    <body>
       <nav class="nav">
-         <a class="nav__link" href="#portafolio">Portafolio</a>
-         <a class="nav__link" href="#servicios">Servicios</a>
-         <a class="nav__link" href="#contacto">Contacto</a>
+         <span id="menuIcon"><img src="build/img/menu-dark.svg" alt="Menu icon"></span>
+         <div class="container">
+            <a class="nav__link" href="#portafolio">Portafolio</a>
+            <a class="nav__link" href="#servicios">Servicios</a>
+            <a class="nav__link" href="#contacto">Contacto</a>
+         </div>
          <span id="colorToggle"><img src="build/img/moon-dark.svg" alt="Moon icon"></span>
       </nav>
 
@@ -63,14 +65,14 @@
       </div>
 
       <main>
-         <img src="build/img/wave-white.svg" alt="Wave picture" style="margin-bottom: -1rem;">
+         <img class="wave" alt="Wave picture" style="margin-bottom: -1rem;">
          <div class="portafolio" id="portafolio">
             <div class="container">
                <h2>Portafolio</h2>
                <div class="targetsPortafolio"></div>
             </div>
          </div>
-         <img src="build/img/wave-white.svg" alt="Wave picture" style="transform: rotate(180deg); margin-top: -0.5rem;">
+         <img class="wave" alt="Wave picture" style="transform: rotate(180deg); margin-top: -0.5rem;">
          <div class="servicios" id="servicios">
             <h2>Mis Servicios</h2>
             <div class="targetsServicios"></div>
@@ -78,9 +80,9 @@
       </main>
 
       <footer class="footer" id="contacto">
-         <a class="mailto__link" href="mailto:eber4202@hotmail.com"><img src="build/img/mailto.svg" alt="Mailto icon"></a>
+         <a class="mailto__link" href="mailto:eber4202@hotmail.com"><img src="build/img/mailto-dark.svg" alt="Mailto icon"></a>
          <p>Hecho con &#128153; por <strong>Eber Alejo</strong> &copy; <span id="year"></span></p>
-         <a href="https://github.com/ch3ber" target="_blank"><img src="build/img/github.svg" alt="GitHub icon"></a>
+         <a href="https://github.com/ch3ber" target="_blank"><img src="build/img/github-dark.svg" alt="GitHub icon"></a>
       </footer>
 
       <script src="build/js/bundle.min.js"></script>

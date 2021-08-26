@@ -1,0 +1,17 @@
+.dark {
+   background-color: $base-dark;
+   color: $text-dark;
+   .nav {
+      background-color: $base-dark;
+      .nav__link {
+         color: $text-dark;
+      }
+   }
+   .portafolio {
+      background-color: $primario-dark;
+   }
+   .footer {
+      background-color: $terciario-dark;
+   }
+}
+
