@@ -2,7 +2,6 @@ html {
    box-sizing: border-box;
    font-size: 62.5%;
 }
-
 *, *:before, *:after {
    box-sizing: inherit;
 }
@@ -11,20 +10,13 @@ body {
    font-size: 1.6rem;
    line-height: 1.5;
 }
-
-p {
-   font-size: 2rem;
-}
-
-a {
-   text-decoration: none;
-}
-
+p { font-size: 2rem; }
+a { text-decoration: none; }
 img {
    max-width: 100%;
    background-repeat: no-repeat;
 }
-
+h1,
 h2,
 h3 {
    text-align: center;
@@ -34,16 +26,27 @@ h3 {
 h1 {
    max-width: 70%;
    margin: 0 auto;
-   text-align: center;
-   font-size: 6.4rem;
+   font-size: 4.5rem;
    font-weight: $fuenteBold;
 }
 
-h2 {
-   font-size: 5rem;
+h2 { font-size: 3.5rem; }
+h3 { font-size: 2.5rem; }
+
+@include tablet() {
+   h1 {
+      font-size: 5rem;
+   }
 }
 
-h3 {
-   font-size: 3rem;
+@include pc() {
+   h1 {
+      font-size: 6.4rem;
+   }
+   h2 {
+      font-size: 5rem;
+   }
+   h3 {
+      font-size: 3rem;
+   }
 }
-

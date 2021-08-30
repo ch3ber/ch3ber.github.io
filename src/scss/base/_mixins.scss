@@ -21,3 +21,24 @@
     gap: $gap;
     grid-template-columns: repeat($columns, 1fr);
 }
+@mixin createButton($style) {
+   padding: 2rem;
+   @if style == 'fill' {
+      background-color: $secundario;
+   }
+}
+@mixin avatar($size, $circle: false) {
+  width: $size;
+  height: $size;
+
+  @if $circle {
+    //border-radius: $size / 2;
+  }
+}
+
+.square-av {
+  @include avatar(100px, $circle: false);
+}
+.circle-av {
+  @include avatar(100px, $circle: true);
+}

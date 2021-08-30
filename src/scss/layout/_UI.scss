@@ -5,10 +5,16 @@ body {
 }
 
 .container {
-   width: min(90%, 120rem);
+   width: min(80%, 120rem);
    margin: 0 auto;
 }
 
 .main {
    background-color: $secundario;
+}
+
+@include pc() {
+   .container {
+      width: min(90%, 120rem);
+   }
 }

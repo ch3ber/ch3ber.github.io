@@ -1,26 +1,32 @@
 'use strict';
-
 document.addEventListener('DOMContentLoaded', function() {
-   alert('Esta pagina esta en desarrollo');
-   createWaves(DATA_APP.darkMode);
+   //alert('Esta pagina esta en desarrollo');
+   createWaves(userPreferencesMode.matches ? 'dark' : 'white');
+   renderIcons(userPreferencesMode.matches ? 'white' : 'dark');
    createTargets();
    createServicios();
    setYear();
    showMenu();
    scrollNav();
-   darkMode();
+   darkMode(hasDarkMode);
+   navShadow();
 });
 
+//leer preferencias del usuario sobre el dark mode
+const userPreferencesMode = window.matchMedia('(prefers-color-scheme: dark)');
+let hasDarkMode = userPreferencesMode.matches;
+
+// datos globales de la app
 const DATA_APP = {
-   darkMode: false,
    pagina1: 'Lorem1 ipsum dolor sit amet, consectetur adipiscing elit. scelerisque netus. Nam placerat fames enim mauris enim nec.',
    pagina2: 'Lorem2 ipsum dolor sit amet, consectetur adipiscing elit. scelerisque netus. Nam placerat fames enim mauris enim nec.',
    pagina3: 'Lorem3 ipsum dolor sit amet, consectetur adipiscing elit. scelerisque netus. Nam placerat fames enim mauris enim nec.',
-   button1: 'Ver sitio web',
-   button2: 'Ver codigo',
    link1: 'https://eber-festival-musica.vercel.app',
    link2: 'https://eber-template1.netlify.app',
    link3: 'https://eber-blogdecafe.netlify.app',
+   code1: 'https://github.com/ch3ber/',
+   code2: 'https://github.com/ch3ber/',
+   code3: 'https://github.com/ch3ber/',
    servicio1: 'Social media integration',
    servicio2: 'SEO',
    servicio3: 'Optimizacion',
@@ -32,20 +38,14 @@ const DATA_APP = {
 
 };
 
-function createWaves(darkMode) {
-   let color;
-   if (darkMode == false) {
-      color = 'white';
-   }
-   if (darkMode) {
-      color = 'dark';
-   }
-   document.querySelectorAll('.wave').forEach(wave => wave.setAttribute('src', `build/img/wave-${color}.svg`));
+//crear waves del color deseado
+function createWaves(fill) {
+   document.querySelectorAll('.wave').forEach(wave => wave.setAttribute('src', `build/img/wave-${fill}.svg`));
 }
 
+//mover a la seccion indicada que selecciono el usuario en el menu
 function scrollNav() {
-   const enlaces = document.querySelectorAll('.nav__link');
-   enlaces.forEach(enlace => {
+   document.querySelectorAll('.nav__link').forEach(enlace => {
       enlace.addEventListener('click', event => {
          event.preventDefault();
          const seccion = document.querySelector(event.target.attributes.href.value);
@@ -54,38 +54,56 @@ function scrollNav() {
    });
 }
 
+function navShadow() {
+   //registrat el intersection observer
+   const observer = new IntersectionObserver(function(entries) {
+      console.log(entries);
+      if (entries[0].isIntersecting) {
+         document.querySelector('.nav').classList.remove('shadow');
+      } else {
+         document.querySelector('.nav').classList.add('shadow');
+      }
+   });
+   //elemento a observar
+   observer.observe(document.querySelector('h1'));
+}
+
+// funcion para crear las targets de la seccion portafolio
 function createTargets() {
    for (let i=1; i < 4; i++) {
-      const target = document.createElement('DIV');
       
+      //agregar imagen sobre el sitio web
       const img = document.createElement('IMG');
       img.setAttribute('src', `build/img/pagina${i}.png`);
 
+      //agregar la descripcion sobre el sitio web
       const description = document.createElement('P');
       description.textContent = DATA_APP[`pagina${i}`];
 
-      const buttons = document.createElement('DIV');
-      let buttonNumber = 1;
-      while (buttonNumber < 3) {
-         const button = document.createElement('A');
-         button.classList.add(`button-style${buttonNumber}`);
-         button.innerHTML = DATA_APP[`button${buttonNumber}`];
-         button.href = DATA_APP[`link${i}`];
-         buttons.append(button);
-         buttonNumber++;
-      }
-      buttons.classList.add('buttons-container');
+      //creacion de bottones dentro de un contenedor
+      const buttonsContainer = document.createElement('DIV');
+      const button1 = createButton('ver sitio web', 'fill', DATA_APP[`link${i}`]);
+      const button2 = createButton('ver codigo', 'ghost', DATA_APP[`code${i}`]);
+      buttonsContainer.append(button1, button2);
 
-
-      target.append(img, description, buttons);
+      const target = document.createElement('DIV');
+      target.append(img, description, buttonsContainer);
       document.querySelector('.targetsPortafolio').append(target);
    }
 }
 
+//funcion para crear botones
+function createButton(content, style, href) {
+   const element = document.createElement('A');
+   element.innerHTML = content;
+   element.classList.add(`button-${style}`);
+   element.href = href;
+   return element;
+}
+
+//crear seccion de servicios
 function createServicios() {
    for (let i=1; i < 5; i++) {
-      const target = document.createElement('DIV');
-
       const title = document.createElement('H3');
       title.textContent = DATA_APP[`servicio${i}`];
 
@@ -95,31 +113,60 @@ function createServicios() {
       const img = document.createElement('IMG');
       img.setAttribute('src', `build/img/servicio${i}.svg`);
 
+      const target = document.createElement('DIV');
       target.append(title, description, img);
       document.querySelector('.targetsServicios').append(target);
    }
 }
 
+//definir el ano de copyright
 function setYear() {
    const date = new Date;
    const year = date.getFullYear();
    document.getElementById('year').textContent = year;
 }
 
+//menu responsive
 function showMenu() {
    document.getElementById('menuIcon').addEventListener('click', show);
-   document.querySelectorAll('.nav__link').forEach(link => link.addEventListener('click', show));
    function show() {
       document.querySelector('.nav').classList.toggle('nav--show');
       document.body.classList.toggle('static');
    }
+   document.querySelectorAll('.nav__link').forEach(link => link.addEventListener('click', remove));
+   function remove() {
+      document.querySelector('.nav').classList.remove('nav--show');
+      document.body.classList.remove('static');
+   }
 }
 
-function darkMode() {
+//cambiar el color de la pagina
+function darkMode(userPreferencesDark = null) {
+   if (userPreferencesDark) {
+      document.body.classList.add('dark');
+      createWaves('dark');
+      renderIcons('white');
+   }
    document.getElementById('colorToggle').addEventListener('click', darkModeToggle);
    function darkModeToggle() {
-      DATA_APP.darkMode = !DATA_APP.darkMode;
       document.body.classList.toggle('dark');
-      createWaves(DATA_APP.darkMode);
+      createWaves(hasDarkMode ? 'white' : 'dark');
+      renderIcons(hasDarkMode ? 'dark' : 'white');
+      hasDarkMode = !hasDarkMode;
    }
+}
+
+//renderizar los iconos segun el color de la pagina
+function renderIcons(fill) {
+   const menuIcon = document.querySelector('.menu-icon');
+   menuIcon.setAttribute('src', `build/img/menu-${fill}.svg`);
+
+   const moonIcon = document.querySelector('.moon-icon');
+   moonIcon.setAttribute('src', `build/img/moon-${fill}.svg`);
+
+   const mailtoIcon = document.querySelector('.mailto__icon');
+   mailtoIcon.setAttribute('src', `build/img/mailto-${fill}.svg`);
+
+   const githubIcon = document.querySelector('.github-icon');
+   githubIcon.setAttribute('src', `build/img/github-${fill}.svg`);
 }

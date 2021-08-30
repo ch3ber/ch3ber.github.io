@@ -13,5 +13,11 @@
    .footer {
       background-color: $terciario-dark;
    }
+   .header {
+      background: $primario-dark;
+      box-shadow:  20px 20px 40px #20242D,
+      -20px -20px 40px #3C4453;
+   }
+   transition: background-color 0.1s linear;
 }
 
