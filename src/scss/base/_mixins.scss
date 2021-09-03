@@ -1,44 +1,51 @@
 /** Media Queries **/
 @mixin phone {
-    @media (min-width: #{$phone}) {
-        @content;
-    }
+   @media (min-width: #{$phone}) { @content; }
 }
-
 @mixin tablet {
-    @media (min-width: #{$tablet}) {
-        @content;
-    }
+   @media (min-width: #{$tablet}) { @content; }
 }
-  
 @mixin pc {
-    @media (min-width: #{$pc}) {
-        @content;
-    }
+   @media (min-width: #{$pc}) { @content; }
 }
-@mixin grid($columns, $gap ) {
-    display: grid;
-    gap: $gap;
-    grid-template-columns: repeat($columns, 1fr);
-}
-@mixin createButton($style) {
-   padding: 2rem;
-   @if style == 'fill' {
+//buttons
+@mixin button($fill, $color) {
+   padding: 1rem;
+   color: $color;
+   border-radius: 2rem;
+   font-size: 2rem;
+   text-align: center;
+   @if $fill {
       background-color: $secundario;
+      color: $text;
+      border: none;
+   } @else {
+      border: 2px solid $color;
    }
 }
-@mixin avatar($size, $circle: false) {
-  width: $size;
-  height: $size;
-
-  @if $circle {
-    //border-radius: $size / 2;
-  }
+//neumorphism
+@mixin neumorphism($type, $borderRadius: true) {
+   @if $borderRadius { border-radius: 2rem; }
+   @if $type == white {
+      background-color: $primario;
+      box-shadow:  20px 20px 40px #b3b3b3,
+                  -20px -20px 40px #ffffff;
+   } @else {
+      background-color: $secundario-dark;
+      box-shadow:  20px 20px 40px #292E39,
+                  -20px -20px 40px #4D566B;
+   }
 }
-
-.square-av {
-  @include avatar(100px, $circle: false);
-}
-.circle-av {
-  @include avatar(100px, $circle: true);
+//neumorphism inset
+@mixin neumorphism-inset($type) {
+   padding: 3rem;
+   @if $type == white {
+      background-color: $primario;
+      box-shadow: inset 3px 3px 6px #b3b3b3,
+                  inset -3px -3px 6px #ffffff;
+   } @else {
+      background-color: $secundario-dark;
+      box-shadow: inset 3px 3px 6px #20242D,
+                  inset -3px -3px 6px #3C4453;
+   }
 }

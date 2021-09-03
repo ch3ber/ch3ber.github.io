@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
    //alert('Esta pagina esta en desarrollo');
    createWaves(userPreferencesMode.matches ? 'dark' : 'white');
    renderIcons(userPreferencesMode.matches ? 'white' : 'dark');
-   createTargets();
+   createCards();
    createServicios();
    setYear();
    showMenu();
@@ -18,13 +18,13 @@ let hasDarkMode = userPreferencesMode.matches;
 
 // datos globales de la app
 const DATA_APP = {
-   pagina1: 'Lorem1 ipsum dolor sit amet, consectetur adipiscing elit. scelerisque netus. Nam placerat fames enim mauris enim nec.',
-   pagina2: 'Lorem2 ipsum dolor sit amet, consectetur adipiscing elit. scelerisque netus. Nam placerat fames enim mauris enim nec.',
-   pagina3: 'Lorem3 ipsum dolor sit amet, consectetur adipiscing elit. scelerisque netus. Nam placerat fames enim mauris enim nec.',
+   pagina1: 'Un festival ficticio de Rock y EDM, tiene un video en loop, menu sticky usando javascript y una galeria creada con javascript',
+   pagina2: 'Portafolio web Freelancer (no usado) overlay en header y formulario de contacto usando CSS grid',
+   pagina3: 'Blog con diferentes entradas, SEO, performance y validación de datos en el formulario usando javascript',
    link1: 'https://eber-festival-musica.vercel.app',
    link2: 'https://eber-template1.netlify.app',
    link3: 'https://eber-blogdecafe.netlify.app',
-   code1: 'https://github.com/ch3ber/',
+   code1: 'https://github.com/ch3ber/festival-musica',
    code2: 'https://github.com/ch3ber/',
    code3: 'https://github.com/ch3ber/',
    servicio1: 'Social media integration',
@@ -57,7 +57,6 @@ function scrollNav() {
 function navShadow() {
    //registrat el intersection observer
    const observer = new IntersectionObserver(function(entries) {
-      console.log(entries);
       if (entries[0].isIntersecting) {
          document.querySelector('.nav').classList.remove('shadow');
       } else {
@@ -68,8 +67,8 @@ function navShadow() {
    observer.observe(document.querySelector('h1'));
 }
 
-// funcion para crear las targets de la seccion portafolio
-function createTargets() {
+// funcion para crear las cards de la seccion portafolio
+function createCards() {
    for (let i=1; i < 4; i++) {
       
       //agregar imagen sobre el sitio web
@@ -82,13 +81,15 @@ function createTargets() {
 
       //creacion de bottones dentro de un contenedor
       const buttonsContainer = document.createElement('DIV');
+      buttonsContainer.classList.add('card__buttons');
       const button1 = createButton('ver sitio web', 'fill', DATA_APP[`link${i}`]);
       const button2 = createButton('ver codigo', 'ghost', DATA_APP[`code${i}`]);
       buttonsContainer.append(button1, button2);
 
-      const target = document.createElement('DIV');
-      target.append(img, description, buttonsContainer);
-      document.querySelector('.targetsPortafolio').append(target);
+      const card = document.createElement('DIV');
+      card.classList.add('portafolio__card');
+      card.append(img, description, buttonsContainer);
+      document.querySelector('#portafolio').append(card);
    }
 }
 
@@ -98,6 +99,7 @@ function createButton(content, style, href) {
    element.innerHTML = content;
    element.classList.add(`button-${style}`);
    element.href = href;
+   element.setAttribute('target', '_blank');
    return element;
 }
 
@@ -113,9 +115,10 @@ function createServicios() {
       const img = document.createElement('IMG');
       img.setAttribute('src', `build/img/servicio${i}.svg`);
 
-      const target = document.createElement('DIV');
-      target.append(title, description, img);
-      document.querySelector('.targetsServicios').append(target);
+      const card = document.createElement('DIV');
+      card.classList.add('servicio');
+      card.append(title, description, img);
+      document.querySelector('#servicios').append(card);
    }
 }
 

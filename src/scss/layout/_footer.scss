@@ -8,5 +8,14 @@
       text-align: center;
       padding: 0;
    }
+   a {
+      display: grid;
+      place-items: center center;
+      padding: 1.5rem;
+      @include neumorphism(white);
+      &:hover {
+         background-color: darken($primario, 10);
+      }
+   }
 }
 
