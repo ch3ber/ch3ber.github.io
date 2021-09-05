@@ -1,12 +1,11 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', function() {
-   //alert('Esta pagina esta en desarrollo');
    createWaves(userPreferencesMode.matches ? 'dark' : 'white');
    renderIcons(userPreferencesMode.matches ? 'white' : 'dark');
    createCards();
    createServicios();
    setYear();
-   showMenu();
+   toggleMenuResponsive();
    scrollNav();
    darkMode(hasDarkMode);
    navShadow();
@@ -55,7 +54,7 @@ function scrollNav() {
 }
 
 function navShadow() {
-   //registrat el intersection observer
+   //verificar si el elemento se encuentra en observacion
    const observer = new IntersectionObserver(function(entries) {
       if (entries[0].isIntersecting) {
          document.querySelector('.nav').classList.remove('shadow');
@@ -86,6 +85,7 @@ function createCards() {
       const button2 = createButton('ver codigo', 'ghost', DATA_APP[`code${i}`]);
       buttonsContainer.append(button1, button2);
 
+      //crear card e insertar en la seccion de portafolio
       const card = document.createElement('DIV');
       card.classList.add('portafolio__card');
       card.append(img, description, buttonsContainer);
@@ -130,12 +130,14 @@ function setYear() {
 }
 
 //menu responsive
-function showMenu() {
+function toggleMenuResponsive() {
+   //mostrar el menu responsive
    document.getElementById('menuIcon').addEventListener('click', show);
    function show() {
       document.querySelector('.nav').classList.toggle('nav--show');
       document.body.classList.toggle('static');
    }
+   //ocultar el menu responsive
    document.querySelectorAll('.nav__link').forEach(link => link.addEventListener('click', remove));
    function remove() {
       document.querySelector('.nav').classList.remove('nav--show');
@@ -145,11 +147,13 @@ function showMenu() {
 
 //cambiar el color de la pagina
 function darkMode(userPreferencesDark = null) {
+   //lee las preferencias del usuario para definir el color de la pagina
    if (userPreferencesDark) {
       document.body.classList.add('dark');
       createWaves('dark');
       renderIcons('white');
    }
+   //cambiar color de pagina al dar click al icono de luna
    document.getElementById('colorToggle').addEventListener('click', darkModeToggle);
    function darkModeToggle() {
       document.body.classList.toggle('dark');
@@ -161,15 +165,8 @@ function darkMode(userPreferencesDark = null) {
 
 //renderizar los iconos segun el color de la pagina
 function renderIcons(fill) {
-   const menuIcon = document.querySelector('.menu-icon');
-   menuIcon.setAttribute('src', `build/img/menu-${fill}.svg`);
-
-   const moonIcon = document.querySelector('.moon-icon');
-   moonIcon.setAttribute('src', `build/img/moon-${fill}.svg`);
-
-   const mailtoIcon = document.querySelector('.mailto__icon');
-   mailtoIcon.setAttribute('src', `build/img/mailto-${fill}.svg`);
-
-   const githubIcon = document.querySelector('.github-icon');
-   githubIcon.setAttribute('src', `build/img/github-${fill}.svg`);
+   document.querySelector('.menu-icon').setAttribute('src', `build/img/menu-${fill}.svg`);
+   document.querySelector('.moon-icon').setAttribute('src', `build/img/moon-${fill}.svg`);
+   document.querySelector('.mailto__icon').setAttribute('src', `build/img/mailto-${fill}.svg`);
+   document.querySelector('.github-icon').setAttribute('src', `build/img/github-${fill}.svg`);
 }
