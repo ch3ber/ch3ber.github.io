@@ -21,11 +21,14 @@ const DATA_APP = {
    pagina2: 'Portafolio web Freelancer (no usado) overlay en header y formulario de contacto usando CSS grid',
    pagina3: 'Blog con diferentes entradas, SEO, performance y validación de datos en el formulario usando javascript',
    link1: 'https://eber-festival-musica.vercel.app',
-   link2: 'https://eber-template1.netlify.app',
-   link3: 'https://eber-blogdecafe.netlify.app',
+   link2: 'https://ch3ber-freelancer-website.netlify.app',
+   link3: 'https://ch3ber-blogdecafe.netlify.app',
+   alt1: 'Pagina web Festival de musica',
+   alt2: 'Pagina web Freelancer',
+   alt3: 'Pagina web Blog de cafe',
    code1: 'https://github.com/ch3ber/festival-musica',
-   code2: 'https://github.com/ch3ber/',
-   code3: 'https://github.com/ch3ber/',
+   code2: 'https://github.com/ch3ber/freelancer-website',
+   code3: 'https://github.com/ch3ber/BlogDeCafe',
    servicio1: 'Social media integration',
    servicio2: 'SEO',
    servicio3: 'Optimizacion',
@@ -73,6 +76,7 @@ function createCards() {
       //agregar imagen sobre el sitio web
       const img = document.createElement('IMG');
       img.setAttribute('src', `build/img/pagina${i}.png`);
+      img.setAttribute('alt', DATA_APP[`alt${i}`]);
 
       //agregar la descripcion sobre el sitio web
       const description = document.createElement('P');
@@ -94,12 +98,13 @@ function createCards() {
 }
 
 //funcion para crear botones
-function createButton(content, style, href) {
+function createButton(content, style, href, rel = true) {
    const element = document.createElement('A');
    element.innerHTML = content;
    element.classList.add(`button-${style}`);
    element.href = href;
    element.setAttribute('target', '_blank');
+   if (rel) { element.setAttribute('rel', 'noreferrer'); }
    return element;
 }
 
@@ -114,6 +119,7 @@ function createServicios() {
 
       const img = document.createElement('IMG');
       img.setAttribute('src', `build/img/servicio${i}.svg`);
+      img.setAttribute('alt', DATA_APP[`servicio${i}`]);
 
       const card = document.createElement('DIV');
       card.classList.add('servicio');
