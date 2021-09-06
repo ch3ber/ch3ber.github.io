@@ -75,9 +75,11 @@ function createCards() {
       
       //agregar imagen sobre el sitio web
       const img = document.createElement('IMG');
-      document.querySelector('html').classList[0] == 'webp'
-         ? img.setAttribute('src', `build/img/pagina${i}.webp`)
-         : img.setAttribute('src', `build/img/pagina${i}.png`);
+      if (document.querySelector('html').classList.contains('webp')) {
+         img.setAttribute('src', `build/img/pagina${i}.webp`);
+      } else {
+         img.setAttribute('src', `build/img/pagina${i}.png`);
+      }
 
       img.setAttribute('alt', DATA_APP[`alt${i}`]);
 
