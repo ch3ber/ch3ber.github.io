@@ -55,7 +55,8 @@
          .tecnologias__using,
          .tecnologias__learning{
             display: flex;
-            font-family: $fuenteBold;
+            font-family: $fontBase;
+            font-weight: bold; //700
             flex-direction: column;
             justify-content: center;
             align-items: center;

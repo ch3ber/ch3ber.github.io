@@ -13,7 +13,8 @@
    }
    .nav__link {
       color: $text;
-      font-family: $fuenteRegular;
+      font-family: $fontBase;
+      font-weight: normal;
       display: none;
    }
 }
