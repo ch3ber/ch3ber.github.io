@@ -1,15 +1,16 @@
-'use strict';
+import React from 'react'
+import ReactDOM from 'react-dom';
 import '@styles/app.scss';
+import { App } from './App.jsx';
+
+ReactDOM.render(<App />, document.getElementById('app'));
+
 document.addEventListener('DOMContentLoaded', function() {
    createWaves(userPreferencesMode.matches ? 'dark' : 'white');
    renderIcons(userPreferencesMode.matches ? 'white' : 'dark');
-   createCards();
    createServicios();
-   setYear();
    toggleMenuResponsive();
-   scrollNav();
    darkMode(hasDarkMode);
-   navShadow();
 });
 
 //leer preferencias del usuario sobre el dark mode
@@ -46,74 +47,6 @@ function createWaves(fill) {
    document.querySelectorAll('.wave').forEach(wave => wave.setAttribute('src', `assets/img/wave-${fill}.svg`));
 }
 
-//mover a la seccion indicada que selecciono el usuario en el menu
-function scrollNav() {
-   document.querySelectorAll('.nav__link').forEach(enlace => {
-      enlace.addEventListener('click', event => {
-         event.preventDefault();
-         const seccion = document.querySelector(event.target.attributes.href.value);
-         seccion.scrollIntoView({ behavior: 'smooth' });
-      })
-   });
-}
-
-function navShadow() {
-   //verificar si el elemento se encuentra en observacion
-   const observer = new IntersectionObserver(function(entries) {
-      if (entries[0].isIntersecting) {
-         document.querySelector('.nav').classList.remove('shadow');
-      } else {
-         document.querySelector('.nav').classList.add('shadow');
-      }
-   });
-   //elemento a observar
-   observer.observe(document.querySelector('h1'));
-}
-
-// funcion para crear las cards de la seccion portafolio
-function createCards() {
-   for (let i=1; i < 4; i++) {
-      
-      //agregar imagen sobre el sitio web
-      const img = document.createElement('IMG');
-      if (document.querySelector('html').classList.contains('webp')) {
-         img.setAttribute('src', `assets/img/pagina${i}.webp`);
-      } else {
-         img.setAttribute('src', `assets/img/pagina${i}.png`);
-      }
-
-      img.setAttribute('alt', DATA_APP[`alt${i}`]);
-
-      //agregar la descripcion sobre el sitio web
-      const description = document.createElement('P');
-      description.textContent = DATA_APP[`pagina${i}`];
-
-      //creacion de bottones dentro de un contenedor
-      const buttonsContainer = document.createElement('DIV');
-      buttonsContainer.classList.add('card__buttons');
-      const button1 = createButton('ver sitio web', 'fill', DATA_APP[`link${i}`]);
-      const button2 = createButton('ver codigo', 'ghost', DATA_APP[`code${i}`]);
-      buttonsContainer.append(button1, button2);
-
-      //crear card e insertar en la seccion de portafolio
-      const card = document.createElement('DIV');
-      card.classList.add('portafolio__card');
-      card.append(img, description, buttonsContainer);
-      document.querySelector('#portafolio').append(card);
-   }
-}
-
-//funcion para crear botones
-function createButton(content, style, href, rel = true) {
-   const element = document.createElement('A');
-   element.innerHTML = content;
-   element.classList.add(`button-${style}`);
-   element.href = href;
-   element.setAttribute('target', '_blank');
-   if (rel) { element.setAttribute('rel', 'noreferrer'); }
-   return element;
-}
-
 //crear seccion de servicios
 function createServicios() {
    for (let i=1; i < 5; i++) {
@@ -132,13 +65,6 @@ function createServicios() {
       card.append(title, description, img);
       document.querySelector('#servicios').append(card);
    }
-}
-
-//definir el ano de copyright
-function setYear() {
-   const date = new Date;
-   const year = date.getFullYear();
-   document.getElementById('year').textContent = year;
 }
 
 //menu responsive

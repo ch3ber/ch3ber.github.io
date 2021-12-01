@@ -14,7 +14,7 @@ module.exports = {
    mode: 'development',
    devtool: 'source-map',
    resolve: {
-      extensions: ['.js'],
+      extensions: ['.js', 'jsx'],
       alias: {
          '@styles': path.resolve(__dirname, 'src/scss/'),
          '@images': path.resolve(__dirname, 'src/img/'),
@@ -23,10 +23,16 @@ module.exports = {
    module: {
       rules: [
          {
-            test: /\.m?js$/,
+            test: /\.(js|jsx)$/,
             exclude: /node_modules/,
             use: {
-               loader: 'babel-loader'
+               loader: 'babel-loader',
+               options: {
+                  presets: [
+                     '@babel/preset-env',
+                     '@babel/preset-react'
+                  ]
+               }
             }
          },
          {

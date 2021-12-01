@@ -24,8 +24,6 @@
          text-align: center;
       }
       .card__buttons {
-         .button-fill { @include button($fill: true, $color: $text); }
-         .button-ghost { @include button($fill: false, $color: $text); }
          padding-bottom: 3rem;
          display: flex;
          justify-content: space-evenly;
