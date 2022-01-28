@@ -1,2 +1,0 @@
-.button-fill { @include button($fill: true, $color: $text); }
-.button-ghost { @include button($fill: false, $color: $text); }
