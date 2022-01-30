@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import { mainTheme } from './themes/main'
 
 export const GlobalStyles = createGlobalStyle`
 *,
@@ -16,8 +15,8 @@ html {
 body {
   font-size: 1.6rem;
   font-family: Arial, Helvetica, sans-serif;
-  color: ${mainTheme.colors.white};
-  background-color: ${mainTheme.colors.black900};
+  color: ${({ theme }) => theme.fonts.regular};
+  background-color: ${({ theme }) => theme.background.dark};
 }
 img {
   width: 100%;
@@ -25,6 +24,6 @@ img {
 }
 a {
   text-decoration: none;
-  color: ${mainTheme.colors.white}
+  color: ${({ theme }) => theme.fonts.regular};
 }
 `

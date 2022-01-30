@@ -6,15 +6,18 @@ import {
   ContainerButtons,
   Header,
   HeaderContent,
+  ArrowContainer,
   Arrow
 } from './styles'
-import { LinkButton } from '../../components/NavBar/LinkButton'
-import { AiOutlineArrowDown } from 'react-icons/ai'
+import { LinkButton } from '../../components/LinkButton'
+import { BsMouse2Fill } from 'react-icons/bs'
 
 import profilePicture from '../../assets/img/profilePicture.jpg'
 
 export const Home = () => {
-  const SIZE = '50px'
+  const SIZE = 50
+  const MOUSE_SIZE = 30
+
   return (
     <Container>
       <Header>
@@ -41,7 +44,10 @@ export const Home = () => {
         </LinkButton>
       </ContainerButtons>
 
-      <Arrow size={SIZE} />
+      <ArrowContainer>
+        <BsMouse2Fill size={`${MOUSE_SIZE}px`} />
+        <Arrow size={`${SIZE}px`} />
+      </ArrowContainer>
     </Container>
   )
 }

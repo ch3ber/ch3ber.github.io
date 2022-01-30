@@ -1,8 +1,8 @@
-export const mainTheme = {
+export const lightTheme = {
   background: {
-    dark: '#121217',
-    regular: '#1B1B22',
-    light: '#1F1F28'
+    dark: '#dddddd',
+    regular: '#eeeeee',
+    light: '#ffffff'
   },
   primary: {
     dark: '#4F5A7D',
@@ -19,10 +19,10 @@ export const mainTheme = {
     white200: '#CED3DF'
   },
   nav: {
-    linkBaground: '#292930',
-    linkForeground: '#717178'
+    linkBaground: '#a5a5a5',
+    linkForeground: '#efefef'
   },
   fonts: {
-    regular: '#ffffff'
+    regular: '#191919'
   }
 }

@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import { mainTheme } from '../../../styles/themes/main'
 
 export const A = styled.a`
   padding: 1rem;
-  background-color: ${mainTheme.colors.primary600};
-  border: 3px solid ${mainTheme.colors.primary600};
+  background-color: ${({ theme }) => theme.primary.regular};
+  border: 3px solid ${({ theme }) => theme.primary.regular};
   border-radius: 1rem;
   display: grid;
   place-content: center center;
