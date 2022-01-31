@@ -17,6 +17,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: ${({ theme }) => theme.fonts.regular};
   background-color: ${({ theme }) => theme.background.dark};
+  transition: background-color 300ms ease-out;
 }
 img {
   width: 100%;

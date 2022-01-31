@@ -10,7 +10,7 @@ export const Nav = styled.nav`
   background-color: ${({ theme }) => theme.background.regular};
   display: grid;
   place-content: center center;
-  height: 7rem;
+  height: ${({ theme }) => theme.nav.height};
 `
 
 export const Ul = styled.ul`
@@ -31,7 +31,7 @@ export const Link = styled(LinkRouter)`
   background-color: ${({ theme }) => theme.nav.linkBaground};
   border-radius: 1rem;
   color: ${({ theme }) => theme.nav.linkForeground};
-  transition: all 300ms ease;
+  transition: all 300ms ease-out;
 
   &[aria-current] {
     color: ${({ theme }) => theme.mono.white};

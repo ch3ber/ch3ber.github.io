@@ -1,10 +1,12 @@
 import React from 'react'
-import { Container, Title } from './styles'
+import { Container, Title, TitleContainer } from './styles'
 
 export const SimpleCard = ({ title, children }) => {
   return (
     <Container>
-      <Title>{title}</Title>
+      <TitleContainer>
+        <Title>{title}</Title>
+      </TitleContainer>
       {children}
     </Container>
   )

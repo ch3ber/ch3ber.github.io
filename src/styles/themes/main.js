@@ -20,9 +20,13 @@ export const mainTheme = {
   },
   nav: {
     linkBaground: '#292930',
-    linkForeground: '#717178'
+    linkForeground: '#717178',
+    height: '7rem'
   },
   fonts: {
     regular: '#ffffff'
+  },
+  shadows: {
+    backgroundRegular: 'rgba(40, 40, 49, 0.75)'
   }
 }

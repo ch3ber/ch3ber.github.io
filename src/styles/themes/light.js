@@ -20,9 +20,13 @@ export const lightTheme = {
   },
   nav: {
     linkBaground: '#a5a5a5',
-    linkForeground: '#efefef'
+    linkForeground: '#efefef',
+    height: '7rem'
   },
   fonts: {
     regular: '#191919'
+  },
+  shadows: {
+    backgroundRegular: 'rgba(40, 40, 49, 0.75)'
   }
 }
