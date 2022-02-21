@@ -10,6 +10,7 @@ import { mainTheme } from './styles/themes/main'
 import { lightTheme } from './styles/themes/light'
 
 import { Home } from './pages/home'
+import { MyWork } from './pages/MyWork'
 
 import { NavBar } from './components/NavBar'
 import { ToggleTheme } from './components/ToggleTheme'
@@ -25,7 +26,7 @@ export const App = () => {
         <ToggleTheme />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/mywork' element={<p>mywork</p>} />
+          <Route path='/mywork' element={<MyWork />} />
           <Route path='/services' element={<p>services</p>} />
           <Route path='/contact' element={<p>contact</p>} />
           <Route path='*' element={<p>Error404</p>} />

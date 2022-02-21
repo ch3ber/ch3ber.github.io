@@ -5,7 +5,7 @@ import { AiOutlineArrowDown } from 'react-icons/ai'
 export const Container = styled.main`
   max-width: min(90%, 1200px);
   margin: 0 auto;
-  padding-bottom: ${({ theme }) => `calc(${theme.nav.height} + 3rem)`};
+  padding-bottom: ${({ theme }) => `calc(${theme.nav.height} + 1rem)`};
 `
 export const Header = styled.header`
   text-align: center;
@@ -84,7 +84,7 @@ export const CardsContainer = styled.div`
   margin-top: 10rem;
   display: grid;
   grid-auto-flow: row;
-  grid-gap: 8rem;
+  grid-gap: 5rem;
 `
 export const IconsContainer = styled.div`
   color: ${({ theme }) => theme.primary.regular};

@@ -10,7 +10,7 @@ export const Container = styled.div`
   width: 95%;
   margin: 0 auto;
   padding: 3rem;
-  padding-top: 4rem;
+  margin-top: 4.5rem;
   background-color: ${({ theme }) => theme.background.light};
   border-radius: 1rem;
   position: relative;
