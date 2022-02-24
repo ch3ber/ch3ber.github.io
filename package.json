@@ -10,7 +10,8 @@
     "serve:dev": "webpack --config 'webpack.config.dev.js' && npx serve dist -s",
     "serve:build": "webpack && npx serve dist -s",
     "lint": "standard",
-    "lint-fix": "standard --fix"
+    "lint-fix": "standard --fix",
+    "deploy": "webpack --mode produciton && bash predeploy.sh"
   },
   "repository": {
     "type": "git",

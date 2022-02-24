@@ -1,11 +1,9 @@
 const path = require('path')
 const CopyPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
+// const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -24,24 +22,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
-      },
-      {
-        test: /\.scss|.s[ac]ss$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              implementation: require.resolve('sass')
-            }
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
           }
-        ]
+        }
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
