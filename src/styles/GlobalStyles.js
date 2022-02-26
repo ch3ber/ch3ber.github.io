@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { media } from './breakpoints'
 
 export const GlobalStyles = createGlobalStyle`
 *,
@@ -18,6 +19,13 @@ body {
   color: ${({ theme }) => theme.fonts.regular};
   background-color: ${({ theme }) => theme.background.dark};
   transition: background-color 300ms ease-out;
+
+  ${media.sm} {
+    font-size: 1.8rem;
+  }
+  ${media.lg} {
+    font-size: 2rem;
+  }
 }
 img {
   width: 100%;

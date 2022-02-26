@@ -1,6 +1,8 @@
 import styled, { keyframes } from 'styled-components'
 import { Link as LinkRouter } from 'react-router-dom'
 import { AiOutlineArrowDown } from 'react-icons/ai'
+import { media } from '../../styles/breakpoints'
+import { SimpleCard } from '../../components/SimpleCard'
 
 export const Container = styled.main`
   max-width: min(90%, 1200px);
@@ -9,6 +11,24 @@ export const Container = styled.main`
 `
 export const Header = styled.header`
   text-align: center;
+
+  ${media.md} {
+    padding-top: 10rem;
+  }
+
+  ${media.lg} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  ${media.xl} {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    max-width: 70%;
+  }
 `
 export const HeaderContent = styled.div`
   margin-bottom: 5rem;
@@ -27,6 +47,18 @@ export const HeaderContent = styled.div`
     max-width: 75%;
     margin: 0 auto;
   }
+
+  ${media.lg} {
+    h1 {
+      font-size: 6rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
 `
 export const Img = styled.img`
   margin-top: 7rem;
@@ -34,6 +66,11 @@ export const Img = styled.img`
   width: 15rem;
   border-radius: 50%;
   border: 5px dashed ${({ theme }) => theme.secondary.regular};
+
+  ${media.lg} {
+    margin: 0;
+    width: 17rem;
+  }
 `
 
 export const ContainerButtons = styled.div`
@@ -42,6 +79,14 @@ export const ContainerButtons = styled.div`
   gap: 3rem;
   width: fit-content;
   margin: 0 auto;
+
+  ${media.xs} {
+    flex-direction: row;
+  }
+
+  ${media.lg} {
+    gap: 10rem;
+  }
 `
 
 export const Link = styled(LinkRouter)`
@@ -64,6 +109,13 @@ export const ArrowContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${media.md} {
+    margin: 8rem 0;
+  }
+  ${media.xl} {
+    margin: 13rem 0;
+  }
 `
 function animateArrow () {
   return keyframes`
@@ -85,6 +137,24 @@ export const CardsContainer = styled.div`
   display: grid;
   grid-auto-flow: row;
   grid-gap: 5rem;
+
+  ${media.lg} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+`
+export const Tools = styled.div`
+  ${media.lg} {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+`
+export const Tecnologies = styled.div`
+  ${media.lg} {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
 `
 export const IconsContainer = styled.div`
   color: ${({ theme }) => theme.primary.regular};
@@ -95,11 +165,13 @@ export const IconsContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
 `
+export const IconsCard = styled(SimpleCard)`
+  height: 100%;
+`
 export const EsBarProgress = styled.div`
   width: 100%;
   height: 1rem;
   background-color: ${({ theme }) => theme.primary.regular};
-  position: relative;
   border-radius: 1rem;
 `
 export const IgBarProgress = styled.div`
@@ -108,11 +180,12 @@ export const IgBarProgress = styled.div`
   background-color: ${({ theme }) => theme.primary.regular};
   position: relative;
   border-radius: 1rem;
-
-  &::before {
-    width: 50%;
-    height: 1rem;
-    position: absolute;
-    background-color: ${({ theme }) => theme.primary.dark};
-  }
+`
+export const IgProgress = styled.div`
+  width: 50%;
+  height: 1rem;
+  position: relative;
+  top: -1rem;
+  background-color: ${({ theme }) => theme.primary.dark};
+  border-radius: 1rem;
 `

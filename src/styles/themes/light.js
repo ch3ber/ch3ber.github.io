@@ -1,8 +1,8 @@
 export const lightTheme = {
   background: {
-    dark: '#dddddd',
-    regular: '#eeeeee',
-    light: '#ffffff'
+    dark: '#ffffff',
+    regular: '#efefef',
+    light: '#f7f7f7'
   },
   primary: {
     dark: '#4F5A7D',
@@ -24,9 +24,9 @@ export const lightTheme = {
     height: '7rem'
   },
   fonts: {
-    regular: '#191919'
+    regular: '#1D1C23'
   },
   shadows: {
-    backgroundRegular: 'rgba(40, 40, 49, 0.75)'
+    backgroundRegular: 'rgba(200, 200, 210, 0.75)'
   }
 }

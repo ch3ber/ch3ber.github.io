@@ -11,9 +11,13 @@ import {
   ArrowContainer,
   Arrow,
   CardsContainer,
+  Tecnologies,
+  Tools,
   IconsContainer,
+  IconsCard,
   EsBarProgress,
-  IgBarProgress
+  IgBarProgress,
+  IgProgress
 } from './styles'
 
 // import icons
@@ -40,14 +44,6 @@ import { SimpleCard } from '../../components/SimpleCard'
 import profilePicture from '../../assets/img/profilePicture.jpg'
 import { PageTitle } from '../../components/PageTitle'
 import { Footer } from '../../components/Footer'
-
-const IconsCard = ({ title, children }) => {
-  return (
-    <SimpleCard title={title}>
-      <IconsContainer>{children}</IconsContainer>
-    </SimpleCard>
-  )
-}
 
 export const Home = () => {
   const ARROW_SIZE = 50
@@ -88,22 +84,30 @@ export const Home = () => {
       <PageTitle isSubTilte>Habilidades y conocimientos</PageTitle>
 
       <CardsContainer>
-        <IconsCard title='Lenguajes Y Tecnologias'>
-          <FaHtml5 size={ICONS_SIZE} />
-          <FaCss3Alt size={ICONS_SIZE} />
-          <FaSass size={ICONS_SIZE} />
-          <FaReact size={ICONS_SIZE} />
-          <FaGitAlt size={ICONS_SIZE} />
-          <SiJavascript size={ICONS_SIZE} />
-          <SiWebpack size={ICONS_SIZE} />
-          <SiStyledcomponents size={ICONS_SIZE} />
-        </IconsCard>
+        <Tecnologies>
+          <IconsCard title='Lenguajes Y Tecnologias' data-category='teclogies'>
+            <IconsContainer>
+              <FaHtml5 size={ICONS_SIZE} />
+              <FaCss3Alt size={ICONS_SIZE} />
+              <FaSass size={ICONS_SIZE} />
+              <FaReact size={ICONS_SIZE} />
+              <FaGitAlt size={ICONS_SIZE} />
+              <SiJavascript size={ICONS_SIZE} />
+              <SiWebpack size={ICONS_SIZE} />
+              <SiStyledcomponents size={ICONS_SIZE} />
+            </IconsContainer>
+          </IconsCard>
+        </Tecnologies>
 
-        <IconsCard title='Herramientas'>
-          <FaFigma size={ICONS_SIZE} />
-          <SiNetlify size={ICONS_SIZE} />
-          <SiNeovim size={ICONS_SIZE} />
-        </IconsCard>
+        <Tools>
+          <SimpleCard title='Herramientas' data-category='tools'>
+            <IconsContainer>
+              <FaFigma size={ICONS_SIZE} />
+              <SiNetlify size={ICONS_SIZE} />
+              <SiNeovim size={ICONS_SIZE} />
+            </IconsContainer>
+          </SimpleCard>
+        </Tools>
 
         <SimpleCard title='Idiomas'>
           <div>
@@ -114,6 +118,7 @@ export const Home = () => {
           <div>
             <p>Ingles</p>
             <IgBarProgress />
+            <IgProgress />
             <p>50%</p>
           </div>
         </SimpleCard>
