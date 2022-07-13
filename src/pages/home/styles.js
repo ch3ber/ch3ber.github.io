@@ -8,6 +8,11 @@ export const Container = styled.main`
   max-width: min(90%, 1200px);
   margin: 0 auto;
   padding-bottom: ${({ theme }) => `calc(${theme.nav.height} + 1rem)`};
+
+  ${media.lg} {
+    padding: 0;
+    padding-left: ${({ theme }) => `calc(${theme.nav.height} + 1rem)`};
+  }
 `
 export const Header = styled.header`
   text-align: center;
@@ -54,6 +59,7 @@ export const HeaderContent = styled.div`
     }
     h2 {
       font-size: 3rem;
+      text-align: left;
     }
     p {
       font-size: 2rem;

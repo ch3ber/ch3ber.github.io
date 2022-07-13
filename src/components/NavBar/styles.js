@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { NavLink as LinkRouter } from 'react-router-dom'
 import { shadow } from '../../styles/effects'
+import { media } from '../../styles/breakpoints'
 
 export const Nav = styled.nav`
   position: fixed;
@@ -11,6 +12,14 @@ export const Nav = styled.nav`
   display: grid;
   place-content: center center;
   height: ${({ theme }) => theme.nav.height};
+
+  ${media.lg} {
+    top: 0;
+    left: 0;
+    right: unset;
+    height: 100vh;
+    width: ${({ theme }) => theme.nav.height};
+  }
 `
 
 export const Ul = styled.ul`
@@ -21,6 +30,10 @@ export const Ul = styled.ul`
   justify-content: space-between;
   align-items: center;
   gap: 4rem;
+
+  ${media.lg} {
+    flex-direction: column;
+  }
 `
 
 export const Link = styled(LinkRouter)`
