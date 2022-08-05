@@ -1,3 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .title-1 {
+    @apply text-5xl font-bold text-center;
+  }
+  .title-2 {
+    @apply text-3xl font-bold text-center;
+  }
+  .title-3 {
+    @apply text-lg font-bold mb-2;
+  }
+  .project-card {
+    @apply bg-snow-100 dark:bg-polar-100 rounded-lg overflow-hidden;
+  }
+  .project-card__buttons {
+    @apply flex justify-around items-center mt-6;
+  }
+  .project-card__body {
+    @apply p-5;
+  }
+
+  .btn-fill {
+    @apply px-4 py-2 rounded text-polar-400 neumorphism dark:neumorphism-polar transition hover:shadow-none;
+  }
+  .btn-ghost {
+    @apply border-2 px-4 py-2 rounded border-frost-200 transition hover:border-frost-100;
+  }
+}
+
+@layer utilities {
+  .neumorphism {
+    @apply bg-[#ffffff] border border-snow-100;
+    box-shadow:  10px 10px 15px #d9d9d9,
+                -10px -10px 15px #ffffff;
+  }
+  .neumorphism-dark {
+    @apply bg-polar-400 border-none text-snow-100;
+    box-shadow:  10px 10px 15px #272c36,
+                -10px -10px 15px #353c4a;
+  }
+  .neumorphism-polar {
+    @apply bg-polar-100 border-none text-snow-100;
+    box-shadow:  15px 15px 30px #41495a,
+                -15px -15px 30px #57637a;
+  }
+}

@@ -1,11 +1,16 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
+
 module.exports = {
+  darkMode: 'class',
   content: [
     './index.html',
     './src/**/*.{vue,js,ts,jsx,tsx}'
   ],
   theme: {
     colors: {
+      zinc: colors.zinc,
       polar: {
         100: '#4C566A',
         200: '#434C5E',
@@ -31,7 +36,11 @@ module.exports = {
         purple: '#B48EAD'
       }
     },
-    extend: {}
+    extend: {
+      fontFamily: {
+        sans: ['Nunito', ...defaultTheme.fontFamily.sans]
+      }
+    }
   },
   plugins: []
 }

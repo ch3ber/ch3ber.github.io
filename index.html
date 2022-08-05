@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es-mx">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Eber Alejo un Freelancer en el desarrollo web&comma; apasionado de linux y la programación"
+      content="Eber Alejo un Freelancer en el desarrollo web, apasionado de linux y la programación"
     />
 
     <!--preload css-->
@@ -14,47 +14,48 @@
     <!--<link rel="preload" href="build/img/moon-white.svg" as="image">-->
     <!--<link rel="preload" href="build/img/moon-dark.svg" as="image">-->
     <!--<link rel="preload" href="build/img/eberalejo.jpg" as="image">-->
-<script src="https://kit.fontawesome.com/0d89849159.js" crossorigin="anonymous"></script>
-    <title>Eber Alejo &dash; Desarrollador web Frontend</title>
+    <script src="https://kit.fontawesome.com/0d89849159.js" crossorigin="anonymous"></script>
+    <title>Eber Alejo - Desarrollador Web Frontend</title>
   </head>
 
-  <body class="bg-polar-400 text-snow-100">
-    <nav id="nav" class="flex justify-between py-7 px-10">
-      <span id="toggleNav">
-         <img class="menu-icon" alt="Menu icon" src="/src/public/img/menu-white.svg" />
-      </span>
-      <div class="">
-        <a class="nav__link" href="#portafolio">Portafolio</a>
-        <a class="nav__link" href="#servicios">Servicios</a>
-        <a class="nav__link" href="#contacto">Contacto</a>
+  <body class="dark:bg-polar-400 text-polar-100 dark:text-snow-100">
+    <nav id="nav" class="z-10 bg-[#ffffff] dark:bg-polar-400 sticky top-0 left-0 right-0 flex items-center justify-between py-5 px-10">
+      <div id="navModal" class="z-10 fixed flex justify-center items-center bg-[#ffffff] dark:bg-polar-400 overflow-hidden transition-all  duration-500  top-0 left-0 right-0 h-0">
+        <ul class="flex flex-col items-center justify-evenly gap-16">
+          <a class="title-2 transition hover:-translate-y-2" href="#portafolio">Portafolio</a>
+          <a class="title-2 transition hover:-translate-y-2" href="#servicios">Servicios</a>
+          <a class="title-2 transition hover:-translate-y-2" href="#contacto">Contacto</a>
+        </ul>
       </div>
-      <span id="colorToggle">
-         <img class="moon-icon" alt="Moon icon" src="/src/public/img/moon-white.svg" />
+      <span id="toggleNav" class="z-10">
+         <img class="menu-icon" alt="Menu icon" src="/src/public/img/menu-dark.svg" />
+      </span>
+      <span id="toggleDarkMode">
+         <img class="moon-icon" alt="Moon icon" src="/src/public/img/moon-dark.svg" />
       </span>
     </nav>
 
-    <div class="w-11/12 mx-auto">
-      <h1 class="text-5xl font-bold text-center">Eber Alejo &dash; Frontend Wep Developer</h1>
-      <header class="mt-16 flex flex-col md:flex-row gap-10 bg-polar-300 rounded-3xl p-10">
+    <div class="w-10/12 mx-auto mt-10">
+      <h1 class="title-1 flex gap-5 flex-col">Eber Alejo <span class="title-2">Frontend Web Developer</span></h1>
+      <header class="neumorphism dark:neumorphism-dark mt-16 flex flex-col md:flex-row gap-10 dark:bg-polar-300 rounded-3xl p-10">
         <section>
            <div class="mb-10 w-9/12 mx-auto rounded-full overflow-hidden object-cover">
              <picture>
-               <img loading="lazy" src="/src/public/img/eberalejo.jpg" alt="Eber Alejo" />
+               <img loading="lazy" src="/src/public/img/Eber-Alejo.jpeg" alt="Eber Alejo" />
                <source srcset="/src/public/img/eberalejo.webp" type="image/webp" />
              </picture>
            </div>
            <div class="text-center">
             <h2 class="text-4xl font-bold mb-4">Quién soy&quest;</h2>
             <p>
-              Soy Eber Alejo un Frontend web developer y Freelancer originario
-              de México, actualmente estoy estudiando la carrera de desarrollo
-              web en la preparatoria. Soy un amante de la programación y de
-              Linux
+              Nací en México, estoy estudiando la carrera de programación web en
+            preparatoria. Aprendo y escribo código todos los dias desde hace mas
+            de 1 año
             </p>
           </div>
         </section>
         <section class="flex flex-col md:flex-row gap-5 text-center">
-           <h2 class="text-2xl text-snow-300 font-semibold">Conocimientos</h2>
+           <h2 class="title-2">Conocimientos</h2>
            <article>
               <h3>Tecnologias y herramientas que uso</h3>
               <div class="flex items-center text-xl flex-wrap gap-6 text-frost-400">
@@ -90,27 +91,28 @@
 
     <main class="mt-16">
       <img
-        src="./src/public/img/wave-dark.svg"
+        src="./src/public/img/wave-white.svg"
         loading="lazy"
         class="w-full"
         alt="Wave picture"
       />
 
-      <div class="bg-polar-300 p-10">
+      <div class="bg-snow-300 dark:bg-polar-300 p-10">
+        <!-- portfolio -->
         <section class="container">
-          <h2 class="text-3xl font-bold text-center mb-7">Portafolio</h2>
+          <h2 class="title-2 mb-7">Portafolio</h2>
           <section id="portafolio" class="grid gap-14">
-             
-            <article class="bg-polar-100 rounded-lg overflow-hidden">
+
+            <article class="project-card">
               <img src="/src/public/img/pagina1.png" alt="Pagina web Festival de musica" />
-              <div class="p-5">
-                 <h3 class="font-bold mb-2">Project Name</h3>
+              <div class="project-card__body">
+                 <h3 class="title-3">Project Name</h3>
                  <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur doloribus assumenda reiciendis aspernatur 
                  </p>
-                 <div class="flex justify-around items-center mt-6">
+                 <div class="project-card__buttons">
                     <a
-                    class="border-2 px-4 py-2 rounded border-frost-400 transition hover:border-frost-300"
+                    class="btn-ghost"
                     href="https://github.com/ch3ber/festival-musica"
                     target="_blank"
                     rel="noreferrer"
@@ -118,7 +120,7 @@
                     ver codigo
                   </a>
                   <a
-                    class="bg-frost-400 px-4 py-2 rounded transition hover:bg-frost-300"
+                    class="btn-fill"
                     href="https://eber-festival-musica.vercel.app"
                     target="_blank"
                     rel="noreferrer"
@@ -129,16 +131,16 @@
               </div>
             </article>
              
-            <article class="bg-polar-100 rounded-lg overflow-hidden">
+            <article class="project-card">
               <img src="/src/public/img/pagina1.png" alt="Pagina web Festival de musica" />
-              <div class="p-5">
-                 <h3 class="font-bold mb-2">Project Name</h3>
+              <div class="project-card__body">
+                 <h3 class="title-3">Project Name</h3>
                  <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur doloribus assumenda reiciendis aspernatur 
                  </p>
-                 <div class="flex justify-between items-center mt-6">
+                 <div class="project-card__buttons">
                     <a
-                    class="border-2 px-4 py-2 rounded border-frost-400 transition hover:border-frost-300"
+                    class="btn-ghost"
                     href="https://github.com/ch3ber/festival-musica"
                     target="_blank"
                     rel="noreferrer"
@@ -146,7 +148,7 @@
                     ver codigo
                   </a>
                   <a
-                    class="bg-frost-400 px-4 py-2 rounded transition hover:bg-frost-300"
+                    class="btn-fill"
                     href="https://eber-festival-musica.vercel.app"
                     target="_blank"
                     rel="noreferrer"
@@ -156,16 +158,16 @@
                  </div>
               </div>
             </article>
-            <article class="bg-polar-100 rounded-lg overflow-hidden">
+            <article class="project-card">
               <img src="/src/public/img/pagina1.png" alt="Pagina web Festival de musica" />
-              <div class="p-5">
-                 <h3 class="font-bold mb-2">Project Name</h3>
+              <div class="project-card__body">
+                 <h3 class="title-3">Project Name</h3>
                  <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur doloribus assumenda reiciendis aspernatur 
                  </p>
-                 <div class="flex justify-between items-center mt-6">
+                 <div class="project-card__buttons">
                     <a
-                    class="border-2 px-4 py-2 rounded border-frost-400 transition hover:border-frost-300"
+                    class="btn-ghost"
                     href="https://github.com/ch3ber/festival-musica"
                     target="_blank"
                     rel="noreferrer"
@@ -173,7 +175,7 @@
                     ver codigo
                   </a>
                   <a
-                    class="bg-frost-400 px-4 py-2 rounded transition hover:bg-frost-300"
+                    class="btn-fill"
                     href="https://eber-festival-musica.vercel.app"
                     target="_blank"
                     rel="noreferrer"
@@ -183,16 +185,16 @@
                  </div>
               </div>
             </article>
-            <article class="bg-polar-100 rounded-lg overflow-hidden">
+            <article class="project-card">
               <img src="/src/public/img/pagina1.png" alt="Pagina web Festival de musica" />
-              <div class="p-5">
-                 <h3 class="font-bold mb-2">Project Name</h3>
+              <div class="project-card__body">
+                 <h3 class="title-3">Project Name</h3>
                  <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur doloribus assumenda reiciendis aspernatur 
                  </p>
-                 <div class="flex justify-between items-center mt-6">
+                 <div class="project-card__buttons">
                     <a
-                    class="border-2 px-4 py-2 rounded border-frost-400 transition hover:border-frost-300"
+                    class="btn-ghost"
                     href="https://github.com/ch3ber/festival-musica"
                     target="_blank"
                     rel="noreferrer"
@@ -200,7 +202,7 @@
                     ver codigo
                   </a>
                   <a
-                    class="bg-frost-400 px-4 py-2 rounded transition hover:bg-frost-300"
+                    class="btn-fill"
                     href="https://eber-festival-musica.vercel.app"
                     target="_blank"
                     rel="noreferrer"
@@ -210,16 +212,16 @@
                  </div>
               </div>
             </article>
-            <article class="bg-polar-100 rounded-lg overflow-hidden">
+            <article class="project-card">
               <img src="/src/public/img/pagina1.png" alt="Pagina web Festival de musica" />
-              <div class="p-5">
-                 <h3 class="font-bold mb-2">Project Name</h3>
+              <div class="project-card__body">
+                 <h3 class="title-3">Project Name</h3>
                  <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur doloribus assumenda reiciendis aspernatur 
                  </p>
-                 <div class="flex justify-between items-center mt-6">
+                 <div class="project-card__buttons">
                     <a
-                    class="border-2 px-4 py-2 rounded border-frost-400 transition hover:border-frost-300"
+                    class="btn-ghost"
                     href="https://github.com/ch3ber/festival-musica"
                     target="_blank"
                     rel="noreferrer"
@@ -227,7 +229,7 @@
                     ver codigo
                   </a>
                   <a
-                    class="bg-frost-400 px-4 py-2 rounded transition hover:bg-frost-300"
+                    class="btn-fill"
                     href="https://eber-festival-musica.vercel.app"
                     target="_blank"
                     rel="noreferrer"
@@ -237,16 +239,16 @@
                  </div>
               </div>
             </article>
-            <article class="bg-polar-100 rounded-lg overflow-hidden">
+            <article class="project-card">
               <img src="/src/public/img/pagina1.png" alt="Pagina web Festival de musica" />
-              <div class="p-5">
-                 <h3 class="font-bold mb-2">Project Name</h3>
+              <div class="project-card__body">
+                 <h3 class="title-3">Project Name</h3>
                  <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur doloribus assumenda reiciendis aspernatur 
                  </p>
-                 <div class="flex justify-between items-center mt-6">
+                 <div class="project-card__buttons">
                     <a
-                    class="border-2 px-4 py-2 rounded border-frost-400 transition hover:border-frost-300"
+                    class="btn-ghost"
                     href="https://github.com/ch3ber/festival-musica"
                     target="_blank"
                     rel="noreferrer"
@@ -254,7 +256,7 @@
                     ver codigo
                   </a>
                   <a
-                    class="bg-frost-400 px-4 py-2 rounded transition hover:bg-frost-300"
+                    class="btn-fill"
                     href="https://eber-festival-musica.vercel.app"
                     target="_blank"
                     rel="noreferrer"
@@ -269,28 +271,38 @@
         </section>
       </div>
 
-      <img
-        src="./src/public/img/wave-dark.svg"
-        loading="lazy"
-        class="w-full rotate-180 -mt-1"
-        alt="Wave picture"
-      />
-      <div class="servicios">
-        <div class="container">
-          <h2>Mis Servicios</h2>
-          <div id="servicios" class="servicios__cards"></div>
-        </div>
+      <div class="z-0">
+        <img
+          src="./src/public/img/wave-white.svg"
+          loading="lazy"
+          class="w-full rotate-180 -mt-1"
+          alt="Wave picture"
+        />
       </div>
+
+      <!-- servicios -->
+      <section class="p-10">
+          <h2 id="servicios" class="title-2">Mis Servicios</h2>
+          <div class="grid gap-14">
+            
+            <article>
+              <h3>Integracion con redes sociales</h3>
+            </article>
+
+          </div>
+      </section>
+
     </main>
 
-    <footer class="footer" id="contacto">
-      <a class="mailto" href="mailto:eber4202@hotmail.com"
-      ><img
-          src="./src/public/img/mailto-white.svg"
-          loading="lazy"
-          class="mailto__icon"
-          alt="Mailto icon"
-        /></a>
+    <footer class="mt-20" id="contacto">
+        <a class="mailto" href="mailto:eber4202@hotmail.com">
+          <img
+            src="./src/public/img/mailto-white.svg"
+            loading="lazy"
+            class="mailto__icon"
+            alt="Mailto icon"
+          />
+        </a>
       <p>
         Hecho con &#128153; por <strong>Eber Alejo</strong> &copy;
         <span id="year"></span>
