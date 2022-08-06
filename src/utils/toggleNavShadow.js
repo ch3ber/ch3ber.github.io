@@ -6,11 +6,11 @@ export const toggleNavShadow = (event) => {
 
   if (haveDarkMode) {
     document.getElementById('nav').classList.remove('shadow-zinc-500/30')
-    colorShadow = 'shadow-zinc-800'
+    colorShadow = 'shadow-slate8700'
   }
 
   if (!haveDarkMode) {
-    document.getElementById('nav').classList.remove('shadow-zinc-800')
+    document.getElementById('nav').classList.remove('shadow-slate-800')
   }
 
   if (isScrolled) {

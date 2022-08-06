@@ -11,6 +11,7 @@ module.exports = {
   theme: {
     colors: {
       zinc: colors.zinc,
+      slate: colors.slate,
       polar: {
         100: '#4C566A',
         200: '#434C5E',
