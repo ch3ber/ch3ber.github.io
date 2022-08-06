@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "standard",
     "lint-fix": "standard --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
   "homepage": "https://github.com/ch3ber/ch3ber.github.io#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.8",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.14",
     "sass": "1.54.2",
     "standard": "16.0.4",
