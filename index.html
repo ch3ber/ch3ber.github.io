@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Eber Alejo un Freelancer en el desarrollo web, apasionado de linux y la programación" />
+
+  <!--preload css-->
+  <!--<link rel="preload" href="build/css/app.css" as="style">-->
+  <!--preload images-->
+  <!--<link rel="preload" href="build/img/moon-white.svg" as="image">-->
+  <!--<link rel="preload" href="build/img/moon-dark.svg" as="image">-->
+  <!--<link rel="preload" href="build/img/eberalejo.jpg" as="image">-->
+  <script src="https://kit.fontawesome.com/0d89849159.js" crossorigin="anonymous"></script>
+  <title>Eber Alejo - Desarrollador Web Frontend</title>
+</head>
+
+<body class="dark:bg-polar-400 text-polar-100 dark:text-snow-100">
+  <nav id="nav"
+    class="z-10 h-20 bg-[#ffffff] dark:bg-polar-400 fixed top-0 left-0 right-0 flex items-center justify-between py-5 px-10">
+    <div class="max-w-3xl">
+      <div id="navModal"
+        class="z-10 fixed flex justify-center items-center bg-[#ffffff] dark:bg-polar-400 overflow-hidden transition-all  duration-500  top-0 left-0 right-0 h-0">
+        <ul class="flex flex-col items-center justify-evenly gap-16">
+          <a class="title-2 transition hover:-translate-y-2" href="#proyectos">Proyectos</a>
+          <a class="title-2 transition hover:-translate-y-2" href="#servicios">Servicios</a>
+          <a class="title-2 transition hover:-translate-y-2" href="#contacto">Contacto</a>
+        </ul>
+      </div>
+      <span id="toggleNav" class="fixed top-7 z-10">
+        <img class="menu-icon" alt="Menu icon" src="/src/public/img/menu-dark.svg" />
+      </span>
+      <!-- <span id="toggleDarkMode">
+          <img class="absolute top-5 right-10" alt="Moon icon" src="/src/public/img/moon-dark.svg" />
+        </span> -->
+    </div>
+  </nav>
+
+  <!-- header card -->
+  <div class="w-10/12 max-w-6xl mx-auto mt-32">
+    <h1 class="title-1 flex gap-5 flex-col">Eber Alejo <span class="title-2">Frontend Web Developer</span></h1>
+
+    <!-- header -->
+    <header
+      class="neumorphism dark:neumorphism-dark mt-16 grid grid-cols-1 md:grid-cols-2 content-center items-center justify-items-center gap-10 dark:bg-polar-300 rounded-xl p-10">
+
+      <!-- profile image -->
+      <div class="w-9/12 mx-auto object-cover rounded-lg neumorphism-with-border">
+        <div class="neumorphism--inset p-6 rounded-lg">
+          <img class="rounded-lg overflow-hidden " loading="lazy" src="/src/public/img/Eber-Alejo.jpeg"
+            alt="Eber Alejo" />
+        </div>
+      </div>
+
+      <!-- body card -->
+      <div>
+        <section>
+          <h2 class="title-2">¿Quién es Eber?</h2>
+          <p class="text-center mt-5">
+            Nací en México, estoy estudiando la carrera de programación web en
+            preparatoria. Aprendo y escribo código todos los dias desde hace mas
+            de 1 año
+          </p>
+        </section>
+
+        <!-- icons -->
+        <section class="text-center mt-10">
+          <h2 class="title-2">Conocimientos</h2>
+
+          <article class="mt-4">
+            <h3 class="title-3">Tecnologias</h3>
+
+            <div class="flex items-center justify-center flex-wrap gap-3">
+              <div class="icon">
+                <img src="./src/public/img/html-svgrepo-com.svg" alt="" srcset="">
+              </div>
+              <div class="icon">
+                <img src="./src/public/img/css-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img src="./src/public/img/js-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img src="./src/public/img/typescript-logo-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img src="./src/public/img/react-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img src="./src/public/img/sass-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img src="./src/public/img/tailwindcss-icon-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img src="./src/public/img/next-js-svgrepo-com.svg" alt="">
+              </div>
+            </div>
+          </article>
+
+          <article class="mt-4">
+            <h3 class="title-3">Herramientas</h3>
+            <div class="flex items-center justify-center flex-wrap gap-3">
+              <div class="icon">
+                <img title="Git" src="./src/public/img/git-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Figma" src="./src/public/img/figma-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Netlify" src="./src/public/img/netlify-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Vercel" src="./src/public/img/vercel-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Webpack" src="./src/public/img/webpack-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Vite" src="./src/public/img/vite-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="NPM" src="./src/public/img/npm-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Arch Linux" src="./src/public/img/arch-linux-svgrepo-com.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Neovim" src="./src/public/img/neovim-svgrepo-com.svg" alt="">
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </header>
+  </div>
+
+  <main class="mt-16 max-w-6xl mx-auto md:p-20">
+
+    <!-- portfolio -->
+    <section>
+      <h2 id="proyectos" class="title-2">Proyectos</h2>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-14">
+
+        <article class="project-card">
+          <img loading="lazy" src="/src/public/img/pagina1.png" alt="Pagina web Festival de musica" />
+          <div class="project-card__body">
+            <h3 class="title-3">Project Name</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur doloribus assumenda reiciendis
+              aspernatur
+            </p>
+            <div class="project-card__buttons">
+              <div class="neumorphism-with-border">
+                <a class="neumorphism--inset py-2 px-4 rounded" href="#" target="_blank" rel="noreferrer">
+                  ver codigo
+                </a>
+              </div>
+              <a class="btn-fill border-none" href="#" target="_blank" rel="noreferrer">
+                ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img loading="lazy" src="/src/public/img/pagina1.png" alt="Pagina web Festival de musica" />
+          <div class="project-card__body">
+            <h3 class="title-3">Project Name</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur doloribus assumenda reiciendis
+              aspernatur
+            </p>
+            <div class="project-card__buttons">
+              <div class="neumorphism-with-border">
+                <a class="neumorphism--inset py-2 px-4 rounded" href="#" target="_blank" rel="noreferrer">
+                  ver codigo
+                </a>
+              </div>
+              <a class="btn-fill border-none" href="#" target="_blank" rel="noreferrer">
+                ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <img loading="lazy" src="/src/public/img/pagina1.png" alt="Pagina web Festival de musica" />
+          <div class="project-card__body">
+            <h3 class="title-3">Project Name</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur doloribus assumenda reiciendis
+              aspernatur
+            </p>
+            <div class="project-card__buttons">
+              <div class="neumorphism-with-border">
+                <a class="neumorphism--inset py-2 px-4 rounded" href="#" target="_blank" rel="noreferrer">
+                  ver codigo
+                </a>
+              </div>
+              <a class="btn-fill border-none" href="#" target="_blank" rel="noreferrer">
+                ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <img loading="lazy" src="/src/public/img/pagina1.png" alt="Pagina web Festival de musica" />
+          <div class="project-card__body">
+            <h3 class="title-3">Project Name</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur doloribus assumenda reiciendis
+              aspernatur
+            </p>
+            <div class="project-card__buttons">
+              <div class="neumorphism-with-border">
+                <a class="neumorphism--inset py-2 px-4 rounded" href="#" target="_blank" rel="noreferrer">
+                  ver codigo
+                </a>
+              </div>
+              <a class="btn-fill border-none" href="#" target="_blank" rel="noreferrer">
+                ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <img loading="lazy" src="/src/public/img/pagina1.png" alt="Pagina web Festival de musica" />
+          <div class="project-card__body">
+            <h3 class="title-3">Project Name</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur doloribus assumenda reiciendis
+              aspernatur
+            </p>
+            <div class="project-card__buttons">
+              <div class="neumorphism-with-border">
+                <a class="neumorphism--inset py-2 px-4 rounded" href="#" target="_blank" rel="noreferrer">
+                  ver codigo
+                </a>
+              </div>
+              <a class="btn-fill border-none" href="#" target="_blank" rel="noreferrer">
+                ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <img loading="lazy" src="/src/public/img/pagina1.png" alt="Pagina web Festival de musica" />
+          <div class="project-card__body">
+            <h3 class="title-3">Project Name</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur doloribus assumenda reiciendis
+              aspernatur
+            </p>
+            <div class="project-card__buttons">
+              <div class="neumorphism-with-border">
+                <a class="neumorphism--inset py-2 px-4 rounded" href="#" target="_blank" rel="noreferrer">
+                  ver codigo
+                </a>
+              </div>
+              <a class="btn-fill border-none" href="#" target="_blank" rel="noreferrer">
+                ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+    <!-- servicios -->
+    <!-- <section class="p-10">
+          <h2 id="servicios" class="title-2">Mis Servicios</h2>
+          <div class="grid gap-14">
+            
+          </div>
+      </section> -->
+  </main>
+
+  <img class="z-0 mt-20 w-full" src="./src/public/img/waves.svg" alt="" srcset="">
+  <footer class="z-0 p-12 text-snow-100 bg-polar-300" id="contacto">
+    <div class="mx-auto max-w-2xl flex flex-wrap space-y-10 md:space-y-0 md:flex-row justify-between">
+
+      <section>
+        <h3 class="title-3 font-bold">About</h3>
+        <p class="text-snow-300">
+          Hecho con &#128153; por <strong>Eber Alejo</strong> &copy;
+          <span id="year"></span>
+        </p>
+      </section>
+
+      <section>
+        <h3 class="title-3 font-bold">Social</h3>
+        <ul class="text-snow-300 grid grid-cols-2 md:grid-cols-4 md:gap-1 gap-3">
+          <li>
+            <a class="transition hover:text-zinc-400 hover:underline" href="mailto:eber4202@hotmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              E-Mail
+            </a>
+          </li>
+          <li>
+            <a class="transition hover:text-zinc-400 hover:underline" rel="noreferrer" href="https://github.com/ch3ber"
+              target="_blank">
+              <i class="fa-brands fa-github"></i>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a class="transition hover:text-zinc-400 hover:underline" rel="noreferrer"
+              href="https://twitter.com/ch3ber_dev" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a class="transition hover:text-zinc-400 hover:underline" rel="noreferrer"
+              href="https://www.linkedin.com/in/eberalejo" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </footer>
+
+  <script type="module" defer src="/src/index.js"></script>
+</body>
+
+</html>
