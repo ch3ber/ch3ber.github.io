@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "lint": "standard",
     "lint-fix": "standard --fix",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
