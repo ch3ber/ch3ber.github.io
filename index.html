@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Eber Alejo un Freelancer en el desarrollo web, apasionado de linux y la programación" />
+
+  <!--preload css-->
+  <!--<link rel="preload" href="build/css/app.css" as="style">-->
+  <!--preload images-->
+  <!--<link rel="preload" href="build/img/moon-white.svg" as="image">-->
+  <!--<link rel="preload" href="build/img/moon-dark.svg" as="image">-->
+  <!--<link rel="preload" href="build/img/eberalejo.jpg" as="image">-->
+  <script src="https://kit.fontawesome.com/0d89849159.js" crossorigin="anonymous"></script>
+  <title>Eber Alejo - Desarrollador Web Frontend</title>
+  <script type="module" crossorigin src="/assets/index.4013c7ec.js"></script>
+  <link rel="stylesheet" href="/assets/index.0cd787da.css">
+</head>
+
+<body class="dark:bg-polar-400 transition-colors duration-75 text-polar-100 dark:text-snow-100">
+  <nav id="nav" class="z-10 bg-[#ffffff] dark:bg-polar-400 sticky top-0 left-0 right-0 py-5 px-10">
+    <div class="max-w-3xl mx-auto grid grid-cols-2 place-items-center">
+
+      <div id="navModal"
+        class="z-10 fixed flex flex-col gap-10 justify-center items-center bg-[#ffffff] dark:bg-polar-400 overflow-hidden transition-all  duration-500  top-0 left-0 right-0 h-0">
+        <ul class="flex flex-col items-center justify-evenly gap-10">
+          <a data-showNav="false" class="title-2 transition hover:-translate-y-2" href="#about">About</a>
+          <a data-showNav="false" class="title-2 transition hover:-translate-y-2" href="#proyectos">Proyectos</a>
+          <!-- <a data-showNav="false" class="title-2 transition hover:-translate-y-2" href="#servicios">Servicios</a> -->
+          <a data-showNav="false" class="title-2 transition hover:-translate-y-2" href="#contacto">Contacto</a>
+        </ul>
+        <span data-showNav="false" class="text-4xl transition hover:-translate-y-2">
+          <i class="fa-solid fa-xmark"></i>
+        </span>
+      </div>
+
+      <span data-showNav="true" class="text-4xl hover:opacity-80 transition-opacity">
+        <i class="fa-solid fa-bars"></i>
+      </span>
+
+      <span id="toggleDarkMode" class="text-4xl hover:opacity-80 transition-opacity">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+      </span>
+
+    </div>
+  </nav>
+
+  <!-- about -->
+  <div id="about" class="w-10/12 max-w-6xl mx-auto mt-16">
+    <h1 class="title-1 flex gap-5 flex-col">Eber Alejo <span class="title-2">Frontend Web Developer</span></h1>
+
+    <!-- header -->
+    <header
+      class="neumorphism dark:neumorphism-dark mt-16 grid grid-cols-1 md:grid-cols-2 content-center items-center justify-items-center gap-10 dark:bg-polar-300 rounded-xl p-10">
+
+      <!-- profile image -->
+      <div class="w-9/12 mx-auto object-cover rounded-lg neumorphism-with-border dark:neumorphism-with-border-dark">
+        <div class="neumorphism--inset dark:neumorphism--inset-dark p-6 rounded-lg">
+          <img class="rounded-lg overflow-hidden " loading="lazy" src="/assets/Eber-Alejo.0e7b584a.jpeg"
+            alt="Eber Alejo" />
+        </div>
+      </div>
+
+      <!-- body card -->
+      <div>
+        <section>
+          <h2 class="title-2">¿Quién es Eber?</h2>
+          <p class="text-center mt-5">
+            Nací en México y me encuentro estudiando la carrera de programación web a nivel preparatoria. Me gusta
+            aprender sobre tecnología de forma autodidacta. Me especializo en el desarrollo Frontend y creo asombrosos
+            sitios web como este
+          </p>
+        </section>
+
+        <!-- icons -->
+        <section class="text-center mt-10">
+          <h2 class="title-2">Conocimientos</h2>
+
+          <article class="mt-4">
+            <h3 class="title-3">Tecnologías</h3>
+
+            <div class="flex items-center justify-center flex-wrap gap-3">
+              <div class="icon">
+                <img src="/assets/html-svgrepo-com.cbb3e24c.svg" alt="" srcset="">
+              </div>
+              <div class="icon">
+                <img src="/assets/css-svgrepo-com.106e7ff7.svg" alt="">
+              </div>
+              <div class="icon">
+                <img src="/assets/js-svgrepo-com.bf4e4339.svg" alt="">
+              </div>
+              <div class="icon">
+                <img src="/assets/typescript-logo-svgrepo-com.a37cdf16.svg" alt="">
+              </div>
+              <div class="icon">
+                <img src="/assets/react-svgrepo-com.2c32888f.svg" alt="">
+              </div>
+              <div class="icon">
+                <img src="/assets/sass-svgrepo-com.398bd914.svg" alt="">
+              </div>
+              <div class="icon">
+                <img src="/assets/tailwindcss-icon-svgrepo-com.77a43d77.svg" alt="">
+              </div>
+              <div class="icon">
+                <img src="/assets/next-js-svgrepo-com.d4d2e276.svg" alt="">
+              </div>
+            </div>
+          </article>
+
+          <article class="mt-4">
+            <h3 class="title-3">Herramientas</h3>
+            <div class="flex items-center justify-center flex-wrap gap-3">
+              <div class="icon">
+                <img title="Git" src="/assets/git-svgrepo-com.8c4b94ea.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Figma" src="/assets/figma-svgrepo-com.674839a6.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Netlify" src="/assets/netlify-svgrepo-com.4663079a.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Vercel" src="/assets/vercel-svgrepo-com.5665e7b0.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Webpack" src="/assets/webpack-svgrepo-com.8e7d6f74.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Vite" src="/assets/vite-svgrepo-com.2cdc0d67.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="NPM" src="/assets/npm-svgrepo-com.1bb577a3.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Arch Linux" src="/assets/arch-linux-svgrepo-com.2e8b7196.svg" alt="">
+              </div>
+              <div class="icon">
+                <img title="Neovim" src="/assets/neovim-svgrepo-com.5a79d204.svg" alt="">
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </header>
+  </div>
+
+  <main class="mt-16 max-w-6xl mx-auto md:p-20 w-11/12 md:w-full">
+
+    <!-- portfolio -->
+    <section id="proyectos">
+      <h2 class="title-2">Proyectos</h2>
+      <div class="mt-10 grid place-content-center place-items-stretch grid-cols-1 md:grid-cols-3 gap-14">
+
+        <article class="project-card">
+          <img loading="lazy" src="/assets/Petgram-Tu-app-de-fotos-de-mascotas.3e448685.png"
+            alt="Previsualización de la pagina web" />
+          <div class="project-card__body">
+            <h3 class="title-3">Petgram</h3>
+            <p class="h-32">
+              Clon de Instagram funcional usando React.js y grahpql, login funcional, así como persistencia de datos. UI
+              diferente a la de Instagram.
+            </p>
+            <div class="project-card__buttons">
+              <div class="neumorphism-with-border dark:neumorphism-with-border-dark">
+                <a class="neumorphism--inset dark:neumorphism--inset-dark py-2 px-4 rounded"
+                  href="https://github.com/ch3ber/petgram" target="_blank" rel="noreferrer">
+                  Ver código
+                </a>
+              </div>
+              <a class="btn-fill border-none" href="https://petgram-ch3ber.vercel.app/" target="_blank"
+                rel="noreferrer">
+                Ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img loading="lazy" src="/assets/avocado-store-vercel-app.d04480e7.png"
+            alt="Previsualización de la pagina web" />
+          <div class="project-card__body">
+            <h3 class="title-3">Avocado Store</h3>
+            <p class="h-32">
+              Creada con Next.js, TypeScript y Chakra UI, una tienda en la que podrás comprar todo tipo de aguacates.
+              Estoy trabajando en este proyecto:)
+            </p>
+            <div class="project-card__buttons">
+              <div class="neumorphism-with-border dark:neumorphism-with-border-dark">
+                <a class="neumorphism--inset dark:neumorphism--inset-dark py-2 px-4 rounded"
+                  href="https://github.com/ch3ber/avocado-store" target="_blank" rel="noreferrer">
+                  Ver código
+                </a>
+              </div>
+              <a class="btn-fill border-none" href="https://ch3ber-avocado-store.vercel.app/" target="_blank"
+                rel="noreferrer">
+                Ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img loading="lazy" src="/assets/Frontend-Mentor-Time-tracking-dashboard.af7a0635.png"
+            alt="Previsualización de la pagina web" />
+          <div class="project-card__body">
+            <h3 class="title-3">Time tracking dashboard</h3>
+            <p class="h-32">
+              Un reto de <a class="underline transition-opacity hover:opacity-80" href="https://www.frontendmentor.io/"
+                target="_blank" rel="noreferrer">Frontend Mentor</a> completado, tablero con información dinámica usando
+              JavaScript, CSS para los estilos y un JSON como Data Base
+            </p>
+            <div class="project-card__buttons">
+              <div class="neumorphism-with-border dark:neumorphism-with-border-dark">
+                <a class="neumorphism--inset dark:neumorphism--inset-dark py-2 px-4 rounded"
+                  href="https://github.com/ch3ber/time-tracking-dashboard" target="_blank" rel="noreferrer">
+                  Ver código
+                </a>
+              </div>
+              <a class="btn-fill border-none" href="https://ch3ber-time-tracking-dashboard.netlify.app/" target="_blank"
+                rel="noreferrer">
+                Ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img loading="lazy" src="/assets/todo-webapp.49fb8099.png" alt="Previsualización de la pagina web" />
+          <div class="project-card__body">
+            <h3 class="title-3">ToDo Webapp</h3>
+            <p class="h-32">
+              Crea, guarda, completa y elimina ToDoes con esta página creada con React.js y CSS, uso de local storage
+              para la persistencia de datos
+            </p>
+            <div class="project-card__buttons">
+              <div class="neumorphism-with-border dark:neumorphism-with-border-dark">
+                <a class="neumorphism--inset dark:neumorphism--inset-dark py-2 px-4 rounded"
+                  href="https://github.com/ch3ber/todo-webapp" target="_blank" rel="noreferrer">
+                  Ver código
+                </a>
+              </div>
+              <a class="btn-fill border-none" href="https://ch3ber.github.io/todo-webapp/" target="_blank"
+                rel="noreferrer">
+                Ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img loading="lazy" src="/assets/Rick-And-Morty-App.3f359005.png"
+            alt="Previsualización de la pagina web" />
+          <div class="project-card__body">
+            <h3 class="title-3">Rick And Morty Webapp</h3>
+            <p class="h-32">
+              Encuentra a cualquier personaje de la serie de Rick And Morty con esta web app creada en React.js y SASS
+              usando la <a class="underline transition-opacity hover:opacity-80" href="https://rickandmortyapi.com/"
+                target="_blank" rel="noreferrer">API de Rick
+                And Morty</a>
+            </p>
+            <div class="project-card__buttons">
+              <div class="neumorphism-with-border dark:neumorphism-with-border-dark">
+                <a class="neumorphism--inset dark:neumorphism--inset-dark py-2 px-4 rounded" href="#" target="_blank"
+                  rel="noreferrer">
+                  Ver código
+                </a>
+              </div>
+              <a class="btn-fill border-none" href="#" target="_blank" rel="noreferrer">
+                Ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <img loading="lazy" src="/assets/Devstore.cb876de9.png" alt="Previsualización de la pagina web" />
+          <div class="project-card__body">
+            <h3 class="title-3">Devstore</h3>
+            <p class="h-32">
+              Encuentra los mejores productos para developers. Router, componentes, manejo de local storage y ¡más! Solo
+              usando TypeScript y Tailwindcss
+            </p>
+            <div class="project-card__buttons">
+              <div class="neumorphism-with-border dark:neumorphism-with-border-dark">
+                <a class="neumorphism--inset dark:neumorphism--inset-dark py-2 px-4 rounded"
+                  href="https://github.com/ch3ber/devstore" target="_blank" rel="noreferrer">
+                  Ver código
+                </a>
+              </div>
+              <a class="btn-fill border-none" href="https://ch3ber-devstore.netlify.app/" target="_blank"
+                rel="noreferrer">
+                Ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+    <!-- servicios -->
+    <!-- <section class="p-10">
+          <h2 id="servicios" class="title-2">Mis Servicios</h2>
+          <div class="grid gap-14">
+            
+          </div>
+      </section> -->
+  </main>
+
+  <img class="z-0 mt-20 w-full" src="/assets/waves.585159e7.svg" alt="" srcset="">
+  <footer class="z-0 p-12 text-snow-100 bg-polar-300" id="contacto">
+    <div class="mx-auto max-w-2xl flex flex-col md:flex-row gap-10 justify-between">
+
+      <section>
+        <h3 class="title-3 font-bold">Desarrollador</h3>
+        <p class="text-snow-300">
+          Hecho con &#128153; por <strong>Eber Alejo</strong>
+        </p>
+      </section>
+
+      <section>
+        <h3 class="title-3 font-bold">Contacto</h3>
+        <ul class="text-snow-300 grid grid-cols-2 md:grid-cols-4 md:gap-1 gap-3">
+          <li>
+            <a class="transition hover:text-zinc-400 hover:underline" href="mailto:eber4202@hotmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              E-Mail
+            </a>
+          </li>
+          <li>
+            <a class="transition hover:text-zinc-400 hover:underline" rel="noreferrer" href="https://github.com/ch3ber"
+              target="_blank">
+              <i class="fa-brands fa-github"></i>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a class="transition hover:text-zinc-400 hover:underline" rel="noreferrer"
+              href="https://twitter.com/ch3ber_dev" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a class="transition hover:text-zinc-400 hover:underline" rel="noreferrer"
+              href="https://www.linkedin.com/in/eberalejo" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </footer>
+
+  
+</body>
+
+</html>
