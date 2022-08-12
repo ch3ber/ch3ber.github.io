@@ -500,18 +500,27 @@
     </main>
 
     <img
-      class="z-0 mt-20 w-full"
-      src="./src/public/img/waves.svg"
+      class="z-0 mt-20 w-full hidden dark:block"
+      src="./src/public/img/waves-dark.svg"
       alt=""
       srcset=""
     />
-    <footer class="z-0 p-12 text-snow-100 bg-polar-300" id="contacto">
+    <img
+      class="z-0 mt-20 w-full block dark:hidden"
+      src="./src/public/img/waves-white.svg"
+      alt=""
+      srcset=""
+    />
+    <footer
+      class="z-0 p-12 text-polar-100 dark:text-snow-100 bg-snow-200 dark:bg-polar-300"
+      id="contacto"
+    >
       <div
         class="mx-auto max-w-2xl flex flex-col md:flex-row gap-10 justify-between"
       >
         <section>
           <h3 class="title-3 font-bold">Desarrollador</h3>
-          <p class="text-snow-300">
+          <p class="text-polar-100 dark:text-snow-300">
             Hecho con &#128153; por <strong>Eber Alejo</strong>
           </p>
         </section>
@@ -519,7 +528,7 @@
         <section>
           <h3 class="title-3 font-bold">Contacto</h3>
           <ul
-            class="text-snow-300 grid grid-cols-2 md:grid-cols-4 md:gap-1 gap-3"
+            class="text-polar-100 dark:text-snow-300 grid grid-cols-2 md:grid-cols-4 md:gap-1 gap-3"
           >
             <li>
               <a
