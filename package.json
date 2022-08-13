@@ -1,7 +1,7 @@
 {
-  "name": "ch3ber-portfolio",
+  "name": "ch3ber-student",
   "version": "2.0.0",
-  "description": "My web portfolio usign react",
+  "description": "",
   "main": "src/index.js",
   "scripts": {
     "dev": "vite",
@@ -16,15 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/ch3ber/ch3ber.github.io.git"
   },
-  "keywords": [
-    "react",
-    "javascript",
-    "react-dom",
-    "portfolio",
-    "web-portfolio",
-    "vite",
-    "vite-react"
-  ],
+  "keywords": [],
   "author": "Eber Edrey Alejo Berrones <eber4202@hotmail.com>",
   "license": "MIT",
   "bugs": {
@@ -32,17 +24,15 @@
   },
   "homepage": "https://github.com/ch3ber/ch3ber.github.io#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.8",
-    "gh-pages": "^4.0.0",
-    "postcss": "^8.4.14",
+    "autoprefixer": "10.4.8",
+    "gh-pages": "4.0.0",
+    "postcss": "8.4.14",
     "sass": "1.54.2",
     "standard": "16.0.4",
-    "tailwindcss": "^3.1.7",
+    "tailwindcss": "3.1.7",
     "vite": "3.0.4"
   },
   "eslintConfig": {
-    "extends": [
-      "./node_modules/standard/eslintrc.json"
-    ]
+    "extends": ["./node_modules/standard/eslintrc.json"]
   }
 }
