@@ -125,3 +125,6 @@ dist
 
 #vim session
 Session.vim
+
+# code sandbox
+.codesandbox
