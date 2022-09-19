@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-F2JGKFWVT6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-F2JGKFWVT6");
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -10,10 +26,10 @@
 
     <!--preload css-->
     <!--<link rel="preload" href="build/css/app.css" as="style">-->
+
     <!--preload images-->
-    <!--<link rel="preload" href="build/img/moon-white.svg" as="image">-->
-    <!--<link rel="preload" href="build/img/moon-dark.svg" as="image">-->
-    <!--<link rel="preload" href="build/img/eberalejo.jpg" as="image">-->
+    <link rel="preload" href="assets/Eber-Alejo.0e7b584a.jpeg" as="image">
+
     <script
       src="https://kit.fontawesome.com/0d89849159.js"
       crossorigin="anonymous"
@@ -36,25 +52,26 @@
           class="z-10 fixed flex flex-col gap-10 justify-center items-center bg-[#ffffff] dark:bg-polar-400 overflow-hidden transition-all duration-500 top-0 left-0 right-0 h-0"
         >
           <ul class="flex flex-col items-center justify-evenly gap-10">
-            <a
-              data-showNav="false"
-              class="title-2 transition hover:-translate-y-2"
-              href="#about"
-              >About</a
-            >
-            <a
-              data-showNav="false"
-              class="title-2 transition hover:-translate-y-2"
-              href="#proyectos"
-              >Proyectos</a
-            >
+            <li class="title-2 transition hover:-translate-y-2">
+              <a data-showNav="false" href="#about">About</a>
+            </li>
+            <li class="title-2 transition hover:-translate-y-2">
+              <a
+                data-showNav="false"
+                class="title-2 transition hover:-translate-y-2"
+                href="#proyectos"
+                >Proyectos</a
+              >
+            </li>
             <!-- <a data-showNav="false" class="title-2 transition hover:-translate-y-2" href="#servicios">Servicios</a> -->
-            <a
-              data-showNav="false"
-              class="title-2 transition hover:-translate-y-2"
-              href="#contacto"
-              >Contacto</a
-            >
+            <li class="title-2 transition hover:-translate-y-2">
+              <a
+                data-showNav="false"
+                class="title-2 transition hover:-translate-y-2"
+                href="#contacto"
+                >Contacto</a
+              >
+            </li>
           </ul>
           <span
             data-showNav="false"
@@ -303,7 +320,8 @@
               <h3 class="title-3">Avocado Store</h3>
               <p class="h-32">
                 Creada con Next.js, TypeScript y Chakra UI, una tienda en la que
-                podrás comprar todo tipo de aguacates. Agrega productos en tiempo real y encuentra el easter egg de la pagina.
+                podrás comprar todo tipo de aguacates. Agrega productos en
+                tiempo real y encuentra el easter egg de la pagina.
               </p>
               <div class="project-card__buttons">
                 <div
