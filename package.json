@@ -36,8 +36,5 @@
     "extends": [
       "./node_modules/standard/eslintrc.json"
     ]
-  },
-  "dependencies": {
-    "kursor": "0.1.6"
   }
 }
