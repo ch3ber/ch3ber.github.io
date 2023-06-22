@@ -34,6 +34,7 @@
       src="https://kit.fontawesome.com/0d89849159.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="./node_modules/kursor/dist/kursor.css">
     <title>Eber Alejo - Desarrollador Web Frontend</title>
   </head>
 
@@ -50,22 +51,22 @@
           class="z-10 fixed flex flex-col gap-10 justify-center items-center bg-[#ffffff] dark:bg-polar-400 overflow-hidden transition-all duration-500 top-0 left-0 right-0 h-0"
         >
           <ul class="flex flex-col items-center justify-evenly gap-10">
-            <li class="title-2 transition hover:-translate-y-2">
+            <li class="title-2 transition hover:-translate-y-3">
               <a data-showNav="false" href="#about">About</a>
             </li>
-            <li class="title-2 transition hover:-translate-y-2">
+            <li class="title-2 transition hover:-translate-y-3">
               <a
                 data-showNav="false"
-                class="title-2 transition hover:-translate-y-2"
+                class="title-2"
                 href="#proyectos"
                 >Proyectos</a
               >
             </li>
-            <!-- <a data-showNav="false" class="title-2 transition hover:-translate-y-2" href="#servicios">Servicios</a> -->
-            <li class="title-2 transition hover:-translate-y-2">
+            <!-- <a data-showNav="false" class="title-2 transition hover:-translate-y-3" href="#servicios">Servicios</a> -->
+            <li class="title-2 transition hover:-translate-y-3">
               <a
                 data-showNav="false"
-                class="title-2 transition hover:-translate-y-2"
+                class="title-2"
                 href="#contacto"
                 >Contacto</a
               >
@@ -73,7 +74,7 @@
           </ul>
           <span
             data-showNav="false"
-            class="text-4xl transition hover:-translate-y-2"
+            class="text-4xl transition hover:-translate-y-3"
           >
             <i class="fa-solid fa-xmark"></i>
           </span>
@@ -97,9 +98,7 @@
 
     <!-- about -->
     <div id="about" class="w-10/12 max-w-6xl mx-auto mt-16">
-      <h1 class="flex flex-col title-1 gap-5">
-        Eber Alejo <span class="title-2">Full Stack Web Developer</span>
-      </h1>
+      <h1 class="flex flex-col title-1 gap-5">Eber Alejo - Full Stack Web Developer</h1>
 
       <!-- header -->
       <header
@@ -112,12 +111,15 @@
           <div
             class="p-6 rounded-lg neumorphism--inset dark:neumorphism--inset-dark"
           >
-            <img
-              class="overflow-hidden rounded-lg"
-              loading="lazy"
-              src="/src/public/img/Eber-Alejo.jpeg"
-              alt="Eber Alejo"
-            />
+            <figure class="overflow-hidden rounded-lg">
+              <img
+                draggable="false"
+                class="overflow-hidden zoom-image-effect"
+                loading="lazy"
+                src="https://github.com/ch3ber.png"
+                alt="Eber Alejo"
+              />
+            </figure>
           </div>
         </div>
 
@@ -271,12 +273,56 @@
         <div
           class="mt-10 grid place-content-center place-items-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-14"
         >
+          <article class="project-card col-start-1 md:col-end-3 xl:col-end-4 md:max-w-xl">
+            <figure class="overflow-hidden">
+              <img
+                loading="lazy"
+                src="/src/public/img/projects/GitHub-ch3ber-e-commerce-api-E-commerce-CRUD-with-postgresql-and-express-js.png"
+                alt="Previsualización del respositorio en GitHub"
+                draggable="false"
+                class="zoom-image-effect"
+              />
+            </figure>
+            <div class="project-card__body">
+              <h3 class="title-3">E-Commerce API</h3>
+              <p class="md:h-32 h-52">
+                Autenticación y autorización de usuarios. TypeScript, Express.js, Sequelize como ORM de PostgreSQL. Recuperación de contraseñas a través de correo electrónico. Unit testing, integration testing y testing E2E utilizando Jest.js y supertest. Continuous Integration (CI) con GitHub Actions.
+              </p>
+              <div class="project-card__buttons">
+                <div
+                  class="neumorphism-with-border dark:neumorphism-with-border-dark"
+                >
+                  <a
+                    class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                    href="https://github.com/ch3ber/e-commerce-api"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Ver código
+                  </a>
+                </div>
+                <a
+                  class="border-none btn-fill"
+                  href="https://e-commerce-api-1r2n.onrender.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ver sitio web
+                </a>
+              </div>
+            </div>
+          </article>
+
           <article class="project-card">
-            <img
-              loading="lazy"
-              src="/src/public/img/projects/Petgram-Tu-app-de-fotos-de-mascotas.png"
-              alt="Previsualización de la pagina web"
-            />
+            <figure class="overflow-hidden">
+              <img
+                loading="lazy"
+                src="/src/public/img/projects/Petgram-Tu-app-de-fotos-de-mascotas.png"
+                alt="Previsualización de la pagina web"
+                draggable="false"
+                class="zoom-image-effect"
+              />
+            </figure>
             <div class="project-card__body">
               <h3 class="title-3">Petgram</h3>
               <p class="h-32">
@@ -310,11 +356,15 @@
           </article>
 
           <article class="project-card">
-            <img
-              loading="lazy"
-              src="/src/public/img/projects/avocado-store-vercel-app.png"
-              alt="Previsualización de la pagina web"
-            />
+            <figure class="overflow-hidden">
+              <img
+                loading="lazy"
+                src="/src/public/img/projects/avocado-store-vercel-app.png"
+                alt="Previsualización de la pagina web"
+                draggable="false"
+                class="zoom-image-effect"
+              />
+            </figure>
             <div class="project-card__body">
               <h3 class="title-3">Avocado Store</h3>
               <p class="h-32">
@@ -348,11 +398,15 @@
           </article>
 
           <article class="project-card">
-            <img
-              loading="lazy"
-              src="/src/public/img/projects/Frontend-Mentor-Time-tracking-dashboard.png"
-              alt="Previsualización de la pagina web"
-            />
+            <figure class="overflow-hidden">
+              <img
+                loading="lazy"
+                src="/src/public/img/projects/Frontend-Mentor-Time-tracking-dashboard.png"
+                alt="Previsualización de la pagina web"
+                draggable="false"
+                class="zoom-image-effect"
+              />
+            </figure>
             <div class="project-card__body">
               <h3 class="title-3">Time tracking dashboard</h3>
               <p class="h-32">
@@ -393,11 +447,15 @@
           </article>
 
           <article class="project-card">
-            <img
-              loading="lazy"
-              src="/src/public/img/projects/todo-webapp.png"
-              alt="Previsualización de la pagina web"
-            />
+            <figure class="overflow-hidden">
+              <img
+                loading="lazy"
+                src="/src/public/img/projects/todo-webapp.png"
+                alt="Previsualización de la pagina web"
+                draggable="false"
+                class="zoom-image-effect"
+              />
+            </figure>
             <div class="project-card__body">
               <h3 class="title-3">ToDo Webapp</h3>
               <p class="h-32">
@@ -431,11 +489,15 @@
           </article>
 
           <article class="project-card">
-            <img
-              loading="lazy"
-              src="/src/public/img/projects/Rick-And-Morty-App.png"
-              alt="Previsualización de la pagina web"
-            />
+            <figure class="overflow-hidden">
+              <img
+                loading="lazy"
+                src="/src/public/img/projects/Rick-And-Morty-App.png"
+                alt="Previsualización de la pagina web"
+                draggable="false"
+                class="zoom-image-effect"
+              />
+            </figure>
             <div class="project-card__body">
               <h3 class="title-3">Rick And Morty Webapp</h3>
               <p class="h-32">
@@ -475,11 +537,15 @@
           </article>
 
           <article class="project-card">
-            <img
-              loading="lazy"
-              src="/src/public/img/projects/Devstore.png"
-              alt="Previsualización de la pagina web"
-            />
+            <figure class="overflow-hidden">
+              <img
+                loading="lazy"
+                src="/src/public/img/projects/Devstore.png"
+                alt="Previsualización de la pagina web"
+                draggable="false"
+                class="zoom-image-effect"
+              />
+            </figure>
             <div class="project-card__body">
               <h3 class="title-3">Devstore</h3>
               <p class="h-32">
@@ -503,42 +569,6 @@
                 <a
                   class="border-none btn-fill"
                   href="https://ch3ber-devstore.netlify.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Ver sitio web
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card col-start-1 md:col-end-3 xl:col-end-4 md:max-w-xl">
-            <img
-              loading="lazy"
-              src="/src/public/img/projects/GitHub-ch3ber-e-commerce-api-E-commerce-CRUD-with-postgresql-and-express-js.png"
-              alt="Previsualización del respositorio en GitHub"
-            />
-            <div class="project-card__body">
-              <h3 class="title-3">E-Commerce API</h3>
-              <p class="md:h-32 h-52">
-                Autenticación y autorización de usuarios. TypeScript, Express.js, Sequelize como ORM de PostgreSQL. Recuperación de contraseñas a través de correo electrónico. Unit testing, integration testing y testing E2E utilizando Jest.js y supertest. Continuous Integration (CI) con GitHub Actions.
-              </p>
-              <div class="project-card__buttons">
-                <div
-                  class="neumorphism-with-border dark:neumorphism-with-border-dark"
-                >
-                  <a
-                    class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
-                    href="https://github.com/ch3ber/e-commerce-api"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Ver código
-                  </a>
-                </div>
-                <a
-                  class="border-none btn-fill"
-                  href="https://e-commerce-api-1r2n.onrender.com"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -635,6 +665,11 @@
         </section>
       </div>
     </footer>
+
+    <script src="./node_modules/kursor/dist/kursor.min.js"></script>
+    <script>
+
+    </script>
 
     <script type="module" defer src="/src/index.js"></script>
   </body>

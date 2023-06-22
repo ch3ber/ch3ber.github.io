@@ -33,6 +33,11 @@
     "vite": "3.0.4"
   },
   "eslintConfig": {
-    "extends": ["./node_modules/standard/eslintrc.json"]
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
+  },
+  "dependencies": {
+    "kursor": "0.1.6"
   }
 }
