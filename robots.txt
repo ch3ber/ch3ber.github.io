@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ch3ber.github.io
+
+# Sitemaps
+Sitemap: https://ch3ber.github.io/sitemap.xml
