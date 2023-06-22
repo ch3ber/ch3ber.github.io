@@ -21,7 +21,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    @apply bg-polar-400 transition-all duration-500 rounded;
+    @apply bg-frost-400 transition-all duration-500 rounded;
   }
 
   h1, h2 {
