@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ch3ber - Eber Alejo. Frontend Web Developer y Creador de contenido</title>
 
-  <link rel="preconnect" href="https://ka-f.fontawesome.com" />
+  <link rel="preconnect" href="https://fontawesome.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="canonical" href="https://ch3ber.github.io">
+  <link rel="preconnect" href="https://ch3ber.github.io">
 
   <meta name="description"
     content="Eber Alejo (ch3ber). Desarrollador Frontend mexicano, colaborador Open Source, creador de contenido, autodidacta y apasionado del aprendizaje continuo" />
@@ -19,11 +19,11 @@
   <link rel="preload" href="https://github.com/ch3ber.png" as="image" />
   <link rel="icon" type="image/x-icon" href="/src/public/img/favicon.ico">
 
-  <script rel=preconnect async src="https://kit.fontawesome.com/0d89849159.js" crossorigin="anonymous"></script>
+  <script rel="prefetch" async src="https://kit.fontawesome.com/0d89849159.js" crossorigin="anonymous"></script>
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZJ41MWFSR"></script>
-  <script>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-8ZJ41MWFSR"></script>
+  <script defer>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
@@ -37,9 +37,9 @@
 
 <body
   class="selection:bg-frost-400 selection:text-snow-100 dark:bg-polar-400 transition-colors duration-75 text-polar-100 dark:text-snow-100">
-  <nav id="nav" class="z-10 bg-[#ffffff] dark:bg-polar-400 sticky top-0 left-0 right-0 py-5 px-10">
+  <header id="nav" class="z-10 bg-[#ffffff] dark:bg-polar-400 sticky top-0 left-0 right-0 py-5 px-10">
     <div class="max-w-3xl mx-auto grid grid-cols-2 place-items-center">
-      <div id="navModal"
+      <nav id="navModal"
         class="z-10 fixed flex flex-col gap-10 justify-center items-center bg-[#ffffff] dark:bg-polar-400 overflow-hidden transition-all duration-500 top-0 left-0 right-0 h-0">
         <ul class="flex flex-col items-center justify-evenly gap-10">
           <li class="title-2 transition hover:-translate-y-3">
@@ -56,7 +56,7 @@
         <span data-showNav="false" class="text-4xl transition hover:-translate-y-3">
           <i class="fa-solid fa-xmark"></i>
         </span>
-      </div>
+      </nav>
 
       <span data-showNav="true" class="text-4xl hover:opacity-80 transition-opacity">
         <i class="fa-solid fa-bars"></i>
@@ -66,10 +66,10 @@
         <i class="fa-solid fa-circle-half-stroke"></i>
       </span>
     </div>
-  </nav>
+  </header>
 
   <!-- about -->
-  <div id="about" class="w-10/12 max-w-6xl mx-auto mt-16">
+  <section id="about" class="w-10/12 max-w-6xl mx-auto mt-16">
     <h1 class="flex flex-col title-1 gap-5">Eber Alejo - Full Stack Web Developer</h1>
 
     <!-- header -->
@@ -86,7 +86,7 @@
       </div>
 
       <!-- body card -->
-      <div>
+      <article>
         <section>
           <h2 class="title-2">¿Quién es Eber?</h2>
           <p class="mt-5 text-center">
@@ -186,9 +186,9 @@
             </div>
           </article>
         </section>
-      </div>
+      </article>
     </header>
-  </div>
+  </section>
 
   <main class="w-11/12 max-w-6xl mx-auto mt-16 md:p-20 md:w-full">
     <!-- portfolio -->
@@ -198,7 +198,7 @@
         <article class="project-card col-start-1 md:col-end-3 xl:col-end-4 md:max-w-xl">
           <figure class="overflow-hidden">
             <img loading="lazy"
-              src="/src/public/img/projects/GitHub-ch3ber-e-commerce-api-E-commerce-CRUD-with-postgresql-and-express-js.png"
+              src="/img/GitHub-ch3ber-e-commerce-api-E-commerce-CRUD-with-postgresql-and-express-js.webp"
               alt="Previsualización del respositorio en GitHub" draggable="false" class="zoom-image-effect" />
           </figure>
           <div class="project-card__body">
@@ -225,8 +225,7 @@
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <img width="1351" height="768" loading="lazy"
-              src="/src/public/img/projects/Petgram-Tu-app-de-fotos-de-mascotas.png"
+            <img width="1351" height="768" loading="lazy" src="/img/Petgram-Tu-app-de-fotos-de-mascotas.webp"
               alt="Previsualización de la pagina web" draggable="false" class="zoom-image-effect" />
           </figure>
           <div class="project-card__body">
@@ -253,7 +252,7 @@
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <img width="1351" height="768" loading="lazy" src="/src/public/img/projects/avocado-store-vercel-app.png"
+            <img width="1351" height="768" loading="lazy" src="/img/avocado-store-vercel-app.webp"
               alt="Previsualización de la pagina web" draggable="false" class="zoom-image-effect" />
           </figure>
           <div class="project-card__body">
@@ -280,8 +279,7 @@
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <img width="1351" height="768" loading="lazy"
-              src="/src/public/img/projects/Frontend-Mentor-Time-tracking-dashboard.png"
+            <img width="1351" height="768" loading="lazy" src="/img/Frontend-Mentor-Time-tracking-dashboard.webp"
               alt="Previsualización de la pagina web" draggable="false" class="zoom-image-effect" />
           </figure>
           <div class="project-card__body">
@@ -310,7 +308,7 @@
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <img width="1351" height="768" loading="lazy" src="/src/public/img/projects/todo-webapp.png"
+            <img width="1351" height="768" loading="lazy" src="/img/todo-webapp.webp"
               alt="Previsualización de la pagina web" draggable="false" class="zoom-image-effect" />
           </figure>
           <div class="project-card__body">
@@ -336,7 +334,7 @@
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <img width="1351" height="768" loading="lazy" src="/src/public/img/projects/Rick-And-Morty-App.png"
+            <img width="1351" height="768" loading="lazy" src="/img/Rick-And-Morty-App.webp"
               alt="Previsualización de la pagina web" draggable="false" class="zoom-image-effect" />
           </figure>
           <div class="project-card__body">
@@ -364,7 +362,7 @@
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <img width="1351" height="768" loading="lazy" src="/src/public/img/projects/Devstore.png"
+            <img width="1351" height="768" loading="lazy" src="/img/Devstore.webp"
               alt="Previsualización de la pagina web" draggable="false" class="zoom-image-effect" />
           </figure>
           <div class="project-card__body">

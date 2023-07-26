@@ -4,8 +4,9 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "setup": "node ./scripts/transformImagesToWebp.mjs",
+    "dev": "npm run setup && vite",
+    "build": "npm run setup && vite build",
     "preview": "vite preview",
     "lint": "standard",
     "lint-fix": "standard --fix",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "autoprefixer": "10.4.8",
     "gh-pages": "4.0.0",
+    "imagemin-webp": "8.0.0",
     "postcss": "8.4.14",
     "sass": "1.54.2",
     "standard": "16.0.4",
