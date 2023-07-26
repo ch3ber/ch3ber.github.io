@@ -1,8 +1,16 @@
-import viteImagemin from 'vite-plugin-imagemin'
 import { defineConfig } from 'vite'
+
+// plugins
+import { createHtmlPlugin } from 'vite-plugin-html'
+import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineConfig({
   plugins: [
+    createHtmlPlugin({
+      minify: true,
+      entry: 'src/index.js',
+      template: 'index.html'
+    }),
     viteImagemin({
       gifsicle: {
         optimizationLevel: 10,
