@@ -9,7 +9,7 @@
     "astro": "astro",
     "lint": "prettier . --check",
     "lint:fix": "prettier . --write",
-    "prepare": "husky"
+    "cm": "cz"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
@@ -17,7 +17,6 @@
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
-    "husky": "^9.1.7",
     "prettier": "3.6.2",
     "prettier-plugin-astro": "0.14.1"
   }
