@@ -1,30 +1,33 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --color-polar-100: "#4C566A";
-  --color-polar-200: "#434C5E";
-  --color-polar-300: "#3B4252";
-  --color-polar-400: "#2E3440";
+:root {
+  --color-polar-100: #4c566a;
+  --color-polar-200: #434c5e;
+  --color-polar-300: #3b4252;
+  --color-polar-400: #2e3440;
 
-  --color-snow-100: "#ECEFF4";
-  --color-snow-100: "#E5E9F0";
-  --color-snow-100: "#D8DEE9";
+  --color-snow-100: #eceff4;
+  --color-snow-200: #e5e9f0;
+  --color-snow-300: #d8dee9;
 
-  --color-frost-100: "#8FBCBB";
-  --color-frost-100: "#88C0D0";
-  --color-frost-100: "#81A1C1";
-  --color-frost-100: "#5E81AC";
+  --color-frost-100: #8fbcbb;
+  --color-frost-200: #88c0d0;
+  --color-frost-300: #81a1c1;
+  --color-frost-400: #5e81ac;
 
-  --color-aurora-red: "#BF616A";
-  --color-aurora-orange: "#D08770";
-  --color-aurora-yellow: "#EBCB8B";
-  --color-aurora-green: "#A3BE8C";
-  --color-aurora-purple: "#B48EAD";
+  --color-aurora-red: #bf616a;
+  --color-aurora-orange: #d08770;
+  --color-aurora-yellow: #ebcb8b;
+  --color-aurora-green: #a3be8c;
+  --color-aurora-purple: #b48ead;
 }
 
-/* @layer utilities {
+@layer utilities {
   .neumorphism {
-    @apply bg-[#ffffff] border border-snow-100;
+    @apply bg-[#ffffff] border;
+    border-color: var(--color-snow-100);
     box-shadow:
       10px 10px 15px #d9d9d9,
       -10px -10px 15px #ffffff;
@@ -42,19 +45,24 @@
       inset -3px -3px 6px #ffffff;
   }
   .neumorphism-dark {
-    @apply bg-polar-400 border-none text-snow-100;
+    @apply border-none;
+    color: var(--color-snow-100);
+    background-color: var(--color-polar-400);
     box-shadow:
       10px 10px 15px #272c36,
       -10px -10px 15px #353c4a;
   }
   .neumorphism-with-border-dark {
-    @apply bg-polar-400 border-4 border-polar-400;
+    @apply border-4;
+    color: var(--color-snow-100);
+    background-color: var(--color-polar-400);
+    border-color: var(--color-polar-400);
     box-shadow:
       10px 10px 15px #272c36,
       -10px -10px 15px #353c4a;
   }
   .neumorphism--inset-dark {
-    @apply bg-polar-400;
+    background-color: var(--color-polar-400);
     box-shadow:
       inset 3px 3px 6px #272c36,
       inset -3px -3px 6px #353c4a;
@@ -92,6 +100,11 @@
     @apply px-4 py-2 rounded neumorphism dark:neumorphism-dark transition hover:shadow-none;
   }
   .btn-ghost {
-    @apply border-2 px-4 py-2 rounded border-frost-200 transition hover:bg-frost-200 hover:text-polar-100;
+    @apply border-2 px-4 py-2 rounded transition;
+    border-color: var(--color-frost-200);
   }
-} */
+  .btn-ghost:hover {
+    background-color: var(--color-frost-200);
+    color: var(--color-polar-100);
+  }
+}

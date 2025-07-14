@@ -711,36 +711,29 @@ import Layout from '../layouts/Layout.astro'
       }
     }
 
-    const toggleNavShadow = (event) => {
+    const toggleNavShadow = () => {
+      const nav = document.getElementById('nav')
       const isScrolled = window.scrollY > 10
-      const haveDarkMode = document
-        .querySelector('html')
-        .classList.contains('dark')
+      const haveDarkMode = document.documentElement.classList.contains('dark')
+      const colorShadow = haveDarkMode
+        ? 'shadow-slate-800'
+        : 'shadow-zinc-500/30'
 
-      let colorShadow = 'shadow-zinc-500/30'
-
-      if (haveDarkMode) {
-        document.getElementById('nav').classList.remove('shadow-zinc-500/30')
-        colorShadow = 'shadow-slate8700'
-      }
-
-      if (!haveDarkMode) {
-        document.getElementById('nav').classList.remove('shadow-slate-800')
-      }
+      nav.classList.remove('shadow-zinc-500/30', 'shadow-slate-800')
 
       if (isScrolled) {
-        document.getElementById('nav').classList.add('shadow-md', colorShadow)
-      }
-
-      if (!isScrolled) {
-        document
-          .getElementById('nav')
-          .classList.remove('shadow-md', colorShadow)
+        nav.classList.add('shadow-md', colorShadow)
+      } else {
+        nav.classList.remove('shadow-md')
       }
     }
 
     const toggleDarkMode = () => {
-      document.querySelector('html').classList.toggle('dark')
+      const html = document.documentElement
+      html.classList.toggle('dark')
+      window.localStorage.theme = html.classList.contains('dark')
+        ? 'dark'
+        : 'light'
     }
 
     const autoSetDarkMode = () => {
