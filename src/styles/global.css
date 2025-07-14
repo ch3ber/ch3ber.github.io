@@ -1,1 +1,97 @@
 @import "tailwindcss";
+
+@theme {
+  --color-polar-100: "#4C566A";
+  --color-polar-200: "#434C5E";
+  --color-polar-300: "#3B4252";
+  --color-polar-400: "#2E3440";
+
+  --color-snow-100: "#ECEFF4";
+  --color-snow-100: "#E5E9F0";
+  --color-snow-100: "#D8DEE9";
+
+  --color-frost-100: "#8FBCBB";
+  --color-frost-100: "#88C0D0";
+  --color-frost-100: "#81A1C1";
+  --color-frost-100: "#5E81AC";
+
+  --color-aurora-red: "#BF616A";
+  --color-aurora-orange: "#D08770";
+  --color-aurora-yellow: "#EBCB8B";
+  --color-aurora-green: "#A3BE8C";
+  --color-aurora-purple: "#B48EAD";
+}
+
+/* @layer utilities {
+  .neumorphism {
+    @apply bg-[#ffffff] border border-snow-100;
+    box-shadow:
+      10px 10px 15px #d9d9d9,
+      -10px -10px 15px #ffffff;
+  }
+  .neumorphism-with-border {
+    @apply bg-[#ffffff] border-4 border-[#ffffff];
+    box-shadow:
+      10px 10px 15px #d9d9d9,
+      -10px -10px 15px #ffffff;
+  }
+  .neumorphism--inset {
+    @apply bg-[#ffffff];
+    box-shadow:
+      inset 3px 3px 6px #d9d9d9,
+      inset -3px -3px 6px #ffffff;
+  }
+  .neumorphism-dark {
+    @apply bg-polar-400 border-none text-snow-100;
+    box-shadow:
+      10px 10px 15px #272c36,
+      -10px -10px 15px #353c4a;
+  }
+  .neumorphism-with-border-dark {
+    @apply bg-polar-400 border-4 border-polar-400;
+    box-shadow:
+      10px 10px 15px #272c36,
+      -10px -10px 15px #353c4a;
+  }
+  .neumorphism--inset-dark {
+    @apply bg-polar-400;
+    box-shadow:
+      inset 3px 3px 6px #272c36,
+      inset -3px -3px 6px #353c4a;
+  }
+
+  .zoom-image-effect {
+    @apply transition-all duration-700 hover:grayscale hover:scale-150 hover:object-cover;
+  }
+}
+
+@layer components {
+  .title-1 {
+    @apply text-5xl font-bold text-center;
+  }
+  .title-2 {
+    @apply text-3xl font-bold text-center;
+  }
+  .title-3 {
+    @apply text-lg font-bold mb-2;
+  }
+  .icon {
+    @apply h-12 w-10 flex items-center justify-center;
+  }
+  .project-card {
+    @apply neumorphism dark:neumorphism-dark max-w-sm rounded-lg overflow-hidden;
+  }
+  .project-card__buttons {
+    @apply flex justify-around items-center mt-6 mb-4;
+  }
+  .project-card__body {
+    @apply p-5;
+  }
+
+  .btn-fill {
+    @apply px-4 py-2 rounded neumorphism dark:neumorphism-dark transition hover:shadow-none;
+  }
+  .btn-ghost {
+    @apply border-2 px-4 py-2 rounded border-frost-200 transition hover:bg-frost-200 hover:text-polar-100;
+  }
+} */

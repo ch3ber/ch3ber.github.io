@@ -1,11 +1,771 @@
 ---
-import Welcome from '../components/Welcome.astro'
 import Layout from '../layouts/Layout.astro'
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <Welcome />
+  <header
+    id="nav"
+    class="z-10 bg-[#ffffff] dark:bg-polar-400 sticky top-0 left-0 right-0 py-5 px-10"
+  >
+    <div class="max-w-3xl mx-auto grid grid-cols-2 place-items-center">
+      <nav
+        id="navModal"
+        class="z-10 fixed flex flex-col gap-10 justify-center items-center bg-[#ffffff] dark:bg-polar-400 overflow-hidden transition-all duration-500 top-0 left-0 right-0 h-0"
+      >
+        <ul class="flex flex-col items-center justify-evenly gap-10">
+          <li class="title-2 transition hover:-translate-y-3">
+            <a data-showNav="false" href="#about">About</a>
+          </li>
+          <li class="title-2 transition hover:-translate-y-3">
+            <a data-showNav="false" class="title-2" href="#proyectos"
+              >Proyectos</a
+            >
+          </li>
+          <!-- <a data-showNav="false" class="title-2 transition hover:-translate-y-3" href="#servicios">Servicios</a> -->
+          <li class="title-2 transition hover:-translate-y-3">
+            <a data-showNav="false" class="title-2" href="#contacto">Contacto</a
+            >
+          </li>
+        </ul>
+        <span
+          data-showNav="false"
+          class="text-4xl transition hover:-translate-y-3"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </span>
+      </nav>
+
+      <span
+        data-showNav="true"
+        class="text-4xl hover:opacity-80 transition-opacity"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </span>
+
+      <span
+        id="toggleDarkMode"
+        class="text-4xl hover:opacity-80 transition-opacity"
+      >
+        <i class="fa-solid fa-circle-half-stroke"></i>
+      </span>
+    </div>
+  </header>
+
+  <!-- about -->
+  <section id="about" class="w-10/12 max-w-6xl mx-auto mt-16">
+    <h1 class="flex flex-col title-1 gap-5">
+      Eber Alejo - Full Stack Web Developer
+    </h1>
+
+    <!-- header -->
+    <header
+      class="items-center content-center p-10 mt-16 neumorphism dark:neumorphism-dark grid grid-cols-1 md:grid-cols-2 justify-items-center gap-10 dark:bg-polar-300 rounded-xl"
+    >
+      <!-- profile image -->
+      <div
+        class="object-cover w-9/12 mx-auto rounded-lg neumorphism-with-border dark:neumorphism-with-border-dark"
+      >
+        <div
+          class="p-6 rounded-lg neumorphism--inset dark:neumorphism--inset-dark"
+        >
+          <figure class="overflow-hidden rounded-lg">
+            <img
+              draggable="false"
+              class="overflow-hidden zoom-image-effect"
+              loading="lazy"
+              src="https://github.com/ch3ber.png"
+              width="460"
+              height="460"
+              alt="Eber Alejo"
+            />
+          </figure>
+        </div>
+      </div>
+
+      <!-- body card -->
+      <article>
+        <section>
+          <h2 class="title-2">¿Quién es Eber?</h2>
+          <p class="mt-5 text-center">
+            Desarrollador frontend mexicano con 3 años de experiencia. Estuve en
+            diferentes proyectos con gente de Argentina y España, fui
+            responsable de su diseño y desarrollo. Además, como maestro, enseñé
+            a un grupo de 5 estudiantes los fundamentos del desarrollo frontend.
+            Soy autodidacta y me apasiona el aprendizaje continuo y estoy
+            constantemente actualizando mis habilidades y conocimientos.
+          </p>
+        </section>
+
+        <!-- icons -->
+        <section class="mt-10 text-center">
+          <h2 class="title-2">Conocimientos</h2>
+
+          <article class="mt-4">
+            <h3 class="title-3">Tecnologías</h3>
+
+            <div class="flex flex-wrap items-center justify-center gap-3">
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="HTML 5"
+                  src="/img/html-svgrepo-com.svg"
+                  alt="HTML 5 logo on svg"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="CSS 3"
+                  src="/img/css-svgrepo-com.svg"
+                  alt="CSS 3 logo on svg"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="JavaScript"
+                  class="w-20"
+                  src="/img/js-svgrepo-com.svg"
+                  alt="JavaScript logo on svg"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="TypeScript"
+                  src="/img/typescript-logo-svgrepo-com.svg"
+                  alt="TypeScript logo on svg"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="React.js logo on svg"
+                  src="/img/react-svgrepo-com.svg"
+                  alt="React.js"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="SASS logo on svg"
+                  src="/img/sass-svgrepo-com.svg"
+                  alt="SASS"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="Tailwindcss"
+                  src="/img/tailwindcss-icon-svgrepo-com.svg"
+                  alt="Tailwindcss logo on svg"
+                />
+              </div>
+              <div class="w-20 icon dark:w-24">
+                <img
+                  width="40"
+                  height="40"
+                  title="chakraUI"
+                  class="dark:bg-[#ffffff] dark:rounded dark:p-3"
+                  src="/img/chakraUI.svg"
+                  alt="chakraUI logo on svg"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="Next.js logo on svg"
+                  src="/img/next-js-svgrepo-com.svg"
+                  alt="Next.js"
+                />
+              </div>
+            </div>
+          </article>
+
+          <article class="mt-4">
+            <h3 class="title-3">Herramientas</h3>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="Git"
+                  src="/img/git-svgrepo-com.svg"
+                  alt="Git logo on svg"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="Figma"
+                  src="/img/figma-svgrepo-com.svg"
+                  alt="Figma logo on svg"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="Netlify"
+                  src="/img/netlify-svgrepo-com.svg"
+                  alt="Netlify logo on svg"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="Vercel"
+                  src="/img/vercel-svgrepo-com.svg"
+                  alt="Vercel logo on svg"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="Webpack"
+                  src="/img/webpack-svgrepo-com.svg"
+                  alt="Webpack logo on svg"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="Vite"
+                  src="/img/vite-svgrepo-com.svg"
+                  alt="Vite.js logo on svg"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="NPM"
+                  src="/img/npm-svgrepo-com.svg"
+                  alt="NPM logo on svg"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="Arch Linux"
+                  src="/img/arch-linux-svgrepo-com.svg"
+                  alt="Arch linux logo on svg"
+                />
+              </div>
+              <div class="icon">
+                <img
+                  width="40"
+                  height="40"
+                  title="Neovim"
+                  src="/img/neovim-svgrepo-com.svg"
+                  alt="Neovim logo on svg"
+                />
+              </div>
+            </div>
+          </article>
+        </section>
+      </article>
+    </header>
+  </section>
+
+  <main class="w-11/12 max-w-6xl mx-auto mt-16 md:p-20 md:w-full">
+    <!-- portfolio -->
+    <section id="proyectos">
+      <h2 class="title-2">Proyectos</h2>
+      <div
+        class="mt-10 grid place-content-center place-items-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-14"
+      >
+        <article
+          class="project-card col-start-1 md:col-end-3 xl:col-end-4 md:max-w-xl"
+        >
+          <figure class="overflow-hidden">
+            <img
+              loading="lazy"
+              src="/img/GitHub-ch3ber-e-commerce-api-E-commerce-CRUD-with-postgresql-and-express-js.webp"
+              alt="Previsualización del respositorio en GitHub"
+              draggable="false"
+              class="zoom-image-effect"
+            />
+          </figure>
+          <div class="project-card__body">
+            <h3 class="title-3">E-Commerce API</h3>
+            <p class="md:h-32 h-52">
+              Autenticación y autorización de usuarios. TypeScript, Express.js,
+              Sequelize como ORM de PostgreSQL. Recuperación de contraseñas a
+              través de correo electrónico. Unit testing, integration testing y
+              testing E2E utilizando Jest.js y supertest. Continuous Integration
+              (CI) con GitHub Actions.
+            </p>
+            <div class="project-card__buttons">
+              <div
+                class="neumorphism-with-border dark:neumorphism-with-border-dark"
+              >
+                <a
+                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  href="https://github.com/ch3ber/e-commerce-api"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ver código
+                </a>
+              </div>
+              <a
+                class="border-none btn-fill"
+                href="https://e-commerce-api-1r2n.onrender.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="overflow-hidden">
+            <img
+              width="1351"
+              height="768"
+              loading="lazy"
+              src="/img/Petgram-Tu-app-de-fotos-de-mascotas.webp"
+              alt="Previsualización de la pagina web"
+              draggable="false"
+              class="zoom-image-effect"
+            />
+          </figure>
+          <div class="project-card__body">
+            <h3 class="title-3">Petgram</h3>
+            <p class="h-32">
+              Clon de Instagram funcional usando React.js y grahpql, login
+              funcional, así como persistencia de datos. UI diferente a la de
+              Instagram.
+            </p>
+            <div class="project-card__buttons">
+              <div
+                class="neumorphism-with-border dark:neumorphism-with-border-dark"
+              >
+                <a
+                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  href="https://github.com/ch3ber/petgram"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ver código
+                </a>
+              </div>
+              <a
+                class="border-none btn-fill"
+                href="https://petgram-ch3ber.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="overflow-hidden">
+            <img
+              width="1351"
+              height="768"
+              loading="lazy"
+              src="/img/avocado-store-vercel-app.webp"
+              alt="Previsualización de la pagina web"
+              draggable="false"
+              class="zoom-image-effect"
+            />
+          </figure>
+          <div class="project-card__body">
+            <h3 class="title-3">Avocado Store</h3>
+            <p class="h-32">
+              Creada con Next.js, TypeScript y Chakra UI, una tienda en la que
+              podrás comprar todo tipo de aguacates. Agrega productos en tiempo
+              real y encuentra el easter egg de la pagina.
+            </p>
+            <div class="project-card__buttons">
+              <div
+                class="neumorphism-with-border dark:neumorphism-with-border-dark"
+              >
+                <a
+                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  href="https://github.com/ch3ber/avocado-store"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ver código
+                </a>
+              </div>
+              <a
+                class="border-none btn-fill"
+                href="https://ch3ber-avocado-store.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="overflow-hidden">
+            <img
+              width="1351"
+              height="768"
+              loading="lazy"
+              src="/img/Frontend-Mentor-Time-tracking-dashboard.webp"
+              alt="Previsualización de la pagina web"
+              draggable="false"
+              class="zoom-image-effect"
+            />
+          </figure>
+          <div class="project-card__body">
+            <h3 class="title-3">Time tracking dashboard</h3>
+            <p class="h-32">
+              Un reto de
+              <a
+                class="underline transition-opacity hover:opacity-80"
+                href="https://www.frontendmentor.io/"
+                target="_blank"
+                rel="noreferrer">Frontend Mentor</a
+              >
+              completado, tablero con información dinámica usando JavaScript, CSS
+              para los estilos y un JSON como Data Base
+            </p>
+            <div class="project-card__buttons">
+              <div
+                class="neumorphism-with-border dark:neumorphism-with-border-dark"
+              >
+                <a
+                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  href="https://github.com/ch3ber/time-tracking-dashboard"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ver código
+                </a>
+              </div>
+              <a
+                class="border-none btn-fill"
+                href="https://ch3ber-time-tracking-dashboard.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="overflow-hidden">
+            <img
+              width="1351"
+              height="768"
+              loading="lazy"
+              src="/img/todo-webapp.webp"
+              alt="Previsualización de la pagina web"
+              draggable="false"
+              class="zoom-image-effect"
+            />
+          </figure>
+          <div class="project-card__body">
+            <h3 class="title-3">ToDo Webapp</h3>
+            <p class="h-32">
+              Crea, guarda, completa y elimina ToDoes con esta página creada con
+              React.js y CSS, uso de local storage para la persistencia de datos
+            </p>
+            <div class="project-card__buttons">
+              <div
+                class="neumorphism-with-border dark:neumorphism-with-border-dark"
+              >
+                <a
+                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  href="https://github.com/ch3ber/todo-webapp"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ver código
+                </a>
+              </div>
+              <a
+                class="border-none btn-fill"
+                href="/todo-webapp"
+                target="_blank"
+              >
+                Ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="overflow-hidden">
+            <img
+              width="1351"
+              height="768"
+              loading="lazy"
+              src="/img/Rick-And-Morty-App.webp"
+              alt="Previsualización de la pagina web"
+              draggable="false"
+              class="zoom-image-effect"
+            />
+          </figure>
+          <div class="project-card__body">
+            <h3 class="title-3">Rick And Morty Webapp</h3>
+            <p class="h-32">
+              Encuentra a cualquier personaje de la serie de Rick And Morty con
+              esta web app creada en React.js y SASS usando la
+              <a
+                class="underline transition-opacity hover:opacity-80"
+                href="https://rickandmortyapi.com/"
+                target="_blank"
+                rel="noreferrer">API de Rick And Morty</a
+              >
+            </p>
+            <div class="project-card__buttons">
+              <div
+                class="neumorphism-with-border dark:neumorphism-with-border-dark"
+              >
+                <a
+                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  href="https://github.com/ch3ber/RickAndMorty-webapp"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ver código
+                </a>
+              </div>
+              <a
+                class="border-none btn-fill"
+                href="https://ch3ber-rickandmortyapp.netlify.app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="overflow-hidden">
+            <img
+              width="1351"
+              height="768"
+              loading="lazy"
+              src="/img/Devstore.webp"
+              alt="Previsualización de la pagina web"
+              draggable="false"
+              class="zoom-image-effect"
+            />
+          </figure>
+          <div class="project-card__body">
+            <h3 class="title-3">Devstore</h3>
+            <p class="h-32">
+              Encuentra los mejores productos para developers. Router,
+              componentes, manejo de local storage y ¡más! Solo usando
+              TypeScript y Tailwindcss
+            </p>
+            <div class="project-card__buttons">
+              <div
+                class="neumorphism-with-border dark:neumorphism-with-border-dark"
+              >
+                <a
+                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  href="https://github.com/ch3ber/devstore"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ver código
+                </a>
+              </div>
+              <a
+                class="border-none btn-fill"
+                href="https://ch3ber-devstore.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ver sitio web
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- servicios -->
+    <!-- <section class="p-10">
+          <h2 id="servicios" class="title-2">Mis Servicios</h2>
+          <div class="grid gap-14">
+
+          </div>
+      </section> -->
+  </main>
+
+  <img
+    class="z-0 hidden w-full mt-20 dark:block"
+    src="/img/waves-dark.svg"
+    alt="Svg wave color gray"
+  />
+  <img
+    class="z-0 block w-full mt-20 dark:hidden"
+    src="/img/waves-white.svg"
+    alt="Svg wave color white"
+  />
+  <footer
+    class="z-0 p-12 text-polar-100 dark:text-snow-100 bg-snow-200 dark:bg-polar-300"
+    id="contacto"
+  >
+    <div
+      class="flex flex-col justify-between max-w-2xl mx-auto md:flex-row gap-10"
+    >
+      <section>
+        <h3 class="font-bold title-3">Desarrollador</h3>
+        <p class="text-polar-100 dark:text-snow-300">
+          Hecho con &#128153; por <strong>Eber Alejo</strong>
+        </p>
+      </section>
+
+      <section>
+        <h3 class="font-bold title-3">Contacto</h3>
+        <ul
+          class="text-polar-100 dark:text-snow-300 grid grid-cols-2 md:grid-cols-4 md:gap-1 gap-3"
+        >
+          <li>
+            <a
+              class="transition hover:text-zinc-400 hover:underline"
+              href="mailto:eber4202@hotmail.com"
+            >
+              <i class="fa-solid fa-envelope"></i>
+              E-Mail
+            </a>
+          </li>
+          <li>
+            <a
+              class="transition hover:text-zinc-400 hover:underline"
+              rel="noreferrer"
+              href="https://github.com/ch3ber"
+              target="_blank"
+            >
+              <i class="fa-brands fa-github"></i>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              class="transition hover:text-zinc-400 hover:underline"
+              rel="noreferrer"
+              href="https://twitter.com/ch3ber_dev"
+              target="_blank"
+            >
+              <i class="fa-brands fa-twitter"></i>
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a
+              class="transition hover:text-zinc-400 hover:underline"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/eberalejo"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </footer>
+  <script>
+    const toggleNav = () => {
+      const navModal = document.getElementById('navModal')
+      const body = document.querySelector('body')
+      const isOpen = navModal.classList.contains('h-screen')
+
+      if (isOpen) {
+        body.classList.remove('h-screen', 'overflow-hidden')
+        navModal.classList.remove('h-screen')
+        navModal.classList.add('h-0')
+      }
+
+      if (!isOpen) {
+        body.classList.add('h-screen', 'overflow-hidden')
+        navModal.classList.remove('h-0')
+        navModal.classList.add('h-screen')
+      }
+    }
+
+    const toggleNavShadow = (event) => {
+      const isScrolled = window.scrollY > 10
+      const haveDarkMode = document
+        .querySelector('html')
+        .classList.contains('dark')
+
+      let colorShadow = 'shadow-zinc-500/30'
+
+      if (haveDarkMode) {
+        document.getElementById('nav').classList.remove('shadow-zinc-500/30')
+        colorShadow = 'shadow-slate8700'
+      }
+
+      if (!haveDarkMode) {
+        document.getElementById('nav').classList.remove('shadow-slate-800')
+      }
+
+      if (isScrolled) {
+        document.getElementById('nav').classList.add('shadow-md', colorShadow)
+      }
+
+      if (!isScrolled) {
+        document
+          .getElementById('nav')
+          .classList.remove('shadow-md', colorShadow)
+      }
+    }
+
+    const toggleDarkMode = () => {
+      document.querySelector('html').classList.toggle('dark')
+    }
+
+    const autoSetDarkMode = () => {
+      if (
+        window.localStorage.theme === 'dark' ||
+        (!('theme' in window.localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      autoSetDarkMode()
+      document
+        .querySelectorAll('[data-showNav]')
+        .forEach((el) => el.addEventListener('click', toggleNav))
+
+      document
+        .getElementById('toggleDarkMode')
+        .addEventListener('click', toggleDarkMode)
+
+      document.addEventListener('scroll', toggleNavShadow)
+    })
+  </script>
 </Layout>

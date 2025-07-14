@@ -6,12 +6,34 @@ import '../styles/global.css'
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>
+      ch3ber - Eber Alejo. Frontend Web Developer y Creador de contenido
+    </title>
+
+    <link rel="preconnect" href="https://fontawesome.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://ch3ber.github.io" />
+
+    <meta
+      name="description"
+      content="Eber Alejo (ch3ber). Desarrollador Frontend mexicano, colaborador Open Source, creador de contenido, autodidacta y apasionado del aprendizaje continuo"
+    />
+
+    <!--<link rel="preload" href="build/css/app.css" as="style">-->
+
+    <link rel="preload" href="https://github.com/ch3ber.png" as="image" />
+
+    <script
+      async
+      src="https://kit.fontawesome.com/0d89849159.js"
+      crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body
+    class="selection:bg-frost-400 selection:text-snow-100 dark:bg-polar-400 transition-colors duration-75 text-polar-100 dark:text-snow-100"
+  >
     <slot />
   </body>
 </html>
