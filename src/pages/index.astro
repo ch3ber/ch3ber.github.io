@@ -59,7 +59,7 @@ import Layout from '../layouts/Layout.astro'
 
     <!-- header -->
     <header
-      class="items-center content-center p-10 mt-16 neumorphism dark:neumorphism-dark grid grid-cols-1 md:grid-cols-2 justify-items-center gap-10 dark:bg-polar-300 rounded-xl"
+      class="items-center content-center p-10 mt-16 neumorphism dark:neumorphism-dark grid grid-cols-1 md:grid-cols-2 justify-items-center gap-10 dark:bg-polar-400 rounded-xl"
     >
       <!-- profile image -->
       <div
@@ -692,80 +692,79 @@ import Layout from '../layouts/Layout.astro'
       </section>
     </div>
   </footer>
-  <script>
-    const toggleNav = () => {
-      const navModal = document.getElementById('navModal')
-      const body = document.querySelector('body')
-      const isOpen = navModal.classList.contains('h-screen')
-
-      if (isOpen) {
-        body.classList.remove('h-screen', 'overflow-hidden')
-        navModal.classList.remove('h-screen')
-        navModal.classList.add('h-0')
-      }
-
-      if (!isOpen) {
-        body.classList.add('h-screen', 'overflow-hidden')
-        navModal.classList.remove('h-0')
-        navModal.classList.add('h-screen')
-      }
-    }
-
-    const toggleNavShadow = (event) => {
-      const isScrolled = window.scrollY > 10
-      const haveDarkMode = document
-        .querySelector('html')
-        .classList.contains('dark')
-
-      let colorShadow = 'shadow-zinc-500/30'
-
-      if (haveDarkMode) {
-        document.getElementById('nav').classList.remove('shadow-zinc-500/30')
-        colorShadow = 'shadow-slate8700'
-      }
-
-      if (!haveDarkMode) {
-        document.getElementById('nav').classList.remove('shadow-slate-800')
-      }
-
-      if (isScrolled) {
-        document.getElementById('nav').classList.add('shadow-md', colorShadow)
-      }
-
-      if (!isScrolled) {
-        document
-          .getElementById('nav')
-          .classList.remove('shadow-md', colorShadow)
-      }
-    }
-
-    const toggleDarkMode = () => {
-      document.querySelector('html').classList.toggle('dark')
-    }
-
-    const autoSetDarkMode = () => {
-      if (
-        window.localStorage.theme === 'dark' ||
-        (!('theme' in window.localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      autoSetDarkMode()
-      document
-        .querySelectorAll('[data-showNav]')
-        .forEach((el) => el.addEventListener('click', toggleNav))
-
-      document
-        .getElementById('toggleDarkMode')
-        .addEventListener('click', toggleDarkMode)
-
-      document.addEventListener('scroll', toggleNavShadow)
-    })
-  </script>
 </Layout>
+
+<script defer>
+  const toggleNav = () => {
+    const navModal = document.getElementById('navModal')
+    const body = document.querySelector('body')
+    const isOpen = navModal.classList.contains('h-screen')
+
+    if (isOpen) {
+      body.classList.remove('h-screen', 'overflow-hidden')
+      navModal.classList.remove('h-screen')
+      navModal.classList.add('h-0')
+    }
+
+    if (!isOpen) {
+      body.classList.add('h-screen', 'overflow-hidden')
+      navModal.classList.remove('h-0')
+      navModal.classList.add('h-screen')
+    }
+  }
+
+  const toggleNavShadow = (event) => {
+    const isScrolled = window.scrollY > 10
+    const haveDarkMode = document
+      .querySelector('html')
+      .classList.contains('dark')
+
+    let colorShadow = 'shadow-zinc-500/30'
+
+    if (haveDarkMode) {
+      document.getElementById('nav').classList.remove('shadow-zinc-500/30')
+      colorShadow = 'shadow-slate8700'
+    }
+
+    if (!haveDarkMode) {
+      document.getElementById('nav').classList.remove('shadow-slate-800')
+    }
+
+    if (isScrolled) {
+      document.getElementById('nav').classList.add('shadow-md', colorShadow)
+    }
+
+    if (!isScrolled) {
+      document.getElementById('nav').classList.remove('shadow-md', colorShadow)
+    }
+  }
+
+  const toggleDarkMode = () => {
+    document.querySelector('html').classList.toggle('dark')
+  }
+
+  const autoSetDarkMode = () => {
+    if (
+      window.localStorage.theme === 'dark' ||
+      (!('theme' in window.localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    autoSetDarkMode()
+    document
+      .querySelectorAll('[data-showNav]')
+      .forEach((el) => el.addEventListener('click', toggleNav))
+
+    document
+      .getElementById('toggleDarkMode')
+      .addEventListener('click', toggleDarkMode)
+
+    document.addEventListener('scroll', toggleNavShadow)
+  })
+</script>

@@ -1,97 +1,156 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap')
+layer(base);
+
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-polar-100: "#4C566A";
-  --color-polar-200: "#434C5E";
-  --color-polar-300: "#3B4252";
-  --color-polar-400: "#2E3440";
+  --color-*: initial;
+  --color-zinc-50: #fafafa;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-600: #52525b;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
 
-  --color-snow-100: "#ECEFF4";
-  --color-snow-100: "#E5E9F0";
-  --color-snow-100: "#D8DEE9";
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
 
-  --color-frost-100: "#8FBCBB";
-  --color-frost-100: "#88C0D0";
-  --color-frost-100: "#81A1C1";
-  --color-frost-100: "#5E81AC";
+  --color-polar-100: #4c566a;
+  --color-polar-200: #434c5e;
+  --color-polar-300: #3b4252;
+  --color-polar-400: #2e3440;
 
-  --color-aurora-red: "#BF616A";
-  --color-aurora-orange: "#D08770";
-  --color-aurora-yellow: "#EBCB8B";
-  --color-aurora-green: "#A3BE8C";
-  --color-aurora-purple: "#B48EAD";
+  --color-snow-100: #eceff4;
+  --color-snow-200: #e5e9f0;
+  --color-snow-300: #d8dee9;
+
+  --color-frost-100: #8fbcbb;
+  --color-frost-200: #88c0d0;
+  --color-frost-300: #81a1c1;
+  --color-frost-400: #5e81ac;
+
+  --color-aurora-red: #bf616a;
+  --color-aurora-orange: #d08770;
+  --color-aurora-yellow: #ebcb8b;
+  --color-aurora-green: #a3be8c;
+  --color-aurora-purple: #b48ead;
+
+  --font-sans:
+    Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-/* @layer utilities {
-  .neumorphism {
-    @apply bg-[#ffffff] border border-snow-100;
-    box-shadow:
-      10px 10px 15px #d9d9d9,
-      -10px -10px 15px #ffffff;
-  }
-  .neumorphism-with-border {
-    @apply bg-[#ffffff] border-4 border-[#ffffff];
-    box-shadow:
-      10px 10px 15px #d9d9d9,
-      -10px -10px 15px #ffffff;
-  }
-  .neumorphism--inset {
-    @apply bg-[#ffffff];
-    box-shadow:
-      inset 3px 3px 6px #d9d9d9,
-      inset -3px -3px 6px #ffffff;
-  }
-  .neumorphism-dark {
-    @apply bg-polar-400 border-none text-snow-100;
-    box-shadow:
-      10px 10px 15px #272c36,
-      -10px -10px 15px #353c4a;
-  }
-  .neumorphism-with-border-dark {
-    @apply bg-polar-400 border-4 border-polar-400;
-    box-shadow:
-      10px 10px 15px #272c36,
-      -10px -10px 15px #353c4a;
-  }
-  .neumorphism--inset-dark {
-    @apply bg-polar-400;
-    box-shadow:
-      inset 3px 3px 6px #272c36,
-      inset -3px -3px 6px #353c4a;
-  }
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
 
-  .zoom-image-effect {
-    @apply transition-all duration-700 hover:grayscale hover:scale-150 hover:object-cover;
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
   }
 }
 
-@layer components {
-  .title-1 {
-    @apply text-5xl font-bold text-center;
-  }
-  .title-2 {
-    @apply text-3xl font-bold text-center;
-  }
-  .title-3 {
-    @apply text-lg font-bold mb-2;
-  }
-  .icon {
-    @apply h-12 w-10 flex items-center justify-center;
-  }
-  .project-card {
-    @apply neumorphism dark:neumorphism-dark max-w-sm rounded-lg overflow-hidden;
-  }
-  .project-card__buttons {
-    @apply flex justify-around items-center mt-6 mb-4;
-  }
-  .project-card__body {
-    @apply p-5;
-  }
+@utility title-1 {
+  @apply text-5xl font-bold text-center;
+}
 
-  .btn-fill {
-    @apply px-4 py-2 rounded neumorphism dark:neumorphism-dark transition hover:shadow-none;
-  }
-  .btn-ghost {
-    @apply border-2 px-4 py-2 rounded border-frost-200 transition hover:bg-frost-200 hover:text-polar-100;
-  }
-} */
+@utility title-2 {
+  @apply text-3xl font-bold text-center;
+}
+
+@utility title-3 {
+  @apply text-lg font-bold mb-2;
+}
+
+@utility icon {
+  @apply h-12 w-10 flex items-center justify-center;
+}
+
+@utility project-card {
+  @apply neumorphism dark:neumorphism-dark max-w-sm rounded-lg overflow-hidden;
+}
+
+@utility project-card__buttons {
+  @apply flex justify-around items-center mt-6 mb-4;
+}
+
+@utility project-card__body {
+  @apply p-5;
+}
+
+@utility btn-fill {
+  @apply px-4 py-2 rounded-sm neumorphism dark:neumorphism-dark transition hover:shadow-none;
+}
+
+@utility btn-ghost {
+  @apply border-2 px-4 py-2 rounded-sm border-frost-200 transition hover:bg-frost-200 hover:text-polar-100;
+}
+
+@utility neumorphism {
+  @apply bg-[#ffffff] border border-snow-100;
+  box-shadow:
+    10px 10px 15px #d9d9d9,
+    -10px -10px 15px #ffffff;
+}
+
+@utility neumorphism-with-border {
+  @apply bg-[#ffffff] border-4 border-[#ffffff];
+  box-shadow:
+    10px 10px 15px #d9d9d9,
+    -10px -10px 15px #ffffff;
+}
+
+@utility neumorphism--inset {
+  @apply bg-[#ffffff];
+  box-shadow:
+    inset 3px 3px 6px #d9d9d9,
+    inset -3px -3px 6px #ffffff;
+}
+
+@utility neumorphism-dark {
+  @apply bg-polar-400 border-none text-snow-100;
+  box-shadow:
+    10px 10px 15px #272c36,
+    -10px -10px 15px #353c4a;
+}
+
+@utility neumorphism-with-border-dark {
+  @apply bg-polar-400 border-4 border-polar-400;
+  box-shadow:
+    10px 10px 15px #272c36,
+    -10px -10px 15px #353c4a;
+}
+
+@utility neumorphism--inset-dark {
+  @apply bg-polar-400;
+  box-shadow:
+    inset 3px 3px 6px #272c36,
+    inset -3px -3px 6px #353c4a;
+}
+
+@utility zoom-image-effect {
+  @apply transition-all duration-700 hover:grayscale hover:scale-150 hover:object-cover;
+}
