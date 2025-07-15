@@ -1,16 +1,17 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import 'animate.css'
 ---
 
 <Layout>
   <header
     id="nav"
-    class="z-10 bg-[#ffffff] dark:bg-polar-400 sticky top-0 left-0 right-0 py-5 px-10"
+    class="lg:hidden z-[999999] backdrop-blur-xs sticky top-0 left-0 right-0"
   >
-    <div class="max-w-3xl mx-auto grid grid-cols-2 place-items-center">
+    <div class="max-w-3xl mx-auto text-center py-4 px-10">
       <nav
         id="navModal"
-        class="z-10 fixed flex flex-col gap-10 justify-center items-center bg-[#ffffff] dark:bg-polar-400 overflow-hidden transition-all duration-500 top-0 left-0 right-0 h-0"
+        class="z-10 fixed flex flex-col gap-10 justify-center items-center dark:bg-bg-100 overflow-hidden transition-all duration-500 top-0 left-0 right-0 h-0"
       >
         <ul class="flex flex-col items-center justify-evenly gap-10">
           <li class="title-2 transition hover:-translate-y-3">
@@ -37,248 +38,63 @@ import Layout from '@/layouts/Layout.astro'
 
       <span
         data-showNav="true"
-        class="text-4xl hover:opacity-80 transition-opacity"
+        class="mx-auto text-center text-4xl hover:opacity-80 transition-opacity"
       >
         <i class="fa-solid fa-bars"></i>
-      </span>
-
-      <span
-        id="toggleDarkMode"
-        class="text-4xl hover:opacity-80 transition-opacity"
-      >
-        <i class="fa-solid fa-circle-half-stroke"></i>
       </span>
     </div>
   </header>
 
+  <header class="hidden lg:block max-w-5xl mx-auto">
+    <nav class="p-10">
+      <ul class="flex items-center justify-evenly gap-10">
+        <li class="font-bold">
+          <a
+            data-showNav="false"
+            class="text-xl hover:text-accents transition"
+            href="#about">About</a
+          >
+        </li>
+        <li class="font-bold">
+          <a
+            data-showNav="false"
+            class="text-xl hover:text-accents transition"
+            href="#proyectos">Proyectos</a
+          >
+        </li>
+        <li class="font-bold">
+          <a
+            data-showNav="false"
+            class="text-xl hover:text-accents transition"
+            href="#contacto">Contacto</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </header>
+
   <!-- about -->
-  <section id="about" class="w-10/12 max-w-6xl mx-auto mt-16">
-    <h1 class="flex flex-col title-1 gap-5">
-      Eber Alejo - Full Stack Web Developer
-    </h1>
-
-    <!-- header -->
-    <header
-      class="items-center content-center p-10 mt-16 neumorphism dark:neumorphism-dark grid grid-cols-1 md:grid-cols-2 justify-items-center gap-10 dark:bg-polar-400 rounded-xl"
+  <section id="about" class="max-w-5xl text-center mx-auto mt-16 px-4 py-10">
+    <h1
+      class="prose-headings:h-1 text-primary-200 flex flex-col text-5xl font-bold gap-5"
     >
-      <!-- profile image -->
-      <div
-        class="object-cover w-9/12 mx-auto rounded-lg neumorphism-with-border dark:neumorphism-with-border-dark"
-      >
-        <div
-          class="p-6 rounded-lg neumorphism--inset dark:neumorphism--inset-dark"
-        >
-          <figure class="overflow-hidden rounded-lg">
-            <img
-              draggable="false"
-              class="overflow-hidden zoom-image-effect"
-              loading="lazy"
-              src="https://github.com/ch3ber.png"
-              width="460"
-              height="460"
-              alt="Eber Alejo"
-            />
-          </figure>
-        </div>
-      </div>
-
-      <!-- body card -->
-      <article>
-        <section>
-          <h2 class="title-2">¿Quién es Eber?</h2>
-          <p class="mt-5 text-center">
-            Desarrollador frontend mexicano con 3 años de experiencia. Estuve en
-            diferentes proyectos con gente de Argentina y España, fui
-            responsable de su diseño y desarrollo. Además, como maestro, enseñé
-            a un grupo de 5 estudiantes los fundamentos del desarrollo frontend.
-            Soy autodidacta y me apasiona el aprendizaje continuo y estoy
-            constantemente actualizando mis habilidades y conocimientos.
-          </p>
-        </section>
-
-        <!-- icons -->
-        <section class="mt-10 text-center">
-          <h2 class="title-2">Conocimientos</h2>
-
-          <article class="mt-4">
-            <h3 class="title-3">Tecnologías</h3>
-
-            <div class="flex flex-wrap items-center justify-center gap-3">
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="HTML 5"
-                  src="/img/html-svgrepo-com.svg"
-                  alt="HTML 5 logo on svg"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="CSS 3"
-                  src="/img/css-svgrepo-com.svg"
-                  alt="CSS 3 logo on svg"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="JavaScript"
-                  class="w-20"
-                  src="/img/js-svgrepo-com.svg"
-                  alt="JavaScript logo on svg"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="TypeScript"
-                  src="/img/typescript-logo-svgrepo-com.svg"
-                  alt="TypeScript logo on svg"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="React.js logo on svg"
-                  src="/img/react-svgrepo-com.svg"
-                  alt="React.js"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="SASS logo on svg"
-                  src="/img/sass-svgrepo-com.svg"
-                  alt="SASS"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="Tailwindcss"
-                  src="/img/tailwindcss-icon-svgrepo-com.svg"
-                  alt="Tailwindcss logo on svg"
-                />
-              </div>
-              <div class="w-20 icon dark:w-24">
-                <img
-                  width="40"
-                  height="40"
-                  title="chakraUI"
-                  class="dark:bg-[#ffffff] dark:rounded dark:p-3"
-                  src="/img/chakraUI.svg"
-                  alt="chakraUI logo on svg"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="Next.js logo on svg"
-                  src="/img/next-js-svgrepo-com.svg"
-                  alt="Next.js"
-                />
-              </div>
-            </div>
-          </article>
-
-          <article class="mt-4">
-            <h3 class="title-3">Herramientas</h3>
-            <div class="flex flex-wrap items-center justify-center gap-3">
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="Git"
-                  src="/img/git-svgrepo-com.svg"
-                  alt="Git logo on svg"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="Figma"
-                  src="/img/figma-svgrepo-com.svg"
-                  alt="Figma logo on svg"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="Netlify"
-                  src="/img/netlify-svgrepo-com.svg"
-                  alt="Netlify logo on svg"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="Vercel"
-                  src="/img/vercel-svgrepo-com.svg"
-                  alt="Vercel logo on svg"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="Webpack"
-                  src="/img/webpack-svgrepo-com.svg"
-                  alt="Webpack logo on svg"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="Vite"
-                  src="/img/vite-svgrepo-com.svg"
-                  alt="Vite.js logo on svg"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="NPM"
-                  src="/img/npm-svgrepo-com.svg"
-                  alt="NPM logo on svg"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="Arch Linux"
-                  src="/img/arch-linux-svgrepo-com.svg"
-                  alt="Arch linux logo on svg"
-                />
-              </div>
-              <div class="icon">
-                <img
-                  width="40"
-                  height="40"
-                  title="Neovim"
-                  src="/img/neovim-svgrepo-com.svg"
-                  alt="Neovim logo on svg"
-                />
-              </div>
-            </div>
-          </article>
-        </section>
-      </article>
-    </header>
+      Eber Alejo
+    </h1>
+    <h2 class="prose-headings:h-2 text-primary-300">
+      Desarrollador Web & Creador de Contenido
+    </h2>
+    <p class="mt-5 mx-auto prose text-txt-100">
+      Ingeniero en Tecnologías Computacionales orientado a resultados y
+      divulgador de conocimiento. Diseño experiencias web de alto rendimiento,
+      optimizo procesos mediante automatización y comparto buenas prácticas a la
+      comunidad a través de proyectos de código abierto y contenidos educativos.
+      Mi trayectoria abarca desde la creación de interfaces intuitivas hasta la
+      construcción de arquitecturas escalables, siempre guiado por la calidad,
+      la eficiencia y el aprendizaje continuo. Reconocido en hackathones
+      nacionales y líder de iniciativas formativas, aporto visión estratégica y
+      capacidad de ejecución a equipos que buscan transformar ideas en
+      soluciones de impacto.
+    </p>
   </section>
 
   <main class="w-11/12 max-w-6xl mx-auto mt-16 md:p-20 md:w-full">
@@ -310,11 +126,9 @@ import Layout from '@/layouts/Layout.astro'
               (CI) con GitHub Actions.
             </p>
             <div class="project-card__buttons">
-              <div
-                class="neumorphism-with-border dark:neumorphism-with-border-dark"
-              >
+              <div class="btn-ghost active:animate__jello">
                 <a
-                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  class="px-4 py-2 rounded-sm"
                   href="https://github.com/ch3ber/e-commerce-api"
                   target="_blank"
                   rel="noreferrer"
@@ -328,7 +142,7 @@ import Layout from '@/layouts/Layout.astro'
                 target="_blank"
                 rel="noreferrer"
               >
-                Ver sitio web
+                Visitar
               </a>
             </div>
           </div>
@@ -354,11 +168,9 @@ import Layout from '@/layouts/Layout.astro'
               Instagram.
             </p>
             <div class="project-card__buttons">
-              <div
-                class="neumorphism-with-border dark:neumorphism-with-border-dark"
-              >
+              <div class="btn-ghost">
                 <a
-                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  class="px-4 py-2 rounded-sm"
                   href="https://github.com/ch3ber/petgram"
                   target="_blank"
                   rel="noreferrer"
@@ -372,7 +184,7 @@ import Layout from '@/layouts/Layout.astro'
                 target="_blank"
                 rel="noreferrer"
               >
-                Ver sitio web
+                Visitar
               </a>
             </div>
           </div>
@@ -398,11 +210,9 @@ import Layout from '@/layouts/Layout.astro'
               real y encuentra el easter egg de la pagina.
             </p>
             <div class="project-card__buttons">
-              <div
-                class="neumorphism-with-border dark:neumorphism-with-border-dark"
-              >
+              <div class="btn-ghost">
                 <a
-                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  class="px-4 py-2 rounded-sm"
                   href="https://github.com/ch3ber/avocado-store"
                   target="_blank"
                   rel="noreferrer"
@@ -416,7 +226,7 @@ import Layout from '@/layouts/Layout.astro'
                 target="_blank"
                 rel="noreferrer"
               >
-                Ver sitio web
+                Visitar
               </a>
             </div>
           </div>
@@ -448,11 +258,9 @@ import Layout from '@/layouts/Layout.astro'
               para los estilos y un JSON como Data Base
             </p>
             <div class="project-card__buttons">
-              <div
-                class="neumorphism-with-border dark:neumorphism-with-border-dark"
-              >
+              <div class="btn-ghost">
                 <a
-                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  class="px-4 py-2 rounded-sm"
                   href="https://github.com/ch3ber/time-tracking-dashboard"
                   target="_blank"
                   rel="noreferrer"
@@ -466,7 +274,7 @@ import Layout from '@/layouts/Layout.astro'
                 target="_blank"
                 rel="noreferrer"
               >
-                Ver sitio web
+                Visitar
               </a>
             </div>
           </div>
@@ -491,11 +299,9 @@ import Layout from '@/layouts/Layout.astro'
               React.js y CSS, uso de local storage para la persistencia de datos
             </p>
             <div class="project-card__buttons">
-              <div
-                class="neumorphism-with-border dark:neumorphism-with-border-dark"
-              >
+              <div class="btn-ghost">
                 <a
-                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  class="px-4 py-2 rounded-sm"
                   href="https://github.com/ch3ber/todo-webapp"
                   target="_blank"
                   rel="noreferrer"
@@ -508,7 +314,7 @@ import Layout from '@/layouts/Layout.astro'
                 href="/todo-webapp"
                 target="_blank"
               >
-                Ver sitio web
+                Visitar
               </a>
             </div>
           </div>
@@ -539,11 +345,9 @@ import Layout from '@/layouts/Layout.astro'
               >
             </p>
             <div class="project-card__buttons">
-              <div
-                class="neumorphism-with-border dark:neumorphism-with-border-dark"
-              >
+              <div class="btn-ghost">
                 <a
-                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  class="px-4 py-2 rounded-sm"
                   href="https://github.com/ch3ber/RickAndMorty-webapp"
                   target="_blank"
                   rel="noreferrer"
@@ -557,7 +361,7 @@ import Layout from '@/layouts/Layout.astro'
                 target="_blank"
                 rel="noreferrer"
               >
-                Ver sitio web
+                Visitar
               </a>
             </div>
           </div>
@@ -583,11 +387,9 @@ import Layout from '@/layouts/Layout.astro'
               TypeScript y Tailwindcss
             </p>
             <div class="project-card__buttons">
-              <div
-                class="neumorphism-with-border dark:neumorphism-with-border-dark"
-              >
+              <div class="btn-ghost">
                 <a
-                  class="px-4 py-2 rounded neumorphism--inset dark:neumorphism--inset-dark"
+                  class="px-4 py-2 rounded-sm"
                   href="https://github.com/ch3ber/devstore"
                   target="_blank"
                   rel="noreferrer"
@@ -601,48 +403,28 @@ import Layout from '@/layouts/Layout.astro'
                 target="_blank"
                 rel="noreferrer"
               >
-                Ver sitio web
+                Visitar
               </a>
             </div>
           </div>
         </article>
       </div>
     </section>
-    <!-- servicios -->
-    <!-- <section class="p-10">
-          <h2 id="servicios" class="title-2">Mis Servicios</h2>
-          <div class="grid gap-14">
-
-          </div>
-      </section> -->
   </main>
 
-  <img
-    class="z-0 hidden w-full mt-20 dark:block"
-    src="/img/waves-dark.svg"
-    alt="Svg wave color gray"
-  />
-  <img
-    class="z-0 block w-full mt-20 dark:hidden"
-    src="/img/waves-white.svg"
-    alt="Svg wave color white"
-  />
-  <footer
-    class="z-0 p-12 text-polar-100 dark:text-snow-100 bg-snow-200 dark:bg-polar-300"
-    id="contacto"
-  >
+  <footer class="mt-10 bg-bg-200 p-12" id="contacto">
     <div
       class="flex flex-col justify-between max-w-2xl mx-auto md:flex-row gap-10"
     >
       <section>
-        <h3 class="font-bold title-3">Desarrollador</h3>
+        <h3 class="font-bold title-3 text-primary-200">Desarrollador</h3>
         <p class="text-polar-100 dark:text-snow-300">
-          Hecho con &#128153; por <strong>Eber Alejo</strong>
+          Hecho por <strong>Eber Alejo</strong>
         </p>
       </section>
 
       <section>
-        <h3 class="font-bold title-3">Contacto</h3>
+        <h3 class="font-bold title-3 text-primary-200">Contacto</h3>
         <ul
           class="text-polar-100 dark:text-snow-300 grid grid-cols-2 md:grid-cols-4 md:gap-1 gap-3"
         >
@@ -739,10 +521,6 @@ import Layout from '@/layouts/Layout.astro'
     }
   }
 
-  const toggleDarkMode = () => {
-    document.querySelector('html').classList.toggle('dark')
-  }
-
   const autoSetDarkMode = () => {
     if (
       window.localStorage.theme === 'dark' ||
@@ -760,10 +538,6 @@ import Layout from '@/layouts/Layout.astro'
     document
       .querySelectorAll('[data-showNav]')
       .forEach((el) => el.addEventListener('click', toggleNav))
-
-    document
-      .getElementById('toggleDarkMode')
-      .addEventListener('click', toggleDarkMode)
 
     document.addEventListener('scroll', toggleNavShadow)
   })
