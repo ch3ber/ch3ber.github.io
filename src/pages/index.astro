@@ -1,5 +1,15 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import Modelo3dCanvas from '@/components/3d/Model3d'
+
+import imgPorject1 from '../assets/img/GitHub-ch3ber-e-commerce-api-E-commerce-CRUD-with-postgresql-and-express-js.png'
+import imgPorject2 from '../assets/img/Petgram-Tu-app-de-fotos-de-mascotas.png'
+import imgPorject3 from '../assets/img/avocado-store-vercel-app.png'
+import imgPorject4 from '../assets/img/Frontend-Mentor-Time-tracking-dashboard.png'
+import imgPorject5 from '../assets/img/todo-webapp.png'
+import imgPorject6 from '../assets/img/Rick-And-Morty-App.png'
+import imgPorject7 from '../assets/img/Devstore.png'
 ---
 
 <Layout>
@@ -7,10 +17,14 @@ import Layout from '@/layouts/Layout.astro'
     id="nav"
     class="lg:hidden z-[999999] backdrop-blur-xs sticky top-0 left-0 right-0"
   >
-    <div class="max-w-3xl mx-auto text-center py-4 px-10">
+    <div
+      class="flex justify-between items-center max-w-3xl mx-auto text-center py-4 px-10"
+    >
+      <a class="font-bold text-2xl" href="/">Eber Alejo</a>
+
       <nav
         id="navModal"
-        class="z-10 fixed flex flex-col gap-10 justify-center items-center dark:bg-bg-100 overflow-hidden transition-all duration-500 top-0 left-0 right-0 h-0"
+        class="z-10 fixed flex flex-col gap-10 justify-center items-center bg-bg-100 overflow-hidden transition-all duration-500 top-0 left-0 right-0 h-0"
       >
         <ul class="flex flex-col items-center justify-evenly gap-10">
           <li class="title-2 transition hover:-translate-y-3">
@@ -21,7 +35,6 @@ import Layout from '@/layouts/Layout.astro'
               >Proyectos</a
             >
           </li>
-          <!-- <a data-showNav="false" class="title-2 transition hover:-translate-y-3" href="#servicios">Servicios</a> -->
           <li class="title-2 transition hover:-translate-y-3">
             <a data-showNav="false" class="title-2" href="#contacto">Contacto</a
             >
@@ -37,35 +50,30 @@ import Layout from '@/layouts/Layout.astro'
 
       <span
         data-showNav="true"
-        class="mx-auto text-center text-4xl hover:opacity-80 transition-opacity"
+        class="self-end text-4xl hover:opacity-80 transition-opacity"
       >
         <i class="fa-solid fa-bars"></i>
       </span>
     </div>
   </header>
 
-  <header class="hidden lg:block max-w-5xl mx-auto">
-    <nav class="p-10">
+  <header class="hidden lg:flex justify-between items-center max-w-5xl mx-auto">
+    <a class="font-bold text-2xl" href="/">Eber Alejo</a>
+    <nav class="p-5">
       <ul class="flex items-center justify-evenly gap-10">
         <li class="font-bold">
-          <a
-            data-showNav="false"
-            class="text-xl hover:text-accents transition"
-            href="#about">About</a
+          <a class="text-xl hover:text-accents transition" href="#about"
+            >About</a
           >
         </li>
         <li class="font-bold">
-          <a
-            data-showNav="false"
-            class="text-xl hover:text-accents transition"
-            href="#proyectos">Proyectos</a
+          <a class="text-xl hover:text-accents transition" href="#proyectos"
+            >Proyectos</a
           >
         </li>
         <li class="font-bold">
-          <a
-            data-showNav="false"
-            class="text-xl hover:text-accents transition"
-            href="#contacto">Contacto</a
+          <a class="text-xl hover:text-accents transition" href="#contacto"
+            >Contacto</a
           >
         </li>
       </ul>
@@ -73,27 +81,37 @@ import Layout from '@/layouts/Layout.astro'
   </header>
 
   <!-- about -->
-  <section id="about" class="max-w-5xl text-center mx-auto mt-16 px-4 py-10">
-    <h1
-      class="prose-headings:h-1 text-primary-200 flex flex-col text-5xl font-bold gap-5"
+  <section
+    id="about"
+    class="flex flex-col lg:flex-row justify-between items-center gap-10 max-w-7xl text-center mx-auto my-10 px-4"
+  >
+    <div
+      class="flex justify-center items-center mx-auto w-[280px] h-[280px] lg:w-[640px] lg:h-[640px]"
     >
-      Eber Alejo
-    </h1>
-    <h2 class="prose-headings:h-2 text-primary-300">
-      Desarrollador Web & Creador de Contenido
-    </h2>
-    <p class="mt-5 mx-auto prose text-txt-100">
-      Ingeniero en Tecnologías Computacionales orientado a resultados y
-      divulgador de conocimiento. Diseño experiencias web de alto rendimiento,
-      optimizo procesos mediante automatización y comparto buenas prácticas a la
-      comunidad a través de proyectos de código abierto y contenidos educativos.
-      Mi trayectoria abarca desde la creación de interfaces intuitivas hasta la
-      construcción de arquitecturas escalables, siempre guiado por la calidad,
-      la eficiencia y el aprendizaje continuo. Reconocido en hackathones
-      nacionales y líder de iniciativas formativas, aporto visión estratégica y
-      capacidad de ejecución a equipos que buscan transformar ideas en
-      soluciones de impacto.
-    </p>
+      <Modelo3dCanvas client:visible />
+    </div>
+    <div class="w-1/2">
+      <h1
+        class="prose-headings:h-1 text-primary-200 flex flex-col text-5xl font-bold gap-5"
+      >
+        Eber Alejo
+      </h1>
+      <h2 class="prose-headings:h-2 text-primary-300">
+        Desarrollador Web & Creador de Contenido
+      </h2>
+      <p class="mt-5 mx-auto prose text-txt-100">
+        Ingeniero en Tecnologías Computacionales orientado a resultados y
+        divulgador de conocimiento. Diseño experiencias web de alto rendimiento,
+        optimizo procesos mediante automatización y comparto buenas prácticas a
+        la comunidad a través de proyectos de código abierto y contenidos
+        educativos. Mi trayectoria abarca desde la creación de interfaces
+        intuitivas hasta la construcción de arquitecturas escalables, siempre
+        guiado por la calidad, la eficiencia y el aprendizaje continuo.
+        Reconocido en hackathones nacionales y líder de iniciativas formativas,
+        aporto visión estratégica y capacidad de ejecución a equipos que buscan
+        transformar ideas en soluciones de impacto.
+      </p>
+    </div>
   </section>
 
   <main class="w-11/12 max-w-6xl mx-auto mt-16 md:p-20 md:w-full">
@@ -107,9 +125,9 @@ import Layout from '@/layouts/Layout.astro'
           class="project-card col-start-1 md:col-end-3 xl:col-end-4 md:max-w-xl"
         >
           <figure class="overflow-hidden">
-            <img
+            <Image
               loading="lazy"
-              src="/img/GitHub-ch3ber-e-commerce-api-E-commerce-CRUD-with-postgresql-and-express-js.webp"
+              src={imgPorject1}
               alt="Previsualización del respositorio en GitHub"
               draggable="false"
               class="zoom-image-effect"
@@ -149,11 +167,11 @@ import Layout from '@/layouts/Layout.astro'
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <img
+            <Image
               width="1351"
               height="768"
               loading="lazy"
-              src="/img/Petgram-Tu-app-de-fotos-de-mascotas.webp"
+              src={imgPorject2}
               alt="Previsualización de la pagina web"
               draggable="false"
               class="zoom-image-effect"
@@ -191,11 +209,11 @@ import Layout from '@/layouts/Layout.astro'
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <img
+            <Image
               width="1351"
               height="768"
               loading="lazy"
-              src="/img/avocado-store-vercel-app.webp"
+              src={imgPorject3}
               alt="Previsualización de la pagina web"
               draggable="false"
               class="zoom-image-effect"
@@ -233,11 +251,11 @@ import Layout from '@/layouts/Layout.astro'
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <img
+            <Image
               width="1351"
               height="768"
               loading="lazy"
-              src="/img/Frontend-Mentor-Time-tracking-dashboard.webp"
+              src={imgPorject4}
               alt="Previsualización de la pagina web"
               draggable="false"
               class="zoom-image-effect"
@@ -281,11 +299,11 @@ import Layout from '@/layouts/Layout.astro'
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <img
+            <Image
               width="1351"
               height="768"
               loading="lazy"
-              src="/img/todo-webapp.webp"
+              src={imgPorject5}
               alt="Previsualización de la pagina web"
               draggable="false"
               class="zoom-image-effect"
@@ -321,11 +339,11 @@ import Layout from '@/layouts/Layout.astro'
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <img
+            <Image
               width="1351"
               height="768"
               loading="lazy"
-              src="/img/Rick-And-Morty-App.webp"
+              src={imgPorject6}
               alt="Previsualización de la pagina web"
               draggable="false"
               class="zoom-image-effect"
@@ -368,11 +386,11 @@ import Layout from '@/layouts/Layout.astro'
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <img
+            <Image
               width="1351"
               height="768"
               loading="lazy"
-              src="/img/Devstore.webp"
+              src={imgPorject7}
               alt="Previsualización de la pagina web"
               draggable="false"
               class="zoom-image-effect"
@@ -417,28 +435,22 @@ import Layout from '@/layouts/Layout.astro'
     >
       <section>
         <h3 class="font-bold title-3 text-primary-200">Desarrollador</h3>
-        <p class="text-polar-100 dark:text-snow-300">
+        <p>
           Hecho por <strong>Eber Alejo</strong>
         </p>
       </section>
 
       <section>
         <h3 class="font-bold title-3 text-primary-200">Contacto</h3>
-        <ul
-          class="text-polar-100 dark:text-snow-300 grid grid-cols-2 md:grid-cols-4 md:gap-1 gap-3"
-        >
+        <ul class="grid grid-cols-2 md:grid-cols-4 md:gap-1 gap-3">
           <li>
-            <a
-              class="transition hover:text-zinc-400 hover:underline"
-              href="mailto:eber4202@hotmail.com"
-            >
+            <a href="mailto:eber4202@hotmail.com">
               <i class="fa-solid fa-envelope"></i>
               E-Mail
             </a>
           </li>
           <li>
             <a
-              class="transition hover:text-zinc-400 hover:underline"
               rel="noreferrer"
               href="https://github.com/ch3ber"
               target="_blank"
@@ -449,7 +461,6 @@ import Layout from '@/layouts/Layout.astro'
           </li>
           <li>
             <a
-              class="transition hover:text-zinc-400 hover:underline"
               rel="noreferrer"
               href="https://twitter.com/ch3ber_dev"
               target="_blank"
@@ -460,7 +471,6 @@ import Layout from '@/layouts/Layout.astro'
           </li>
           <li>
             <a
-              class="transition hover:text-zinc-400 hover:underline"
               rel="noreferrer"
               href="https://www.linkedin.com/in/eberalejo"
               target="_blank"
@@ -494,50 +504,9 @@ import Layout from '@/layouts/Layout.astro'
     }
   }
 
-  const toggleNavShadow = (event) => {
-    const isScrolled = window.scrollY > 10
-    const haveDarkMode = document
-      .querySelector('html')
-      .classList.contains('dark')
-
-    let colorShadow = 'shadow-zinc-500/30'
-
-    if (haveDarkMode) {
-      document.getElementById('nav').classList.remove('shadow-zinc-500/30')
-      colorShadow = 'shadow-slate8700'
-    }
-
-    if (!haveDarkMode) {
-      document.getElementById('nav').classList.remove('shadow-slate-800')
-    }
-
-    if (isScrolled) {
-      document.getElementById('nav').classList.add('shadow-md', colorShadow)
-    }
-
-    if (!isScrolled) {
-      document.getElementById('nav').classList.remove('shadow-md', colorShadow)
-    }
-  }
-
-  const autoSetDarkMode = () => {
-    if (
-      window.localStorage.theme === 'dark' ||
-      (!('theme' in window.localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }
-
   document.addEventListener('DOMContentLoaded', () => {
-    autoSetDarkMode()
     document
       .querySelectorAll('[data-showNav]')
       .forEach((el) => el.addEventListener('click', toggleNav))
-
-    document.addEventListener('scroll', toggleNavShadow)
   })
 </script>
