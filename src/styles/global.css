@@ -9,18 +9,18 @@ layer(base);
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-accents: #64579E;
+  --color-accents: #64579e;
 
   --color-bg-100: #121217;
-  --color-bg-200: #1B1B22;
-  --color-bg-300: #1F1F28;
+  --color-bg-200: #1b1b22;
+  --color-bg-300: #1f1f28;
 
-  --color-primary-100: #4F5A7D;
-  --color-primary-200: #778DBB;
-  --color-primary-300: #A1AFCF;
+  --color-primary-100: #4f5a7d;
+  --color-primary-200: #778dbb;
+  --color-primary-300: #a1afcf;
 
-  --color-txt-100: #CED3DF;
-  --color-txt-200: #F2F4F8;
+  --color-txt-100: #ced3df;
+  --color-txt-200: #f2f4f8;
 
   --color-polar-100: #4c566a;
   --color-polar-200: #434c5e;
