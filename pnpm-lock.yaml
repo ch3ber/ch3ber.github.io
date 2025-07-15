@@ -46,6 +46,9 @@ importers:
       tailwindcss:
         specifier: 4.1.11
         version: 4.1.11
+      three:
+        specifier: 0.178.0
+        version: 0.178.0
     devDependencies:
       "@tailwindcss/typography":
         specifier: 0.5.16
@@ -3170,6 +3173,12 @@ packages:
       }
     engines: { node: ">=18" }
 
+  three@0.178.0:
+    resolution:
+      {
+        integrity: sha512-ybFIB0+x8mz0wnZgSGy2MO/WCO6xZhQSZnmfytSPyNpM0sBafGRVhdaj+erYh5U+RhQOAg/eXqw5uVDiM2BjhQ==,
+      }
+
   tiny-inflate@1.0.3:
     resolution:
       {
@@ -5729,6 +5738,8 @@ snapshots:
       minizlib: 3.0.2
       mkdirp: 3.0.1
       yallist: 5.0.0
+
+  three@0.178.0: {}
 
   tiny-inflate@1.0.3: {}
 
