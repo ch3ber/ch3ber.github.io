@@ -8,50 +8,50 @@ importers:
   .:
     dependencies:
       "@astrojs/react":
-        specifier: ^4.3.0
+        specifier: 4.3.0
         version: 4.3.0(@types/node@24.0.13)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(jiti@2.4.2)(lightningcss@1.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       "@astrojs/vercel":
-        specifier: ^8.2.1
+        specifier: 8.2.1
         version: 8.2.1(astro@5.11.0(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.45.0)(typescript@5.8.3))(react@19.1.0)(rollup@4.45.0)
       "@tailwindcss/vite":
-        specifier: ^4.1.11
+        specifier: 4.1.11
         version: 4.1.11(vite@6.3.5(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1))
       "@types/react":
-        specifier: ^19.1.8
+        specifier: 19.1.8
         version: 19.1.8
       "@types/react-dom":
-        specifier: ^19.1.6
+        specifier: 19.1.6
         version: 19.1.6(@types/react@19.1.8)
       astro:
-        specifier: ^5.11.0
+        specifier: 5.11.0
         version: 5.11.0(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.45.0)(typescript@5.8.3)
       class-variance-authority:
-        specifier: ^0.7.1
+        specifier: 0.7.1
         version: 0.7.1
       clsx:
-        specifier: ^2.1.1
+        specifier: 2.1.1
         version: 2.1.1
       lucide-react:
-        specifier: ^0.525.0
+        specifier: 0.525.0
         version: 0.525.0(react@19.1.0)
       react:
-        specifier: ^19.1.0
+        specifier: 19.1.0
         version: 19.1.0
       react-dom:
-        specifier: ^19.1.0
+        specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
       tailwind-merge:
-        specifier: ^3.3.1
+        specifier: 3.3.1
         version: 3.3.1
       tailwindcss:
-        specifier: ^4.1.11
+        specifier: 4.1.11
         version: 4.1.11
     devDependencies:
       "@tailwindcss/typography":
         specifier: 0.5.16
         version: 0.5.16(tailwindcss@4.1.11)
       husky:
-        specifier: ^9.1.7
+        specifier: 9.1.7
         version: 9.1.7
       prettier:
         specifier: 3.6.2
@@ -60,7 +60,7 @@ importers:
         specifier: 0.14.1
         version: 0.14.1
       tw-animate-css:
-        specifier: ^1.3.5
+        specifier: 1.3.5
         version: 1.3.5
 
 packages:
@@ -909,40 +909,40 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@shikijs/core@3.7.0":
+  "@shikijs/core@3.8.0":
     resolution:
       {
-        integrity: sha512-yilc0S9HvTPyahHpcum8eonYrQtmGTU0lbtwxhA6jHv4Bm1cAdlPFRCJX4AHebkCm75aKTjjRAW+DezqD1b/cg==,
+        integrity: sha512-gWt8NNZFurL6FMESO4lEsmspDh0H1fyUibhx1NnEH/S3kOXgYiWa6ZFqy+dcjBLhZqCXsepuUaL1QFXk6PrpsQ==,
       }
 
-  "@shikijs/engine-javascript@3.7.0":
+  "@shikijs/engine-javascript@3.8.0":
     resolution:
       {
-        integrity: sha512-0t17s03Cbv+ZcUvv+y33GtX75WBLQELgNdVghnsdhTgU3hVcWcMsoP6Lb0nDTl95ZJfbP1mVMO0p3byVh3uuzA==,
+        integrity: sha512-IBULFFpQ1N5Cg/C7jPCGnjIKz72CcRtD0BIbNhSuXPUOxLG0bF1URsP/uLfxQFQ9ORfunCQwL7UuSX1RSRBwUQ==,
       }
 
-  "@shikijs/engine-oniguruma@3.7.0":
+  "@shikijs/engine-oniguruma@3.8.0":
     resolution:
       {
-        integrity: sha512-5BxcD6LjVWsGu4xyaBC5bu8LdNgPCVBnAkWTtOCs/CZxcB22L8rcoWfv7Hh/3WooVjBZmFtyxhgvkQFedPGnFw==,
+        integrity: sha512-Tx7kR0oFzqa+rY7t80LjN8ZVtHO3a4+33EUnBVx2qYP3fGxoI9H0bvnln5ySelz9SIUTsS0/Qn+9dg5zcUMsUw==,
       }
 
-  "@shikijs/langs@3.7.0":
+  "@shikijs/langs@3.8.0":
     resolution:
       {
-        integrity: sha512-1zYtdfXLr9xDKLTGy5kb7O0zDQsxXiIsw1iIBcNOO8Yi5/Y1qDbJ+0VsFoqTlzdmneO8Ij35g7QKF8kcLyznCQ==,
+        integrity: sha512-mfGYuUgjQ5GgXinB5spjGlBVhG2crKRpKkfADlp8r9k/XvZhtNXxyOToSnCEnF0QNiZnJjlt5MmU9PmhRdwAbg==,
       }
 
-  "@shikijs/themes@3.7.0":
+  "@shikijs/themes@3.8.0":
     resolution:
       {
-        integrity: sha512-VJx8497iZPy5zLiiCTSIaOChIcKQwR0FebwE9S3rcN0+J/GTWwQ1v/bqhTbpbY3zybPKeO8wdammqkpXc4NVjQ==,
+        integrity: sha512-yaZiLuyO23sXe16JFU76KyUMTZCJi4EMQKIrdQt7okoTzI4yAaJhVXT2Uy4k8yBIEFRiia5dtD7gC1t8m6y3oQ==,
       }
 
-  "@shikijs/types@3.7.0":
+  "@shikijs/types@3.8.0":
     resolution:
       {
-        integrity: sha512-MGaLeaRlSWpnP0XSAum3kP3a8vtcTsITqoEPYdt3lQG3YCdQH4DnEhodkYcNMcU0uW0RffhoD1O3e0vG5eSBBg==,
+        integrity: sha512-I/b/aNg0rP+kznVDo7s3UK8jMcqEGTtoPDdQ+JlQ2bcJIyu/e2iRvl42GLIDMK03/W1YOHOuhlhQ7aM+XbKUeg==,
       }
 
   "@shikijs/vscode-textmate@10.0.2":
@@ -1728,10 +1728,10 @@ packages:
         integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==,
       }
 
-  electron-to-chromium@1.5.182:
+  electron-to-chromium@1.5.183:
     resolution:
       {
-        integrity: sha512-Lv65Btwv9W4J9pyODI6EWpdnhfvrve/us5h1WspW8B2Fb0366REPtY3hX7ounk1CkV/TBjWCEvCBBbYbmV0qCA==,
+        integrity: sha512-vCrDBYjQCAEefWGjlK3EpoSKfKbT10pR4XXPdn65q7snuNOZnthoVpBfZPykmDapOKfoD+MMIPG8ZjKyyc9oHA==,
       }
 
   emoji-regex@10.4.0:
@@ -3052,10 +3052,10 @@ packages:
       }
     engines: { node: ">=8" }
 
-  shiki@3.7.0:
+  shiki@3.8.0:
     resolution:
       {
-        integrity: sha512-ZcI4UT9n6N2pDuM2n3Jbk0sR4Swzq43nLPgS/4h0E3B/NrFn2HKElrDtceSf8Zx/OWYOo7G1SAtBLypCp+YXqg==,
+        integrity: sha512-yPqK0y68t20aakv+3aMTpUMJZd6UHaBY2/SBUDowh9M70gVUwqT0bf7Kz5CWG0AXfHtFvXCHhBBHVAzdp0ILoQ==,
       }
 
   signal-exit@4.1.0:
@@ -3349,10 +3349,10 @@ packages:
         integrity: sha512-MR04uvD+07cwl/yhVuVWAtw+3GOR/knlL55Nd/wAdblk27GCVt3lqpTivy/tkJcZoNPzTwS1Y+KMojlLDhoTzg==,
       }
 
-  unstorage@1.16.0:
+  unstorage@1.16.1:
     resolution:
       {
-        integrity: sha512-WQ37/H5A7LcRPWfYOrDa1Ys02xAbpPJq6q5GkO88FBXVSQzHd7+BjEwfRqyaSWCv9MbsJy058GWjjPjcJ16GGA==,
+        integrity: sha512-gdpZ3guLDhz+zWIlYP1UwQ259tG5T5vYRzDaHMkQ1bBY1SQPutvZnrRjTFaWUUpseErJIgAZS51h6NOcZVZiqQ==,
       }
     peerDependencies:
       "@azure/app-configuration": ^1.8.0
@@ -3363,7 +3363,7 @@ packages:
       "@azure/storage-blob": ^12.26.0
       "@capacitor/preferences": ^6.0.3 || ^7.0.0
       "@deno/kv": ">=0.9.0"
-      "@netlify/blobs": ^6.5.0 || ^7.0.0 || ^8.1.0
+      "@netlify/blobs": ^6.5.0 || ^7.0.0 || ^8.1.0 || ^9.0.0 || ^10.0.0
       "@planetscale/database": ^1.19.0
       "@upstash/redis": ^1.34.3
       "@vercel/blob": ">=0.27.1"
@@ -3667,7 +3667,7 @@ snapshots:
       remark-parse: 11.0.0
       remark-rehype: 11.1.2
       remark-smartypants: 3.0.2
-      shiki: 3.7.0
+      shiki: 3.8.0
       smol-toml: 1.4.1
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
@@ -4131,33 +4131,33 @@ snapshots:
   "@rollup/rollup-win32-x64-msvc@4.45.0":
     optional: true
 
-  "@shikijs/core@3.7.0":
+  "@shikijs/core@3.8.0":
     dependencies:
-      "@shikijs/types": 3.7.0
+      "@shikijs/types": 3.8.0
       "@shikijs/vscode-textmate": 10.0.2
       "@types/hast": 3.0.4
       hast-util-to-html: 9.0.5
 
-  "@shikijs/engine-javascript@3.7.0":
+  "@shikijs/engine-javascript@3.8.0":
     dependencies:
-      "@shikijs/types": 3.7.0
+      "@shikijs/types": 3.8.0
       "@shikijs/vscode-textmate": 10.0.2
       oniguruma-to-es: 4.3.3
 
-  "@shikijs/engine-oniguruma@3.7.0":
+  "@shikijs/engine-oniguruma@3.8.0":
     dependencies:
-      "@shikijs/types": 3.7.0
+      "@shikijs/types": 3.8.0
       "@shikijs/vscode-textmate": 10.0.2
 
-  "@shikijs/langs@3.7.0":
+  "@shikijs/langs@3.8.0":
     dependencies:
-      "@shikijs/types": 3.7.0
+      "@shikijs/types": 3.8.0
 
-  "@shikijs/themes@3.7.0":
+  "@shikijs/themes@3.8.0":
     dependencies:
-      "@shikijs/types": 3.7.0
+      "@shikijs/types": 3.8.0
 
-  "@shikijs/types@3.7.0":
+  "@shikijs/types@3.8.0":
     dependencies:
       "@shikijs/vscode-textmate": 10.0.2
       "@types/hast": 3.0.4
@@ -4441,14 +4441,14 @@ snapshots:
       prompts: 2.4.2
       rehype: 13.0.2
       semver: 7.7.2
-      shiki: 3.7.0
+      shiki: 3.8.0
       tinyexec: 0.3.2
       tinyglobby: 0.2.14
       tsconfck: 3.1.6(typescript@5.8.3)
       ultrahtml: 1.6.0
       unifont: 0.5.2
       unist-util-visit: 5.0.0
-      unstorage: 1.16.0
+      unstorage: 1.16.1
       vfile: 6.0.3
       vite: 6.3.5(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)
       vitefu: 1.1.1(vite@6.3.5(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1))
@@ -4535,7 +4535,7 @@ snapshots:
   browserslist@4.25.1:
     dependencies:
       caniuse-lite: 1.0.30001727
-      electron-to-chromium: 1.5.182
+      electron-to-chromium: 1.5.183
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.25.1)
 
@@ -4662,7 +4662,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.5.182: {}
+  electron-to-chromium@1.5.183: {}
 
   emoji-regex@10.4.0: {}
 
@@ -5654,14 +5654,14 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shiki@3.7.0:
+  shiki@3.8.0:
     dependencies:
-      "@shikijs/core": 3.7.0
-      "@shikijs/engine-javascript": 3.7.0
-      "@shikijs/engine-oniguruma": 3.7.0
-      "@shikijs/langs": 3.7.0
-      "@shikijs/themes": 3.7.0
-      "@shikijs/types": 3.7.0
+      "@shikijs/core": 3.8.0
+      "@shikijs/engine-javascript": 3.8.0
+      "@shikijs/engine-oniguruma": 3.8.0
+      "@shikijs/langs": 3.8.0
+      "@shikijs/themes": 3.8.0
+      "@shikijs/types": 3.8.0
       "@shikijs/vscode-textmate": 10.0.2
       "@types/hast": 3.0.4
 
@@ -5833,7 +5833,7 @@ snapshots:
       unist-util-is: 6.0.0
       unist-util-visit-parents: 6.0.1
 
-  unstorage@1.16.0:
+  unstorage@1.16.1:
     dependencies:
       anymatch: 3.1.3
       chokidar: 4.0.3
