@@ -1,5 +1,6 @@
 ---
-import '../styles/global.css'
+import '@/styles/global.css'
+import SpeedInsights from '@vercel/speed-insights/astro'
 ---
 
 <!doctype html>
@@ -21,18 +22,15 @@ import '../styles/global.css'
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://ch3ber.github.io" />
 
-    <!--<link rel="preload" href="build/css/app.css" as="style">-->
-
-    <link rel="preload" href="https://github.com/ch3ber.png" as="image" />
-
     <script
       async
       src="https://kit.fontawesome.com/0d89849159.js"
       crossorigin="anonymous"></script>
   </head>
   <body
-    class="selection:bg-frost-400 selection:text-snow-100 dark:bg-polar-400 transition-colors duration-75 text-polar-100 dark:text-snow-100"
+    class="selection:bg-accents selection:text-txt-200 bg-bg-100 text-txt-100"
   >
     <slot />
+    <SpeedInsights />
   </body>
 </html>
