@@ -1,6 +1,5 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import { Image } from 'astro:assets'
 import Modelo3dCanvas from '@/components/3d/Model3d'
 
 import imgPorject1 from '@/assets/img/projects/GitHub-ch3ber-e-commerce-api-E-commerce-CRUD-with-postgresql-and-express-js.png'
@@ -125,9 +124,11 @@ import imgPorject7 from '@/assets/img/projects/Devstore.png'
           class="project-card col-start-1 md:col-end-3 xl:col-end-4 md:max-w-xl"
         >
           <figure class="overflow-hidden">
-            <Image
+            <img
               loading="lazy"
-              src={imgPorject1}
+              src={imgPorject1.src}
+              width={imgPorject1.width}
+              height={imgPorject1.height}
               alt="Previsualización del respositorio en GitHub"
               draggable="false"
               class="zoom-image-effect"
@@ -167,11 +168,11 @@ import imgPorject7 from '@/assets/img/projects/Devstore.png'
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <Image
-              width="1351"
-              height="768"
+            <img
               loading="lazy"
-              src={imgPorject2}
+              src={imgPorject2.src}
+              width={imgPorject2.width}
+              height={imgPorject2.height}
               alt="Previsualización de la pagina web"
               draggable="false"
               class="zoom-image-effect"
@@ -209,11 +210,11 @@ import imgPorject7 from '@/assets/img/projects/Devstore.png'
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <Image
-              width="1351"
-              height="768"
+            <img
               loading="lazy"
-              src={imgPorject3}
+              src={imgPorject3.src}
+              width={imgPorject3.width}
+              height={imgPorject3.height}
               alt="Previsualización de la pagina web"
               draggable="false"
               class="zoom-image-effect"
@@ -251,11 +252,11 @@ import imgPorject7 from '@/assets/img/projects/Devstore.png'
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <Image
-              width="1351"
-              height="768"
+            <img
               loading="lazy"
-              src={imgPorject4}
+              src={imgPorject4.src}
+              width={imgPorject4.width}
+              height={imgPorject4.height}
               alt="Previsualización de la pagina web"
               draggable="false"
               class="zoom-image-effect"
@@ -299,11 +300,11 @@ import imgPorject7 from '@/assets/img/projects/Devstore.png'
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <Image
-              width="1351"
-              height="768"
+            <img
               loading="lazy"
-              src={imgPorject5}
+              src={imgPorject5.src}
+              width={imgPorject5.width}
+              height={imgPorject5.height}
               alt="Previsualización de la pagina web"
               draggable="false"
               class="zoom-image-effect"
@@ -339,11 +340,11 @@ import imgPorject7 from '@/assets/img/projects/Devstore.png'
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <Image
-              width="1351"
-              height="768"
+            <img
               loading="lazy"
-              src={imgPorject6}
+              src={imgPorject6.src}
+              width={imgPorject6.width}
+              height={imgPorject6.height}
               alt="Previsualización de la pagina web"
               draggable="false"
               class="zoom-image-effect"
@@ -386,11 +387,11 @@ import imgPorject7 from '@/assets/img/projects/Devstore.png'
 
         <article class="project-card">
           <figure class="overflow-hidden">
-            <Image
-              width="1351"
-              height="768"
+            <img
               loading="lazy"
-              src={imgPorject7}
+              src={imgPorject7.src}
+              width={imgPorject7.width}
+              height={imgPorject7.height}
               alt="Previsualización de la pagina web"
               draggable="false"
               class="zoom-image-effect"
