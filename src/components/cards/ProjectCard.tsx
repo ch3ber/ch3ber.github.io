@@ -29,12 +29,12 @@ const ProjectCard: FC<Props> = ({ project }) => {
     {
       eager: true,
       as: "url",
-    }
+    },
   );
 
   // Buscamos una imagen cuyo nombre contenga el slug del proyecto.
   const matchedImage = Object.entries(projectImages).find(([path]) =>
-    path.toLowerCase().includes(project.slug.toLowerCase())
+    path.toLowerCase().includes(project.slug.toLowerCase()),
   )?.[1] as string | undefined;
 
   // Si no encontramos coincidencia, usamos la ruta escrita en el markdown.
