@@ -6,7 +6,7 @@ interface Props {
 }
 
 const ProjectCard: FC<Props> = ({ project }) => {
-  const { title, image, repo, demo, summary } = project.data;
+  const { title, image, repo, demo, summary, stack } = project.data;
 
   /*
    * Los posts almacenan en el frontmatter una ruta a la miniatura
@@ -53,9 +53,20 @@ const ProjectCard: FC<Props> = ({ project }) => {
       </figure>
 
       <div className="project-card__body">
-        <h3 className="title-3">{title}</h3>
+        <h3 className="title-3 lg:h-14">{title}</h3>
 
         <p className="h-32">{summary}</p>
+
+        <p className="font-bold">Stack</p>
+        <div className="h-32">
+          <ul className="flex flex-wrap gap-1">
+            {stack.map((value) => (
+              <li className="py-1 px-2 rounded-full bg-accents text-txt-100 text-xs font-light w-auto">
+                {value}
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <div className="project-card__buttons">
           <div className="btn-ghost">
