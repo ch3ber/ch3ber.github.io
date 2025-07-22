@@ -83,7 +83,7 @@ layer(base);
 }
 
 @utility project-card__buttons {
-  @apply flex flex-col justify-between gap-4 items-stretch mt-6 mb-2;
+  @apply flex flex-col justify-between gap-4 items-stretch;
 }
 
 @utility project-card__body {

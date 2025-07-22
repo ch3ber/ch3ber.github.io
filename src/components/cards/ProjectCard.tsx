@@ -48,7 +48,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
           src={imageSrc}
           alt={`Previsualización de ${title}`}
           draggable={false}
-          className="zoom-image-effect"
+          className="zoom-image-effect aspect-video"
         />
       </figure>
 
