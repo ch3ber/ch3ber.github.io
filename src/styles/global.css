@@ -71,7 +71,7 @@ layer(base);
 }
 
 @utility title-3 {
-  @apply text-lg font-bold mb-2;
+  @apply text-lg font-bold;
 }
 
 @utility icon {
@@ -84,10 +84,6 @@ layer(base);
 
 @utility project-card__buttons {
   @apply flex flex-col justify-between gap-4 items-stretch;
-}
-
-@utility project-card__body {
-  @apply p-5;
 }
 
 @utility btn-fill {

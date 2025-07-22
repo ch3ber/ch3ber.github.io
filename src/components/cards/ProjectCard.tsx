@@ -52,44 +52,49 @@ const ProjectCard: FC<Props> = ({ project }) => {
         />
       </figure>
 
-      <div className="project-card__body">
-        <h3 className="title-3 lg:h-14">{title}</h3>
+      <div className="flex flex-col gap-6 p-5 justify-between md:h-[450px]">
+        <section>
+          <h3 className="text-lg font-bold">{title}</h3>
+          <p className="mt-2">{summary}</p>
+        </section>
 
-        <p className="h-32">{summary}</p>
+        <div>
+          <section className="flex flex-col justify-end">
+            <h2 className="font-bold">Stack</h2>
+            <main className="mt-1">
+              <ul className="flex flex-wrap gap-1">
+                {stack.map((value) => (
+                  <li className="py-1 px-2 rounded-full bg-accents text-txt-100 text-xs font-light w-auto">
+                    {value}
+                  </li>
+                ))}
+              </ul>
+            </main>
+          </section>
 
-        <p className="font-bold">Stack</p>
-        <div className="h-32">
-          <ul className="flex flex-wrap gap-1">
-            {stack.map((value) => (
-              <li className="py-1 px-2 rounded-full bg-accents text-txt-100 text-xs font-light w-auto">
-                {value}
-              </li>
-            ))}
-          </ul>
-        </div>
+          <div className="mt-6 project-card__buttons">
+            <div className="btn-ghost">
+              <a
+                className="px-4 py-2 rounded-sm"
+                href={repo}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ver código
+              </a>
+            </div>
 
-        <div className="project-card__buttons">
-          <div className="btn-ghost">
-            <a
-              className="px-4 py-2 rounded-sm"
-              href={repo}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Ver código
-            </a>
+            {demo && (
+              <a
+                className="border-none btn-fill"
+                href={demo}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Visitar
+              </a>
+            )}
           </div>
-
-          {demo && (
-            <a
-              className="border-none btn-fill"
-              href={demo}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Visitar
-            </a>
-          )}
         </div>
       </div>
     </article>
